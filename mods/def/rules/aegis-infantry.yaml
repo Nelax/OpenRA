@@ -1,0 +1,44 @@
+E1:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Rifle Infantry
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 50
+	Armament@PRIMARY:
+		Weapon: M1Carbine
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Vulcan
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot
+
+E6:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	ExternalCaptures:
+		Type: building
+	-AutoTarget:
+	Selectable:
+		Priority: 5
+
+CHAN:
+	Inherits: ^CivInfantry
+	Valued:
+		Cost: 500
+	Selectable:
+		Class: CHAN
+	Tooltip:
+		Name: Scientist

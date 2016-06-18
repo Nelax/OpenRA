@@ -1,0 +1,198 @@
+MINP:
+	Inherits: ^Mine
+	Explodes:
+		Weapon: APMine
+
+MINV:
+	Inherits: ^Mine
+	Explodes:
+		Weapon: ATMine
+
+CRATE:
+	Inherits: ^Crate
+	GiveCashCrateAction:
+		Amount: 1000
+		SelectionShares: 50
+		UseCashTick: true
+	LevelUpCrateAction:
+		SelectionShares: 40
+	ExplodeCrateAction@fire:
+		Weapon: CrateNapalm
+		SelectionShares: 5
+	ExplodeCrateAction@boom:
+		Weapon: CrateExplosion
+		SelectionShares: 5
+	HideMapCrateAction:
+		SelectionShares: 5
+		Effect: hide-map
+	HealUnitsCrateAction:
+		Notification: heal2.aud
+		SelectionShares: 2
+		Effect: heal
+	RevealMapCrateAction:
+		SelectionShares: 1
+		Effect: reveal-map
+	DuplicateUnitCrateAction:
+		SelectionShares: 10
+		MaxAmount: 5
+		MinAmount: 1
+		MaxDuplicateValue: 1500
+	GrantUpgradeCrateAction@invuln:
+		SelectionShares: 5
+		Effect: invuln
+		Notification: ironcur9.aud
+		Upgrades: invulnerability
+		Duration: 600
+
+MONEYCRATE:
+	Inherits: ^Crate
+	Tooltip:
+		Name: Money Crate
+	GiveCashCrateAction:
+		Amount: 500
+		SelectionShares: 1
+		UseCashTick: true
+	RenderSprites:
+		Image: wcrate
+
+HEALCRATE:
+	Inherits: ^Crate
+	Tooltip:
+		Name: Heal Crate
+	HealUnitsCrateAction:
+		Notification: heal2.aud
+		SelectionShares: 1
+		Effect: heal
+
+WCRATE:
+	Inherits: ^Crate
+	Tooltip:
+		Name: Wooden Crate
+	RenderSprites:
+		Image: wcrate
+
+SCRATE:
+	Inherits: ^Crate
+	Tooltip:
+		Name: Steel Crate
+
+CAMERA:
+	EditorOnlyTooltip:
+		Name: (reveals area to owner)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+		Image: camera
+
+FLARE:
+	Immobile:
+		OccupiesSpace: false
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: smokland
+	WithSpriteBody:
+		StartSequence: open
+	BodyOrientation:
+		QuantizedFacings: 1
+	HiddenUnderFog:
+		Type: CenterPosition
+	Tooltip:
+		Name: Flare
+		ShowOwnerRow: false
+	AutoSelectionSize:
+
+MINE:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	Tooltip:
+		Name: Ore Mine
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Ore
+	AutoTargetIgnore:
+	SeedsResource:
+
+GMINE:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	Tooltip:
+		Name: Gem Mine
+	RenderSprites:
+		Palette: player
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Gems
+	AutoTargetIgnore:
+	SeedsResource:
+		ResourceType: Gems
+
+RAILMINE:
+	Inherits@1: ^SpriteActor
+	HiddenUnderShroud:
+	Tooltip:
+		Name: Abandoned Mine
+	RenderSprites:
+		Palette: player
+	WithSpriteBody:
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	AutoTargetIgnore:
+	EditorTilesetFilter:
+		ExcludeTilesets: INTERIOR
+mpspawn:
+	EditorOnlyTooltip:
+		Name: (multiplayer player starting point)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+
+waypoint:
+	EditorOnlyTooltip:
+		Name: (waypoint for scripted behavior)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+
+CTFLAG:
+	Inherits: ^TechBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Flag
+	Bib:
+		HasMinibib: Yes
+	DamageMultiplier@INVULNERABLE:
+		Modifier: 0
+	-Selectable:
+	-Targetable:

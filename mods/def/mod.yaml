@@ -1,0 +1,245 @@
+Metadata:
+	Title: Defcon One
+	Description: 
+	Version: {DEV_VERSION}
+	Author: Nelax
+
+RequiresMods:
+	ra: {DEV_VERSION}
+	modchooser: {DEV_VERSION}
+
+Packages:
+	~^Content/ra
+	.
+	$ra: ra
+	$cnc: cnc
+	$def: def
+	./mods/common: common
+	~main.mix
+	~redalert.mix
+	~conquer.mix
+	~hires.mix
+	~local.mix
+	~sounds.mix
+	~speech.mix
+	~allies.mix
+	~russian.mix
+	~temperat.mix
+	~snow.mix
+	~interior.mix
+	~scores.mix
+	~movies1.mix
+	~movies2.mix
+	ra|bits
+	ra|bits/desert
+	def|bits
+	def|bits/infantry
+	def|bits/units
+	def|bits/buildings
+	def|uibits
+
+MapFolders:
+	def|maps: System
+	~^maps/def/{DEV_VERSION}: User
+
+Rules:
+	def|rules/misc.yaml
+	def|rules/player.yaml
+	def|rules/palettes.yaml
+	def|rules/world.yaml
+	def|rules/defaults.yaml
+	def|rules/civilian.yaml
+	def|rules/decoration.yaml
+	def|rules/husks.yaml
+	def|rules/aircraft.yaml
+	def|rules/aegis-infantry.yaml
+	def|rules/aegis-vehicles.yaml
+	def|rules/aegis-naval.yaml
+	def|rules/aegis-base.yaml
+	def|rules/manticore-infantry.yaml
+	def|rules/manticore-vehicles.yaml
+	def|rules/manticore-naval.yaml
+	def|rules/manticore-base.yaml
+
+Sequences:
+	def|sequences/ships.yaml
+	def|sequences/vehicles.yaml
+	def|sequences/structures.yaml
+	def|sequences/infantry.yaml
+	def|sequences/aircraft.yaml
+	def|sequences/misc.yaml
+	def|sequences/decorations.yaml
+
+TileSets:
+	ra|tilesets/snow.yaml
+	ra|tilesets/interior.yaml
+	ra|tilesets/temperat.yaml
+	ra|tilesets/desert.yaml
+
+Cursors:
+	ra|cursors.yaml
+
+Chrome:
+	def|chrome.yaml
+
+Assemblies:
+	common|OpenRA.Mods.Common.dll
+	ra|OpenRA.Mods.RA.dll
+	cnc|OpenRA.Mods.Cnc.dll
+
+ChromeLayout:
+	ra|chrome/ingame.yaml
+	ra|chrome/ingame-chat.yaml
+	ra|chrome/ingame-fmvplayer.yaml
+	ra|chrome/ingame-info.yaml
+	ra|chrome/ingame-infoscripterror.yaml
+	ra|chrome/ingame-infobriefing.yaml
+	ra|chrome/ingame-infoobjectives.yaml
+	ra|chrome/ingame-infostats.yaml
+	ra|chrome/ingame-menu.yaml
+	ra|chrome/ingame-observer.yaml
+	ra|chrome/ingame-observerstats.yaml
+	ra|chrome/ingame-player.yaml
+	ra|chrome/ingame-perf.yaml
+	ra|chrome/ingame-debug.yaml
+	ra|chrome/mainmenu.yaml
+	ra|chrome/settings.yaml
+	ra|chrome/credits.yaml
+	ra|chrome/lobby.yaml
+	ra|chrome/lobby-mappreview.yaml
+	ra|chrome/lobby-players.yaml
+	ra|chrome/lobby-options.yaml
+	ra|chrome/lobby-music.yaml
+	ra|chrome/lobby-kickdialogs.yaml
+	ra|chrome/lobby-globalchat.yaml
+	ra|chrome/color-picker.yaml
+	ra|chrome/map-chooser.yaml
+	ra|chrome/multiplayer.yaml
+	ra|chrome/multiplayer-browser.yaml
+	ra|chrome/multiplayer-createserver.yaml
+	ra|chrome/multiplayer-directconnect.yaml
+	ra|chrome/multiplayer-globalchat.yaml
+	ra|chrome/connection.yaml
+	ra|chrome/replaybrowser.yaml
+	ra|chrome/dropdowns.yaml
+	ra|chrome/musicplayer.yaml
+	ra|chrome/tooltips.yaml
+	ra|chrome/assetbrowser.yaml
+	ra|chrome/missionbrowser.yaml
+	ra|chrome/confirmation-dialogs.yaml
+	ra|chrome/editor.yaml
+
+Weapons:
+	def|weapons/explosions.yaml
+	def|weapons/largecaliber.yaml
+	def|weapons/missiles.yaml
+	def|weapons/other.yaml
+	def|weapons/smallcaliber.yaml
+	def|weapons/superweapons.yaml
+	
+Voices:
+	def|audio/voices.yaml
+
+Notifications:
+	def|audio/notifications.yaml
+
+Music:
+	ra|audio/music.yaml
+
+Translations:
+	ra|languages/english.yaml
+
+LoadScreen: LogoStripeLoadScreen
+	Image: ra|uibits/loadscreen.png
+	Text: Entering the Post-Post-Apocalypse...
+
+ContentInstaller:
+	TestFiles: ^Content/ra/allies.mix, ^Content/ra/conquer.mix, ^Content/ra/interior.mix, ^Content/ra/redalert.mix, ^Content/ra/russian.mix, ^Content/ra/snow.mix, ^Content/ra/sounds.mix, ^Content/ra/temperat.mix
+	PackageMirrorList: http://www.openra.net/packages/ra-mirrors.txt
+	DiskTestFiles: MAIN.MIX, INSTALL/REDALERT.MIX
+	PackageToExtractFromCD: MAIN.MIX
+	ExtractFilesFromCD:
+		.: conquer.mix, russian.mix, allies.mix, sounds.mix, scores.mix, snow.mix, interior.mix, temperat.mix, general.mix
+	CopyFilesFromCD:
+		.: INSTALL/REDALERT.MIX
+	ShippedSoundtracks: 2
+	MusicPackageMirrorList: http://www.openra.net/packages/ra-music-mirrors.txt
+	InstallShieldCABFilePackageIds: 105
+	InstallShieldCABFileIds: 116
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	ra|metrics.yaml
+
+Fonts:
+	Regular:
+		Font: common|FreeSans.ttf
+		Size:14
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size:14
+	Title:
+		Font: ra|ZoodRangmah.ttf
+		Size:48
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size:18
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size:24
+	Small:
+		Font: common|FreeSans.ttf
+		Size:12
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size:10
+
+MapGrid:
+	TileSize: 24,24
+	Type: Rectangular
+
+SupportsMapsFrom: def
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpD2, ShpTD, TmpRA, TmpTD, ShpTS
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERAT: .tem
+		SNOW: .sno
+		INTERIOR: .int
+		DESERT: .des
+
+GameSpeeds:
+	slower:
+		Name: Slower
+		Timestep: 50
+		OrderLatency: 3
+	default:
+		Name: Normal
+		Timestep: 40
+		OrderLatency: 3
+	faster:
+		Name: Faster
+		Timestep: 30
+		OrderLatency: 4
+	fastest:
+		Name: Fastest
+		Timestep: 20
+		OrderLatency: 6
+	test:
+		Name: TEST
+		Timestep: 35
+		OrderLatency: 2
+
+ColorValidator:
