@@ -1,0 +1,35 @@
+GenericVoice:
+	Variants:
+		aegis: .v01,.v03
+		manticore: .r01,.r03
+	Voices:
+		Select: await1,ready,report1,yessir1
+		Action: ackno,affirm1,noprob,overout,ritaway,roger,ugotit
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+	DisableVariants: Die, Burned, Zapped
+
+VehicleVoice:
+	Variants:
+		aegis: .v00,.v02
+		manticore: .r00,.r02
+	Voices:
+		Select: vehic1,yessir1,report1,await1
+		Action: ackno,affirm1
+		
+CivilianMaleVoice:
+	Voices:
+		Select: guyyeah1
+		Action: guyokay1
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
+
+CivilianFemaleVoice:
+	Voices:
+		Select: girlyeah
+		Action: girlokay
+		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
+		Burned: dedman10
+		Zapped: dedman6
