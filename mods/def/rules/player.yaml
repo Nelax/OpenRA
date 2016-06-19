@@ -1,37 +1,83 @@
 Player:
 	AlwaysVisible:
 	TechTree:
-	ClassicProductionQueue@Building:
-		Type: Building
+	ClassicProductionQueue@BuildingAegis:
+		Type: Building.Aegis
+		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: True
-	ClassicProductionQueue@Defense:
-		Type: Defense
+	ClassicProductionQueue@BuildingManticore:
+		Type: Building.Manticore
+		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: True
-	ClassicProductionQueue@Vehicle:
-		Type: Vehicle
+	ClassicProductionQueue@DefenseAegis:
+		Type: Defense.Aegis
+		Group: Aegis
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@DefenseManticore:
+		Type: Defense.Manticore
+		Group: Manticore
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@VehicleAegis:
+		Type: Vehicle.Aegis
+		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
-	ClassicProductionQueue@Infantry:
-		Type: Infantry
+	ClassicProductionQueue@VehicleManticore:
+		Type: Vehicle.Manticore
+		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
-	ClassicProductionQueue@Ship:
-		Type: Ship
+	ClassicProductionQueue@InfantryAegis:
+		Type: Infantry.Aegis
+		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
-	ClassicProductionQueue@Aircraft:
-		Type: Aircraft
+	ClassicProductionQueue@InfantryManticore:
+		Type: Infantry.Manticore
+		Group: Manticore
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@ShipAegis:
+		Type: Ship.Aegis
+		Group: Aegis
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@ShipManticore:
+		Type: Ship.Manticore
+		Group: Manticore
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@AircraftAegis:
+		Type: Aircraft.Aegis
+		Group: Aegis
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@AircraftManticore:
+		Type: Aircraft.Manticore
+		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
@@ -78,3 +124,5 @@ Player:
 		Image: iconchevrons
 		Sequence: veteran
 	ResourceStorageWarning:
+	DeveloperMode:
+		Enabled: true
