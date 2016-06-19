@@ -201,6 +201,20 @@ production-icons: chrome.png
 	ship: 496,48,16,16
 	ship-disabled: 496,64,16,16
 	ship-alert: 496,80,16,16
+	aegis: 384,0,16,16
+	aegis-disabled: 384,16,16,16
+	aegis-alert: 384,32,16,16
+	manticore: 400,0,16,16
+	manticore-disabled: 400,16,16,16
+	manticore-alert: 400,32,16,16
+
+switcher-icons: chrome.png
+	aegis: 384,0,16,16
+	aegis-disabled: 384,16,16,16
+	aegis-alert: 384,32,16,16
+	manticore: 400,0,16,16
+	manticore-disabled: 400,16,16,16
+	manticore-alert: 400,32,16,16
 
 order-icons: chrome.png
 	options: 480,0,16,16

@@ -69,11 +69,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Red Alert Lua scripts", "Re
 		mods\ra\maps\allies-05a\allies05a-AI.lua = mods\ra\maps\allies-05a\allies05a-AI.lua
 		mods\ra\maps\allies-05a\allies05a.lua = mods\ra\maps\allies-05a\allies05a.lua
 		mods\ra\maps\desert-shellmap\desert-shellmap.lua = mods\ra\maps\desert-shellmap\desert-shellmap.lua
+		mods\ra\maps\evacuation\evacuation.lua = mods\ra\maps\evacuation\evacuation.lua
 		mods\ra\maps\fort-lonestar\fort-lonestar-AI.lua = mods\ra\maps\fort-lonestar\fort-lonestar-AI.lua
 		mods\ra\maps\fort-lonestar\fort-lonestar.lua = mods\ra\maps\fort-lonestar\fort-lonestar.lua
 		mods\ra\maps\intervention\intervention.lua = mods\ra\maps\intervention\intervention.lua
 		mods\ra\maps\monster-tank-madness\monster-tank-madness.lua = mods\ra\maps\monster-tank-madness\monster-tank-madness.lua
-		mods\ra\maps\evacuation\evacuation.lua = mods\ra\maps\evacuation\evacuation.lua
 		mods\ra\maps\soviet-01\soviet01.lua = mods\ra\maps\soviet-01\soviet01.lua
 		mods\ra\maps\soviet-02a\soviet02a.lua = mods\ra\maps\soviet-02a\soviet02a.lua
 		mods\ra\maps\soviet-02b\soviet02b.lua = mods\ra\maps\soviet-02b\soviet02b.lua
@@ -123,6 +123,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tiberian Sun Lua scripts", 
 	ProjectSection(SolutionItems) = preProject
 		mods\ts\maps\fields-of-green\fields-of-green.lua = mods\ts\maps\fields-of-green\fields-of-green.lua
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.Def", "OpenRA.Mods.Def\OpenRA.Mods.Def.csproj", "{D7DA8561-4612-4940-83D8-82278EF7EF87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -174,6 +176,10 @@ Global
 		{6CB8E1B7-6B36-4D93-8633-7C573E194AC4}.Debug|x86.Build.0 = Debug|x86
 		{6CB8E1B7-6B36-4D93-8633-7C573E194AC4}.Release|x86.ActiveCfg = Release|x86
 		{6CB8E1B7-6B36-4D93-8633-7C573E194AC4}.Release|x86.Build.0 = Release|x86
+		{D7DA8561-4612-4940-83D8-82278EF7EF87}.Debug|x86.ActiveCfg = Debug|x86
+		{D7DA8561-4612-4940-83D8-82278EF7EF87}.Debug|x86.Build.0 = Debug|x86
+		{D7DA8561-4612-4940-83D8-82278EF7EF87}.Release|x86.ActiveCfg = Release|x86
+		{D7DA8561-4612-4940-83D8-82278EF7EF87}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
