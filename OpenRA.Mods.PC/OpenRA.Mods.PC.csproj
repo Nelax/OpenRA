@@ -8,8 +8,8 @@
     <ProjectGuid>{D7DA8561-4612-4940-83D8-82278EF7EF87}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenRA.Mods.Def</RootNamespace>
-    <AssemblyName>OpenRA.Mods.Def</AssemblyName>
+    <RootNamespace>OpenRA.Mods.PC</RootNamespace>
+    <AssemblyName>OpenRA.Mods.PC</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -60,8 +60,8 @@
     <Optimize>true</Optimize>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="cp ${TargetFile} ../mods/cnc" workingdir="${ProjectDir}" />
-        <Command type="AfterBuild" command="cp ${TargetFile}.mdb ../mods/cnc" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="cp ${TargetFile} ../mods/pc" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="cp ${TargetFile}.mdb ../mods/pc" workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -115,8 +115,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>mkdir "$(SolutionDir)mods/def/"
-copy "$(TargetPath)" "$(SolutionDir)mods/def/"
+    <PostBuildEvent>mkdir "$(SolutionDir)mods/pc/"
+copy "$(TargetPath)" "$(SolutionDir)mods/pc/"
 cd "$(SolutionDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

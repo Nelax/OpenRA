@@ -124,7 +124,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tiberian Sun Lua scripts", 
 		mods\ts\maps\fields-of-green\fields-of-green.lua = mods\ts\maps\fields-of-green\fields-of-green.lua
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.Def", "OpenRA.Mods.Def\OpenRA.Mods.Def.csproj", "{D7DA8561-4612-4940-83D8-82278EF7EF87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.PC", "OpenRA.Mods.PC\OpenRA.Mods.PC.csproj", "{D7DA8561-4612-4940-83D8-82278EF7EF87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

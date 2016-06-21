@@ -1,9 +1,38 @@
 E1:
 	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~barr, ~barracks, ~techlevel.infonly
 	Valued:
 		Cost: 100
 	Tooltip:
 		Name: Rifle Infantry
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 50
+	Armament@PRIMARY:
+		Weapon: M1Carbine
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Vulcan
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot
+		
+E2:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry.Manticore
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~barr2, ~barracks, ~techlevel.infonly
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Rifle Infantry 2
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 50
