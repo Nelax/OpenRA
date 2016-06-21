@@ -16,7 +16,7 @@ using OpenRA.Mods.Common.Widgets;
 using OpenRA.Network;
 using OpenRA.Widgets;
 
-namespace OpenRA.Mods.AM.Widgets.Logic
+namespace OpenRA.Mods.PC.Widgets.Logic
 {
 	public class PagedProductionLogic : ChromeLogic
 	{
