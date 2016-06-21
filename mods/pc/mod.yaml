@@ -1,5 +1,5 @@
 Metadata:
-	Title: Defcon One
+	Title: Phoenix Chronicles
 	Description: 
 	Version: {DEV_VERSION}
 	Author: Nelax
@@ -13,7 +13,7 @@ Packages:
 	.
 	$ra: ra
 	$cnc: cnc
-	$def: def
+	$pc: pc
 	./mods/common: common
 	~main.mix
 	~redalert.mix
@@ -32,39 +32,39 @@ Packages:
 	~movies2.mix
 	ra|bits
 	ra|bits/desert
-	def|uibits
+	pc|uibits
 
 MapFolders:
-	def|maps: System
-	~^maps/def/{DEV_VERSION}: User
+	pc|maps: System
+	~^maps/pc/{DEV_VERSION}: User
 
 Rules:
-	def|rules/misc.yaml
-	def|rules/player.yaml
-	def|rules/palettes.yaml
-	def|rules/world.yaml
-	def|rules/defaults.yaml
-	def|rules/civilian.yaml
-	def|rules/decoration.yaml
-	def|rules/husks.yaml
-	def|rules/aircraft.yaml
-	def|rules/aegis-infantry.yaml
-	def|rules/aegis-vehicles.yaml
-	def|rules/aegis-naval.yaml
-	def|rules/aegis-base.yaml
-	def|rules/manticore-infantry.yaml
-	def|rules/manticore-vehicles.yaml
-	def|rules/manticore-naval.yaml
-	def|rules/manticore-base.yaml
+	pc|rules/misc.yaml
+	pc|rules/player.yaml
+	pc|rules/palettes.yaml
+	pc|rules/world.yaml
+	pc|rules/defaults.yaml
+	pc|rules/civilian.yaml
+	pc|rules/decoration.yaml
+	pc|rules/husks.yaml
+	pc|rules/aircraft.yaml
+	pc|rules/aegis-infantry.yaml
+	pc|rules/aegis-vehicles.yaml
+	pc|rules/aegis-naval.yaml
+	pc|rules/aegis-base.yaml
+	pc|rules/manticore-infantry.yaml
+	pc|rules/manticore-vehicles.yaml
+	pc|rules/manticore-naval.yaml
+	pc|rules/manticore-base.yaml
 
 Sequences:
-	def|sequences/ships.yaml
-	def|sequences/vehicles.yaml
-	def|sequences/structures.yaml
-	def|sequences/infantry.yaml
-	def|sequences/aircraft.yaml
-	def|sequences/misc.yaml
-	def|sequences/decorations.yaml
+	pc|sequences/ships.yaml
+	pc|sequences/vehicles.yaml
+	pc|sequences/structures.yaml
+	pc|sequences/infantry.yaml
+	pc|sequences/aircraft.yaml
+	pc|sequences/misc.yaml
+	pc|sequences/decorations.yaml
 
 TileSets:
 	ra|tilesets/snow.yaml
@@ -76,11 +76,11 @@ Cursors:
 	ra|cursors.yaml
 
 Chrome:
-	def|chrome.yaml
+	pc|chrome.yaml
 
 Assemblies:
 	common|OpenRA.Mods.Common.dll
-	def|OpenRA.Mods.Def.dll
+	pc|OpenRA.Mods.PC.dll
 	ra|OpenRA.Mods.RA.dll
 	cnc|OpenRA.Mods.Cnc.dll
 
@@ -96,7 +96,7 @@ ChromeLayout:
 	ra|chrome/ingame-menu.yaml
 	ra|chrome/ingame-observer.yaml
 	ra|chrome/ingame-observerstats.yaml
-	def|chrome/ingame-player.yaml
+	pc|chrome/ingame-player.yaml
 	ra|chrome/ingame-perf.yaml
 	ra|chrome/ingame-debug.yaml
 	ra|chrome/mainmenu.yaml
@@ -127,18 +127,18 @@ ChromeLayout:
 	ra|chrome/editor.yaml
 
 Weapons:
-	def|weapons/explosions.yaml
-	def|weapons/largecaliber.yaml
-	def|weapons/missiles.yaml
-	def|weapons/other.yaml
-	def|weapons/smallcaliber.yaml
-	def|weapons/superweapons.yaml
+	pc|weapons/explosions.yaml
+	pc|weapons/largecaliber.yaml
+	pc|weapons/missiles.yaml
+	pc|weapons/other.yaml
+	pc|weapons/smallcaliber.yaml
+	pc|weapons/superweapons.yaml
 	
 Voices:
-	def|audio/voices.yaml
+	pc|audio/voices.yaml
 
 Notifications:
-	def|audio/notifications.yaml
+	pc|audio/notifications.yaml
 
 Music:
 	ra|audio/music.yaml
@@ -147,7 +147,7 @@ Translations:
 	ra|languages/english.yaml
 
 LoadScreen: LogoStripeLoadScreen
-	Image: ra|uibits/loadscreen.png
+	Image: pc|uibits/loadscreen.png
 	Text: Entering the Post-Post-Apocalypse...
 	
 ServerTraits:
@@ -190,7 +190,7 @@ MapGrid:
 	TileSize: 24,24
 	Type: Rectangular
 
-SupportsMapsFrom: def
+SupportsMapsFrom: am
 
 SoundFormats: Aud, Wav
 
