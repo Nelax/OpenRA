@@ -6,7 +6,7 @@ FACT:
 	Buildable:
 		Queue: Building.Aegis
 		BuildPaletteOrder: 1000
-		Prerequisites: ~techlevel.infonly
+		Prerequisites: ~disabled
 	ProvidesPrerequisite@aegis:
 		Prerequisite: structures.aegis
 	Health:
