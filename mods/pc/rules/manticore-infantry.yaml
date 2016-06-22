@@ -1,0 +1,25 @@
+E2:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: E1
+	Buildable:
+		Queue: Infantry.Manticore
+		BuildAtProductionType: Soldier.Manticore
+		BuildPaletteOrder: 10
+		Prerequisites: ~bus, ~barracks, ~techlevel.infonly
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Fighter
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 50
+	Armament@PRIMARY:
+		Weapon: M1Carbine
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Vulcan
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot

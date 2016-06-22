@@ -463,6 +463,17 @@ tsla:
 		UseTilesetExtension: true
 	icon: tslaicon
 
+brik:
+	idle:
+		Length: 16
+	scratched-idle:
+		Start: 16
+		Length: 16
+	damaged-idle:
+		Start: 32
+		Length: 16
+	icon: brikicon
+
 pbox:
 	idle:
 	damaged-idle:
@@ -477,6 +488,44 @@ pbox:
 		Offset: 0,-2
 		UseTilesetExtension: true
 	icon: pboxicon
+	
+hpnt:
+	idle: pbox
+	damaged-idle: pbox
+		Start: 1
+	make: pboxmake
+		Length: *
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	bib: mbPBOX
+		Length: *
+		Offset: 0,-2
+		UseTilesetExtension: true
+	icon: pboxicon
+	hardpoint-vulcan: gun
+		Facings: 32
+	hardpoint-missile: ssam
+		Facings: 32
+
+pwr:
+	idle: powr
+	damaged-idle: powr
+		Start: 1
+	make: powrmake
+		Length: *
+	dead: powrdead
+		Tick: 800
+	idle-pwrup: pbox
+	damaged-idle-pwrup: pbox
+		Start: 1
+	bib: bib3
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+	icon: powricon
+	fake-icon: fpwricon
 
 hbox:
 	Defaults:
@@ -572,32 +621,6 @@ mslo:
 		UseTilesetExtension: false
 	fake-icon: mslficon
 		UseTilesetExtension: false
-
-miss:
-	idle:
-	damaged-idle:
-		Start: 1
-	dead:
-		Start: 2
-		Tick: 800
-	make: missmake
-		Length: *
-	bib: bib2
-		Length: *
-		UseTilesetExtension: true
-		TilesetOverrides:
-			INTERIOR: TEMPERAT
-
-brik:
-	idle:
-		Length: 16
-	scratched-idle:
-		Start: 16
-		Length: 16
-	damaged-idle:
-		Start: 32
-		Length: 16
-	icon: brikicon
 
 vgate:
 	make:

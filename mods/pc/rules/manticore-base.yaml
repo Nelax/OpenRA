@@ -1,5 +1,9 @@
 MHQ:
 	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 90
+		Prerequisites: fix, ~techlevel.medium
 	RenderSprites:
 		Image: MCV
 	CustomBuildTimeValue:
@@ -8,20 +12,18 @@ MHQ:
 		Cost: 2000
 	Tooltip:
 		Name: Mobile Headquarters
-		Description: Calls in base vehicles.\n  Unarmed
+		Description: Produces base vehicles.
 	ProvidesPrerequisite@manticore:
 		Prerequisite: structures.manticore
 	ProductionBar@Building:
 		ProductionType: Building.Manticore
 	ProductionBar@Defense:
 		ProductionType: Defense.Manticore
-	ProductionParadrop:
-		Produces: Building.Manticore
-		ActorType: cpln
 	Exit@1:
+		SpawnOffset: 0,1024,0
 		ExitCell: 0,1
 	Production:
-		Produces: Defense.Manticore
+		Produces: Building.Manticore, Defense.Manticore
 		Color: 8A8A8A
 	Selectable:
 		Priority: 4
@@ -38,7 +40,6 @@ MHQ:
 		Range: 4c0
 	MustBeDestroyed:
 		RequiredForShortGame: true
-	BaseBuilding:
 	SpawnActorOnDeath:
 		Actor: MCV.Husk
 
@@ -51,14 +52,18 @@ GTRUK:
 		BuildPaletteOrder: 20
 		Prerequisites: ~techlevel.low
 	Valued:
-		Cost: 500
+		Cost: 300
 	Tooltip:
 		Name: Generator Truck
-		Description: Generates power for your base vehicles.\n  Unarmed
+		Description: Provides power for base vehicles.
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Selectable:
+		Priority: 5
 	Health:
-		HP: 110
+		HP: 400
 	Armor:
-		Type: Light
+		Type: Wood
 	Mobile:
 		Speed: 128
 	RevealsShroud:
@@ -70,3 +75,46 @@ GTRUK:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	ScalePowerWithHealth:
+	MustBeDestroyed:
+		RequiredForShortGame: true
+
+BUS:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: TRUK
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 30
+		Prerequisites: anypower, ~structures.manticore, ~techlevel.infonly
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Barracks Bus
+		Description: Trains infantry.
+	Selectable:
+		Priority: 3
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 4c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Exit@1:
+		ExitCell: 0,1
+	Production:
+		Produces: Infantry.Manticore, Soldier.Manticore
+	PrimaryBuilding:
+	ProductionBar:
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	ProvidesPrerequisite@manticore:
+		Prerequisite: infantry.manticore
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
