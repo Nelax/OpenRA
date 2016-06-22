@@ -43,6 +43,24 @@ HARV.EmptyHusk:
 	RenderSprites:
 		Image: hhusk2
 
+MIN.FullHusk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Mining Rig)
+	TransformOnCapture:
+		IntoActor: harv
+	RenderSprites:
+		Image: hhusk
+
+MIN.EmptyHusk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Mining Rig)
+	TransformOnCapture:
+		IntoActor: harv
+	RenderSprites:
+		Image: hhusk2
+
 FGTR.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:

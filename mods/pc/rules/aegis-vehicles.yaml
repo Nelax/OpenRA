@@ -53,6 +53,7 @@ HARV:
 	SelectionDecorations:
 		VisualBounds: 42,42
 	Harvester:
+		DeliveryBuildings: refn
 		Capacity: 20
 		Resources: Ore,Gems
 		BaleUnloadDelay: 1
