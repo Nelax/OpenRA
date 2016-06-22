@@ -25,6 +25,45 @@ CPLN.Husk:
 	RenderSprites:
 		Image: badr
 
+HARV.FullHusk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Ore Truck)
+	TransformOnCapture:
+		IntoActor: harv
+	RenderSprites:
+		Image: hhusk
+
+HARV.EmptyHusk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Ore Truck)
+	TransformOnCapture:
+		IntoActor: harv
+	RenderSprites:
+		Image: hhusk2
+
+FGTR.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Fighter Plane
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 186
+	SmokeTrailWhenDamaged:
+		Offset: -853,0,171
+		Interval: 2
+		MinDamage: Undamaged
+	RevealsShroud:
+		Range: 12c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: mig
+
 T01.Husk:
 	Inherits: ^TreeHusk
 	Building:

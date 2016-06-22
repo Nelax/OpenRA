@@ -1,7 +1,7 @@
 MCV:
 	Inherits: ^Vehicle
 	Buildable:
-		Queue: Vehicle
+		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 90
 		Prerequisites: fix, ~techlevel.medium
 	CustomBuildTimeValue:
@@ -35,3 +35,90 @@ MCV:
 	BaseBuilding:
 	SpawnActorOnDeath:
 		Actor: MCV.Husk
+
+HARV:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 10
+		Prerequisites: refn, ~techlevel.infonly
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Ore Truck
+		GenericName: Harvester
+		Description: Collects Ore and Gems for processing.\n  Unarmed
+	Selectable:
+		Priority: 7
+	SelectionDecorations:
+		VisualBounds: 42,42
+	Harvester:
+		Capacity: 20
+		Resources: Ore,Gems
+		BaleUnloadDelay: 1
+		SearchFromProcRadius: 30
+		SearchFromOrderRadius: 15
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 85
+		Crushes: wall, mine, crate, infantry
+	RevealsShroud:
+		Range: 4c0
+	WithHarvestAnimation:
+		PrefixByFullness: empty-, half-, full-
+	WithDockingAnimation:
+	SpawnActorOnDeath:
+		Actor: HARV.EmptyHusk
+	HarvesterHuskModifier:
+		FullActor: HARV.FullHusk
+		FullnessThreshold: 50
+	SelfHealing:
+		Step: 1
+		Delay: 25
+		HealIfBelow: 50
+		DamageCooldown: 500
+	Explodes:
+		Weapon: OreExplosion
+
+JEEP:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 30
+		Prerequisites: ~vehicles.aegis, ~techlevel.low
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Jeep
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: 0,0,85
+	Armament:
+		Weapon: M60mg
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+		LoadingUpgrades: notmobile
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded

@@ -35,3 +35,60 @@ CPLN:
 		Interval: 2
 	-EjectOnDeath:
 	RejectsOrders:
+
+FGTR:
+	Inherits: ^Plane
+	RenderSprites:
+		Image: MIG
+	Buildable:
+		Queue: Aircraft.Aegis
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 50
+		Prerequisites: ~afld, cmdc, ~techlevel.high
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Fighter Plane
+		Description: Fast Ground-Attack Plane.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry, Light armor, Aircraft
+	Health:
+		HP: 70
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 12c0
+		Type: CenterPosition
+	Armament:
+		Weapon: Maverick
+		LocalOffset: 0,-640,0, 0,640,0
+		LocalYaw: -40, 24
+	AttackPlane:
+		FacingTolerance: 20
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 192
+		TurnSpeed: 4
+		Speed: 223
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		TargetWhenIdle: false
+		TargetWhenDamaged: false
+		EnableStances: false
+	AmmoPool:
+		Ammo: 8
+	ReturnOnIdle:
+	Selectable:
+		Bounds: 36,28,0,2
+	SelectionDecorations:
+		VisualBounds: 40,29,0,1
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
+	SpawnActorOnDeath:
+		Actor: FGTR.Husk
+	SmokeTrailWhenDamaged:
+		Offset: -853,0,171
+		Interval: 2
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded

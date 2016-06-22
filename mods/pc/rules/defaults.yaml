@@ -322,6 +322,7 @@
 		Types: Ship
 	GivesBounty:
 	Chronoshiftable:
+	RepairableNear:
 	GpsDot:
 		String: Ship
 	WithDamageOverlay:
@@ -352,6 +353,8 @@
 	Selectable:
 		Bounds: 24,24
 	Aircraft:
+		RepairBuildings: fix
+		RearmBuildings: afld
 		AirborneUpgrades: airborne
 		CruisingUpgrades: cruising
 	Targetable@GROUND:
@@ -470,6 +473,14 @@
 	-AcceptsSupplies:
 	DrawLineToTarget:
 	RenderRangeCircle:
+	
+^BuildingPlug:
+	AlwaysVisible:
+	Building:
+		BuildSounds: placbldg.aud
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
 
 ^Wall:
 	Inherits@1: ^ExistsInWorld
