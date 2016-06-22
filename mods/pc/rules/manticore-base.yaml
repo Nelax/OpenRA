@@ -119,48 +119,94 @@ GBUS:
 MRIG:
 	Inherits: ^Vehicle
 	RenderSprites:
-		Image: HARV
+		Image: TRUK
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 60
 		Prerequisites: anypower, ~techlevel.infonly
 	Valued:
-		Cost: 1100
+		Cost: 1400
 	Tooltip:
-		Name: Mining Rig
-		Description: Collects Ore and Gems and processes them.
+		Name: Stockpile Truck
+		Description: Sets up into a Stockpile to \nrefine Ore and Gemsinto credits.
 	Selectable:
-		Priority: 7
-	SelectionDecorations:
-		VisualBounds: 42,42
-	Harvester:
-		Capacity: 20
-		Resources: Ore,Gems
-		BaleUnloadDelay: 1
-		SearchFromProcRadius: 30
-		SearchFromOrderRadius: 15
+		Priority: 4
 	Health:
-		HP: 600
+		HP: 900
 	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 85
-		Crushes: wall, mine, crate, infantry
+		Type: Wood
 	RevealsShroud:
-		Range: 4c0
-	WithHarvestAnimation:
-		PrefixByFullness: empty-, half-, full-
-	WithDockingAnimation:
-	SelfHealing:
-		Step: 1
-		Delay: 25
-		HealIfBelow: 50
-		DamageCooldown: 500
-	Explodes:
-		Weapon: OreExplosion
+		Range: 6c0
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+	MustBeDestroyed:
+		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	Transforms:
+		IntoActor: stoc
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: placbldg.aud, build5.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+
+STOC:
+	Inherits: ^Building
+	RenderSprites:
+		Image: PROC
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 60
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Stockpile
+		Description: Refines Ore and Gems\ninto credits.
+	Building:
+		Footprint: _x_ xxx x==
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 72,50,0,12
+	SelectionDecorations:
+		VisualBounds: 72,70,0,-2
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	Health:
+		HP: 900
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 6c0
+	Bib:
+	Refinery:
+		DockAngle: 64
+		DockOffset: 1,2
+	StoresResources:
+		PipCount: 17
+		Capacity: 2000
+	DrawLineToTarget:
+	CustomSellValue:
+		Value: 600
+	FreeActor:
+		Actor: MIN
+		SpawnOffset: 1,2
+		Facing: 64
+	InfiltrateForCash:
+		Percentage: 50
+		Notification: CreditsStolen
+	WithIdleOverlay@TOP:
+		Sequence: idle-top
+	Power:
+		Amount: -30
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	WithBuildingExplosion:
+		Delay: 1
+	ProvidesPrerequisite@buildingname:
 
 BUS:
 	Inherits: ^Vehicle

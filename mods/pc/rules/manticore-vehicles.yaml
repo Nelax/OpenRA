@@ -1,3 +1,52 @@
+MIN:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: HARV
+	Buildable:
+		Queue: Vehicle.Manticore
+		BuildPaletteOrder: 10
+		Prerequisites: stoc, ~techlevel.infonly
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Mining Rig
+		Description: Collects Ore and Gems for processing.\n  Unarmed
+	Selectable:
+		Priority: 7
+	SelectionDecorations:
+		VisualBounds: 42,42
+	Harvester:
+		DeliveryBuildings: stoc
+		Capacity: 20
+		Resources: Ore,Gems
+		BaleUnloadDelay: 1
+		SearchFromProcRadius: 30
+		SearchFromOrderRadius: 15
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 85
+		Crushes: wall, mine, crate, infantry
+	RevealsShroud:
+		Range: 4c0
+	WithHarvestAnimation:
+		PrefixByFullness: empty-, half-, full-
+	WithDockingAnimation:
+	SpawnActorOnDeath:
+		Actor: MIN.EmptyHusk
+	HarvesterHuskModifier:
+		FullActor: MIN.FullHusk
+		FullnessThreshold: 50
+	SelfHealing:
+		Step: 1
+		Delay: 25
+		HealIfBelow: 50
+		DamageCooldown: 500
+	Explodes:
+		Weapon: OreExplosion
+
 JEEP:
 	Inherits: ^Vehicle
 	Buildable:
