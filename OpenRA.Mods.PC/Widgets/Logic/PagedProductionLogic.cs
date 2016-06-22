@@ -32,7 +32,7 @@ namespace OpenRA.Mods.PC.Widgets.Logic
 
 			// Classic production queues are initialized at game start, and then never change.
 			var queues = world.LocalPlayer.PlayerActor.TraitsImplementing<ProductionQueue>()
-				.Where(q => q.Info.Group == button.ProductionGroup)
+				.Where(q => q.Info.Type.Substring(q.Info.Type.IndexOf('.')+1) == button.ProductionGroup)
 				.ToArray();
 
 			Action<bool> selectTab = reverse =>
@@ -91,7 +91,7 @@ namespace OpenRA.Mods.PC.Widgets.Logic
 				{
 					foreach (ProductionTypeButtonWidget p in pager.Children)
 						if (p.IsHighlighted())
-							palette.CurrentQueue = queues.FirstOrDefault(q => q.Info.Group == p.ProductionGroup && q.Enabled);
+							palette.CurrentQueue = queues.FirstOrDefault(q => q.Info.Type.Substring(q.Info.Type.IndexOf('.')+1) == p.ProductionGroup && q.Enabled);
 				}
 
 				// When a tab is selected, scroll to the top because the current row position may be invalid for the new tab

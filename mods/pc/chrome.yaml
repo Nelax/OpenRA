@@ -1,5 +1,8 @@
+sidebar-switchbar: chrome-extra.png
+	background-switchbar: 0,104,237,34
+
 sidebar-aegis: chrome.png
-	background-top: 0,167,238,290
+	background-top: 0,167,238,289
 	background-iconrow: 0,457,238,47
 	background-bottom: 0,504,238,8
 	background-supportoverlay: 184,118,64,48
@@ -84,6 +87,87 @@ sidebar-button-aegis-highlighted-disabled: chrome.png
 	corner-tr: 193,0,3,3
 	corner-bl: 168,25,3,3
 	corner-br: 193,25,3,3
+
+sidebar-button-big-aegis: chrome-extra.png
+	background: 115,31,50,22
+	border-r: 165,31,3,22
+	border-l: 112,31,3,22
+	border-b: 115,53,50,3
+	border-t: 115,28,50,3
+	corner-tl: 112,28,3,3
+	corner-tr: 165,28,3,3
+	corner-bl: 112,53,3,3
+	corner-br: 165,53,3,3
+sidebar-button-big-aegis-hover: chrome-extra.png
+	background: 115,3,50,22
+	border-r: 165,3,3,22
+	border-l: 112,3,3,22
+	border-b: 115,25,50,3
+	border-t: 115,0,50,3
+	corner-tl: 112,0,3,3
+	corner-tr: 165,0,3,3
+	corner-bl: 112,25,3,3
+	corner-br: 165,25,3,3
+sidebar-button-big-aegis-pressed: chrome-extra.png
+	background: 115,31,50,22
+	border-r: 165,31,3,22
+	border-l: 112,31,3,22
+	border-b: 115,53,50,3
+	border-t: 115,28,50,3
+	corner-tl: 112,28,3,3
+	corner-tr: 165,28,3,3
+	corner-bl: 112,53,3,3
+	corner-br: 165,53,3,3
+sidebar-button-big-aegis-highlighted: chrome-extra.png
+	background: 171,31,50,22
+	border-r: 221,31,3,22
+	border-l: 168,31,3,22
+	border-b: 171,53,50,3
+	border-t: 171,28,50,3
+	corner-tl: 168,28,3,3
+	corner-tr: 221,28,3,3
+	corner-bl: 168,53,3,3
+	corner-br: 221,53,3,3
+sidebar-button-big-aegis-highlighted-hover: chrome-extra.png
+	background: 171,3,50,22
+	border-r: 221,3,3,22
+	border-l: 168,3,3,22
+	border-b: 171,25,50,3
+	border-t: 171,0,50,3
+	corner-tl: 168,0,3,3
+	corner-tr: 221,0,3,3
+	corner-bl: 168,25,3,3
+	corner-br: 221,25,3,3
+sidebar-button-big-aegis-highlighted-pressed: chrome-extra.png
+	background: 171,31,50,22
+	border-r: 221,31,3,22
+	border-l: 168,31,3,22
+	border-b: 171,53,50,3
+	border-t: 171,28,50,3
+	corner-tl: 168,28,3,3
+	corner-tr: 221,28,3,3
+	corner-bl: 168,53,3,3
+	corner-br: 221,53,3,3
+sidebar-button-big-aegis-disabled: chrome-extra.png
+	background: 339,3,50,22
+	border-r: 389,3,3,22
+	border-l: 336,3,3,22
+	border-b: 339,25,50,3
+	border-t: 339,0,50,3
+	corner-tl: 336,0,3,3
+	corner-tr: 389,0,3,3
+	corner-bl: 336,25,3,3
+	corner-br: 389,25,3,3
+sidebar-button-big-aegis-highlighted-disabled: chrome-extra.png
+	background: 339,3,50,22
+	border-r: 389,3,3,22
+	border-l: 336,3,3,22
+	border-b: 339,25,50,3
+	border-t: 339,0,50,3
+	corner-tl: 336,0,3,3
+	corner-tr: 389,0,3,3
+	corner-bl: 336,25,3,3
+	corner-br: 389,25,3,3
 
 sidebar-manticore: chrome.png
 	background-top: 274,167,238,290
@@ -172,6 +256,87 @@ sidebar-button-manticore-highlighted-disabled: chrome.png
 	corner-bl: 168,25,3,3
 	corner-br: 193,25,3,3
 
+sidebar-button-big-manticore: chrome-extra.png
+	background: 3,31,50,22
+	border-r: 53,31,3,22
+	border-l: 0,31,3,22
+	border-b: 3,53,50,3
+	border-t: 3,28,50,3
+	corner-tl: 0,28,3,3
+	corner-tr: 53,28,3,3
+	corner-bl: 0,53,3,3
+	corner-br: 53,53,3,3
+sidebar-button-big-manticore-hover: chrome-extra.png
+	background: 3,3,50,22
+	border-r: 53,3,3,22
+	border-l: 0,3,3,22
+	border-b: 3,25,50,3
+	border-t: 3,0,50,3
+	corner-tl: 0,0,3,3
+	corner-tr: 53,0,3,3
+	corner-bl: 0,25,3,3
+	corner-br: 53,25,3,3
+sidebar-button-big-manticore-pressed: chrome-extra.png
+	background: 3,31,50,22
+	border-r: 53,31,3,22
+	border-l: 0,31,3,22
+	border-b: 3,53,50,3
+	border-t: 3,28,50,3
+	corner-tl: 0,28,3,3
+	corner-tr: 53,28,3,3
+	corner-bl: 0,53,3,3
+	corner-br: 53,53,3,3
+sidebar-button-big-manticore-highlighted: chrome-extra.png
+	background: 59,31,50,22
+	border-r: 109,31,3,22
+	border-l: 56,31,3,22
+	border-b: 59,53,50,3
+	border-t: 59,28,50,3
+	corner-tl: 56,28,3,3
+	corner-tr: 53,28,3,3
+	corner-bl: 56,53,3,3
+	corner-br: 53,53,3,3
+sidebar-button-big-manticore-highlighted-hover: chrome-extra.png
+	background: 59,3,50,22
+	border-r: 109,3,3,22
+	border-l: 56,3,3,22
+	border-b: 59,25,50,3
+	border-t: 59,0,50,3
+	corner-tl: 56,0,3,3
+	corner-tr: 53,0,3,3
+	corner-bl: 56,25,3,3
+	corner-br: 53,25,3,3
+sidebar-button-big-manticore-highlighted-pressed: chrome-extra.png
+	background: 59,31,50,22
+	border-r: 109,31,3,22
+	border-l: 56,31,3,22
+	border-b: 59,53,50,3
+	border-t: 59,28,50,3
+	corner-tl: 56,28,3,3
+	corner-tr: 53,28,3,3
+	corner-bl: 56,53,3,3
+	corner-br: 53,53,3,3
+sidebar-button-big-manticore-disabled: chrome-extra.png
+	background: 339,3,50,22
+	border-r: 389,3,3,22
+	border-l: 336,3,3,22
+	border-b: 339,25,50,3
+	border-t: 339,0,50,3
+	corner-tl: 336,0,3,3
+	corner-tr: 389,0,3,3
+	corner-bl: 336,25,3,3
+	corner-br: 389,25,3,3
+sidebar-button-big-manticore-highlighted-disabled: chrome-extra.png
+	background: 339,3,50,22
+	border-r: 389,3,3,22
+	border-l: 336,3,3,22
+	border-b: 339,25,50,3
+	border-t: 339,0,50,3
+	corner-tl: 336,0,3,3
+	corner-tr: 389,0,3,3
+	corner-bl: 336,25,3,3
+	corner-br: 389,25,3,3
+
 sidebar-bits: chrome.png
 	production-tooltip-time: 416, 80, 16, 16
 	production-tooltip-power: 432, 80, 16, 16
@@ -201,20 +366,14 @@ production-icons: chrome.png
 	ship: 496,48,16,16
 	ship-disabled: 496,64,16,16
 	ship-alert: 496,80,16,16
-	aegis: 384,0,16,16
-	aegis-disabled: 384,16,16,16
-	aegis-alert: 384,32,16,16
-	manticore: 400,0,16,16
-	manticore-disabled: 400,16,16,16
-	manticore-alert: 400,32,16,16
 
-switcher-icons: chrome.png
-	aegis: 384,0,16,16
-	aegis-disabled: 384,16,16,16
-	aegis-alert: 384,32,16,16
-	manticore: 400,0,16,16
-	manticore-disabled: 400,16,16,16
-	manticore-alert: 400,32,16,16
+faction-switch-icons: chrome-extra.png
+	aegis: 0,56,16,16
+	aegis-disabled: 0,72,16,16
+	aegis-alert: 0,56,16,16
+	manticore: 16,56,16,16
+	manticore-disabled: 16,72,16,16
+	manticore-alert: 16,56,16,16
 
 order-icons: chrome.png
 	options: 480,0,16,16

@@ -191,12 +191,12 @@ Container@PLAYER_WIDGETS:
 		Container@SIDEBAR_PRODUCTION:
 			Logic: PagedProductionLogic
 			X: WINDOW_RIGHT - 250
-			Y: 300
+			Y: 299
 			Width: 238
 			Height: 250
 			Children:
 				Container@PALETTE_BACKGROUND:
-					Y: 31
+					Y: 34
 					Children:
 						Image@ROW_TEMPLATE:
 							Logic: AddFactionSuffixLogic
@@ -215,7 +215,7 @@ Container@PLAYER_WIDGETS:
 				LogicTicker@PRODUCTION_TICKER:
 				ProductionPalette@PRODUCTION_PALETTE:
 					X: 42
-					Y: 33
+					Y: 36
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: READY
 					HoldText: ON HOLD
@@ -224,7 +224,7 @@ Container@PLAYER_WIDGETS:
 					IconSpriteOffset: -1, -1
 				Container@PALETTE_FOREGROUND:
 					X: 40
-					Y: 31
+					Y: 34
 					Children:
 						Image@ROW_TEMPLATE:
 							Width: 238
@@ -232,6 +232,14 @@ Container@PLAYER_WIDGETS:
 							IgnoreMouseOver: true
 							ImageCollection: sidebar-bits
 							ImageName: production-iconoverlay
+				Container@PAGE_BACKGROUND:
+					Children:
+						Image@PAGE_BG:
+							Width: 237
+							Height: 34
+							ClickThrough: false
+							ImageCollection: sidebar-switchbar
+							ImageName: background-switchbar
 				Container@PRODUCTION_PAGES:
 					X: 37
 					Y: 2
@@ -241,33 +249,34 @@ Container@PLAYER_WIDGETS:
 						ProductionTypeButton@AEGIS:
 							Logic: AddFactionSuffixLogic
 							ProductionGroup: Aegis
-							Width: 28
+							X: 29
+							Width: 56
 							Height: 28
-							Background: sidebar-button
+							Background: sidebar-button-big
 							TooltipText: Aegis Production
 							TooltipContainer: TOOLTIP_CONTAINER
 							Children:
 								Image@ICON:
-									X: 6
+									X: 20
 									Y: 6
-									ImageCollection: production-icons
+									ImageCollection: faction-switch-icons
 						ProductionTypeButton@MANTICORE:
 							Logic: AddFactionSuffixLogic
 							ProductionGroup: Manticore
-							X: 29
-							Width: 28
+							X: 111
+							Width: 56
 							Height: 28
-							Background: sidebar-button
+							Background: sidebar-button-big
 							TooltipText: Manticore Production
 							TooltipContainer: TOOLTIP_CONTAINER
 							Children:
 								Image@ICON:
-									X: 6
+									X: 20
 									Y: 6
-									ImageCollection: production-icons
+									ImageCollection: faction-switch-icons
 				Container@PRODUCTION_TYPES:
 					X: 7
-					Y: 31
+					Y: 34
 					Width: 29
 					Height: 240
 					Children:

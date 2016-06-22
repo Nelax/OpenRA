@@ -3,7 +3,6 @@ Player:
 	TechTree:
 	ClassicProductionQueue@BuildingAegis:
 		Type: Building.Aegis
-		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
@@ -11,7 +10,6 @@ Player:
 		SpeedUp: True
 	ClassicProductionQueue@BuildingManticore:
 		Type: Building.Manticore
-		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
@@ -19,7 +17,6 @@ Player:
 		SpeedUp: True
 	ClassicProductionQueue@DefenseAegis:
 		Type: Defense.Aegis
-		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
@@ -27,7 +24,6 @@ Player:
 		SpeedUp: True
 	ClassicProductionQueue@DefenseManticore:
 		Type: Defense.Manticore
-		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
@@ -35,49 +31,41 @@ Player:
 		SpeedUp: True
 	ClassicProductionQueue@VehicleAegis:
 		Type: Vehicle.Aegis
-		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
 	ClassicProductionQueue@VehicleManticore:
 		Type: Vehicle.Manticore
-		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
 	ClassicProductionQueue@InfantryAegis:
 		Type: Infantry.Aegis
-		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
 	ClassicProductionQueue@InfantryManticore:
 		Type: Infantry.Manticore
-		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
 	ClassicProductionQueue@ShipAegis:
 		Type: Ship.Aegis
-		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
 	ClassicProductionQueue@ShipManticore:
 		Type: Ship.Manticore
-		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
 	ClassicProductionQueue@AircraftAegis:
 		Type: Aircraft.Aegis
-		Group: Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
 	ClassicProductionQueue@AircraftManticore:
 		Type: Aircraft.Manticore
-		Group: Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: True
