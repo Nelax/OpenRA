@@ -208,10 +208,14 @@ GameSpeeds:
 		Name: Slower
 		Timestep: 50
 		OrderLatency: 3
-	default:
+	normal:
 		Name: Normal
 		Timestep: 40
 		OrderLatency: 3
+	default:
+		Name: Singleplayer
+		Timestep: 35
+		OrderLatency: 2
 	faster:
 		Name: Faster
 		Timestep: 30
@@ -220,10 +224,6 @@ GameSpeeds:
 		Name: Fastest
 		Timestep: 20
 		OrderLatency: 6
-	test:
-		Name: TEST
-		Timestep: 35
-		OrderLatency: 2
 
 ColorValidator:
 

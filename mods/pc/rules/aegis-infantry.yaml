@@ -2,7 +2,7 @@ E1:
 	Inherits: ^Soldier
 	Buildable:
 		Queue: Infantry.Aegis
-		BuildAtProductionType: Soldier
+		BuildAtProductionType: Soldier.Aegis
 		BuildPaletteOrder: 10
 		Prerequisites: ~barr, ~barracks, ~techlevel.infonly
 	Valued:
@@ -26,7 +26,7 @@ E2:
 	Inherits: ^Soldier
 	Buildable:
 		Queue: Infantry.Manticore
-		BuildAtProductionType: Soldier
+		BuildAtProductionType: Soldier.Manticore
 		BuildPaletteOrder: 10
 		Prerequisites: ~barr2, ~barracks, ~techlevel.infonly
 	Valued:

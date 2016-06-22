@@ -47,57 +47,6 @@ FACT:
 	WithBuildingExplosion:
 		Delay: 1
 	ProvidesPrerequisite@buildingname:
-	
-FACT2:
-	Inherits: ^Building
-	RenderSprites:
-		Image: FACT
-	Building:
-		Footprint: xxx xxx xxx
-		Dimensions: 3,3
-	Buildable:
-		Queue: Building.Aegis
-		BuildPaletteOrder: 1000
-		Prerequisites: ~techlevel.infonly
-	ProvidesPrerequisite@manticore:
-		Prerequisite: structures.manticore
-	Health:
-		HP: 1500
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 5c0
-	Bib:
-	Production:
-		Produces: Building.Manticore,Defense.Manticore
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Construction Yard 2
-		Description: Produces structures.
-	CustomSellValue:
-		Value: 2500
-	BaseBuilding:
-	Transforms:
-		IntoActor: mcv
-		Offset: 1,1
-		Facing: 96
-	ProductionBar@Building:
-		ProductionType: Building.Manticore
-	ProductionBar@Defense:
-		ProductionType: Defense.Manticore
-		Color: 8A8A8A
-	BaseProvider:
-		Range: 16c0
-	WithBuildingPlacedAnimation:
-	Power:
-		Amount: 0
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
-	WithBuildingExplosion:
-		Delay: 1
-	ProvidesPrerequisite@buildingname:
 
 POWR:
 	Inherits: ^Building
@@ -109,45 +58,6 @@ POWR:
 		Cost: 300
 	Tooltip:
 		Name: Power Plant
-		Description: Provides power for other structures.
-	ProvidesPrerequisite:
-		Prerequisite: anypower
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Health:
-		HP: 400
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 4c0
-	Bib:
-	Power:
-		Amount: 100
-	InfiltrateForPowerOutage:
-	AffectedByPowerOutage:
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	ScalePowerWithHealth:
-	DisabledOverlay:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
-	WithBuildingExplosion:
-		Delay: 1
-
-POWR2:
-	Inherits: ^Building
-	RenderSprites:
-		Image: POWR
-	Buildable:
-		Queue: Building.Manticore
-		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.infonly
-	Valued:
-		Cost: 300
-	Tooltip:
-		Name: Power Plant 2
 		Description: Provides power for other structures.
 	ProvidesPrerequisite:
 		Prerequisite: anypower
@@ -204,57 +114,13 @@ BARR:
 		SpawnOffset: -725,640,0
 		ExitCell: 0,2
 	Production:
-		Produces: Infantry.Aegis, Soldier
+		Produces: Infantry.Aegis, Soldier.Aegis
 	PrimaryBuilding:
 	ProductionBar:
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	ProvidesPrerequisite@aegis:
 		Prerequisite: infantry.aegis
-	Power:
-		Amount: -20
-	ProvidesPrerequisite@buildingname:
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-		
-BARR2:
-	Inherits: ^Building
-	RenderSprites:
-		Image: BARR
-	Buildable:
-		Queue: Building.Manticore
-		BuildPaletteOrder: 30
-		Prerequisites: anypower, ~structures.manticore, ~techlevel.infonly
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Manticore Barracks
-		Description: Trains infantry.
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Health:
-		HP: 800
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 5c0
-	Bib:
-	RallyPoint:
-	Exit@1:
-		SpawnOffset: -170,810,0
-		ExitCell: 1,2
-	Exit@2:
-		SpawnOffset: -725,640,0
-		ExitCell: 0,2
-	Production:
-		Produces: Infantry.Manticore, Soldier
-	PrimaryBuilding:
-	ProductionBar:
-	ProvidesPrerequisite:
-		Prerequisite: barracks
-	ProvidesPrerequisite@aegis:
-		Prerequisite: infantry.manticore
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:

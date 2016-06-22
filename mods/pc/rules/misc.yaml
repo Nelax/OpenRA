@@ -183,6 +183,12 @@ waypoint:
 	BodyOrientation:
 		QuantizedFacings: 1
 
+^fact.colorpicker:
+	Inherits: FACT
+	RenderSprites:
+		Image: fact
+		Palette: colorpicker
+
 CTFLAG:
 	Inherits: ^TechBuilding
 	Building:

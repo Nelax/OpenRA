@@ -1,0 +1,72 @@
+MHQ:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: MCV
+	CustomBuildTimeValue:
+		Value: 2000
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Headquarters
+		Description: Calls in base vehicles.\n  Unarmed
+	ProvidesPrerequisite@manticore:
+		Prerequisite: structures.manticore
+	ProductionBar@Building:
+		ProductionType: Building.Manticore
+	ProductionBar@Defense:
+		ProductionType: Defense.Manticore
+	ProductionParadrop:
+		Produces: Building.Manticore
+		ActorType: cpln
+	Exit@1:
+		ExitCell: 0,1
+	Production:
+		Produces: Defense.Manticore
+		Color: 8A8A8A
+	Selectable:
+		Priority: 4
+	SelectionDecorations:
+		VisualBounds: 42,42
+	Health:
+		HP: 600
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+		Crushes: wall, mine, crate, infantry
+	RevealsShroud:
+		Range: 4c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	SpawnActorOnDeath:
+		Actor: MCV.Husk
+
+GTRUK:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: TRUK
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 20
+		Prerequisites: ~techlevel.low
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Generator Truck
+		Description: Generates power for your base vehicles.\n  Unarmed
+	Health:
+		HP: 110
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: 100
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
