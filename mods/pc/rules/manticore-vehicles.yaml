@@ -1,0 +1,39 @@
+JEEP:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle.Manticore
+		BuildPaletteOrder: 30
+		Prerequisites: ~vehicles.manticore, ~techlevel.low
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Jeep
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: 0,0,85
+	Armament:
+		Weapon: M60mg
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+		LoadingUpgrades: notmobile
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded

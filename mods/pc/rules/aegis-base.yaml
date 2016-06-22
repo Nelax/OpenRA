@@ -120,7 +120,7 @@ APWR:
 	Buildable:
 		Queue: Building.Aegis
 		BuildPaletteOrder: 110
-		Prerequisites: comm, ~techlevel.medium
+		Prerequisites: comm, ~techlevel.medium, ~disabled
 	Valued:
 		Cost: 500
 	Tooltip:
