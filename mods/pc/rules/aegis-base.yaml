@@ -95,6 +95,7 @@ PWR:
 		UseDeathTypeSuffix: false
 	WithBuildingExplosion:
 		Delay: 1
+	ProvidesPrerequisite@buildingname:
 
 PWRUP:
 	Inherits: ^BuildingPlug
@@ -724,6 +725,7 @@ HPNT:
 		Upgrades:
 			hardpoint.vulcan: hardpoint, hardpoint.vulcan
 			hardpoint.missile: hardpoint, hardpoint.missile
+	ProvidesPrerequisite@buildingname:
 
 VULC:
 	Inherits: ^BuildingPlug
