@@ -42,7 +42,6 @@ FGTR:
 		Image: MIG
 	Buildable:
 		Queue: Aircraft.Aegis
-		BuildAtProductionType: Plane
 		BuildPaletteOrder: 50
 		Prerequisites: ~afld, cmdc, ~techlevel.high
 	Valued:
@@ -58,7 +57,7 @@ FGTR:
 		Range: 12c0
 		Type: CenterPosition
 	Armament:
-		Weapon: Maverick
+		Weapon: FighterMissile
 		LocalOffset: 0,-640,0, 0,640,0
 		LocalYaw: -40, 24
 	AttackPlane:
@@ -114,12 +113,12 @@ SCOT:
 		Range: 10c0
 		Type: CenterPosition
 	Armament@PRIMARY:
-		Weapon: ChainGun
+		Weapon: HeliMount
 		LocalOffset: 85,-213,-85
 		MuzzleSequence: muzzle
 	Armament@SECONDARY:
 		Name: secondary
-		Weapon: ChainGun
+		Weapon: HeliMount
 		LocalOffset: 85,213,-85
 		MuzzleSequence: muzzle
 	AttackHeli:
@@ -175,10 +174,10 @@ GSHP:
 		Range: 12c0
 		Type: CenterPosition
 	Armament@PRIMARY:
-		Weapon: HellfireAG
+		Weapon: GunshipPods
 		LocalOffset: 0,-213,-85
 	Armament@SECONDARY:
-		Weapon: HellfireAG
+		Weapon: GunshipPods
 		LocalOffset: 0,213,-85
 	AttackHeli:
 		FacingTolerance: 20

@@ -60,7 +60,7 @@ GBT:
 		TurnSpeed: 7
 		Offset: 512,0,0
 	Armament@PRIMARY:
-		Weapon: 2Inch
+		Weapon: ShipCannon
 		LocalOffset: 208,0,48
 		MuzzleSequence: muzzle
 	Armament@SECONDARY:
@@ -104,15 +104,11 @@ FRI:
 		TurnSpeed: 7
 		Offset: 341,0,128
 	Armament@PRIMARY:
-		Weapon: 155mm
+		Weapon: ShipBombard
 		LocalOffset: 624,0,208
 		MuzzleSequence: muzzle
 	Armament@SECONDARY:
-		Weapon: DepthCharge
-		LocalOffset: 0,-100,0, 0,100,0
-		LocalYaw: 80, -80
-	Armament@TERTIARY:
-		Weapon: FLAK-23-AA
+		Weapon: ShipFlakAA
 		Recoil: 85
 		LocalOffset: 512,0,192
 		MuzzleSequence: muzzle

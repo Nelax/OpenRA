@@ -15,18 +15,14 @@ FTR:
 	Health:
 		HP: 50
 	Armament@PRIMARY:
-		Weapon: M1Carbine
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: Vulcan
-		MuzzleSequence: garrison-muzzle
+		Weapon: AssaultRifle
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
-GREN:
+ARSN:
 	Inherits: ^Soldier
 	RenderSprites:
 		Image: E2
@@ -38,19 +34,15 @@ GREN:
 	Valued:
 		Cost: 160
 	Tooltip:
-		Name: Grenadier
-		Description: Infantry armed with grenades.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+		Name: Arsonist
+		Description: Infantry armed with firebombs.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 50
 	Mobile:
 		Speed: 71
 	Armament@PRIMARY:
-		Weapon: Grenade
+		Weapon: Firebomb
 		LocalOffset: 0,0,555
-		FireDelay: 15
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: Grenade
 		FireDelay: 15
 	AttackFrontal:
 	WithInfantryBody:
@@ -144,9 +136,6 @@ FLAM:
 		Weapon: Flamer
 		LocalOffset: 427,0,341
 		FireDelay: 8
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: Flamer
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -212,11 +201,8 @@ MORT:
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
-		Weapon: 155mm
+		Weapon: Mortar
 		LocalOffset: 427,0,341
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: 155mm
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
