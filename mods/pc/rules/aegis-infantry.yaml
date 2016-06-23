@@ -1,5 +1,7 @@
-E1:
+PK:
 	Inherits: ^Soldier
+	RenderSprites:
+		Image: E1
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis
@@ -21,14 +23,54 @@ E1:
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 
-E6:
+RK:
 	Inherits: ^Soldier
+	RenderSprites:
+		Image: E3
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier.Aegis
+		BuildPaletteOrder: 30
+		Prerequisites: ~barr, ~techlevel.infonly
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Rocketeer
+		Description: Anti-tank/Anti-aircraft infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Health:
+		HP: 45
+	Armament@PRIMARY:
+		Weapon: RedEye
+		LocalOffset: 0,0,555
+	Armament@SECONDARY:
+		Weapon: Dragon
+		LocalOffset: 0,0,555
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Dragon
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+ENG:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: E6
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier.Aegis
+		BuildPaletteOrder: 60
+		Prerequisites: ~barr, ~techlevel.infonly
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Engineer
-		Description: Infiltrates and captures\nenemy structures.\n  Unarmed
+		Description: Infiltrates and captures\nenemy structures and caravan units.\n  Unarmed
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -38,6 +80,149 @@ E6:
 	-AutoTarget:
 	Selectable:
 		Priority: 5
+
+MED:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: MEDI
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier.Aegis
+		BuildPaletteOrder: 40
+		Prerequisites: ~barr, comm, ~techlevel.low
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Medic
+		Description: Heals nearby infantry.\n  Unarmed
+	Health:
+		HP: 80
+	RevealsShroud:
+		Range: 3c0
+	Passenger:
+		PipType: Yellow
+	Armament:
+		Weapon: Heal
+		Cursor: heal
+		OutsideRangeCursor: heal
+		TargetStances: Ally
+		ForceTargetStances: None
+	AttackFrontal:
+	WithInfantryBody:
+		StandSequences: stand
+		AttackSequence: heal
+	Voiced:
+		VoiceSet: MedicVoice
+
+HGN:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: E4
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier.Aegis
+		BuildPaletteOrder: 70
+		Prerequisites: ~barr, comm, ~techlevel.medium
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Heavy Gunner
+		Description: Advanced anti-personnel infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 40
+	Armament@PRIMARY:
+		Weapon: M60mg
+		LocalOffset: 427,0,341
+		FireDelay: 8
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: Vulcan
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+LEG:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: SHOK
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier.Aegis
+		BuildPaletteOrder: 130
+		Prerequisites: ~barr, cmdc, ~techlevel.high
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Legionairre
+		Description: Elite infantry with portable particle cannon.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+	Health:
+		HP: 60
+	RevealsShroud:
+		Range: 5c0
+	Armament@PRIMARY:
+		Weapon: PortaTesla
+		LocalOffset: 427,0,341
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: PortaTesla
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+SPY:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: SPY
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier.Aegis
+		BuildPaletteOrder: 90
+		Prerequisites: ~barr, cmdc, ~techlevel.high
+	Valued:
+		Cost: 500
+	-Tooltip:
+	DisguiseToolTip:
+		Name: Spy
+		GenericName: Soldier
+		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\nLoses disguise when attacking.\nCan detect cloaked units and spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft\n  Special Ability: Disguised
+	-Guard:
+	RevealsShroud:
+		Range: 5c0
+	Passenger:
+		PipType: Yellow
+		Voice: Move
+	Disguise:
+		Voice: Move
+	Infiltrates:
+		Types: SpyInfiltrate
+	-AutoTarget:
+	-WithInfantryBody:
+	WithDisguisingInfantryBody:
+		AttackSequence: shoot
+		IdleSequences: idle1,idle2
+		StandSequences: stand,stand2
+	WithDecoration@disguise:
+		Image: pips
+		Sequence: pip-disguise
+		Palette: effect
+		ReferencePoint: Top, Right
+		ZOffset: 256
+		UpgradeTypes: disguise
+		UpgradeMinEnabledLevel: 1
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Cloak, Hijacker
+	Armament:
+		Weapon: SilencedPPK
+	AttackFrontal:
+	AttackMove:
+		Voice: Move
+	Voiced:
+		VoiceSet: SpyVoice
 
 CHAN:
 	Inherits: ^CivInfantry

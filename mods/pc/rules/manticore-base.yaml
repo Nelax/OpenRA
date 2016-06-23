@@ -1,11 +1,11 @@
 MHQ:
 	Inherits: ^Vehicle
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 90
-		Prerequisites: fix, ~techlevel.medium
 	RenderSprites:
 		Image: MCV
+	Buildable:
+		Queue: Vehicle.Manticore
+		BuildPaletteOrder: 90
+		Prerequisites: deal, ~techlevel.high
 	CustomBuildTimeValue:
 		Value: 2000
 	Valued:
@@ -143,6 +143,8 @@ MRIG:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: stockpile
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	Transforms:
@@ -174,6 +176,8 @@ STOC:
 		VisualBounds: 72,70,0,-2
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	ProvidesPrerequisite:
+		Prerequisite: stockpile
 	Health:
 		HP: 900
 	Armor:
@@ -256,7 +260,7 @@ MACH:
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 80
-		Prerequisites: mrig, ~techlevel.low
+		Prerequisites: stockpile, ~techlevel.low
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -354,7 +358,7 @@ RVAN:
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 90
-		Prerequisites: mrig, ~techlevel.medium
+		Prerequisites: stockpile, ~techlevel.medium
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -387,6 +391,230 @@ RVAN:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
+	
+PNTN:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: LST
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 80
+		Prerequisites: rvan, ~techlevel.medium
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Pontoon Layer
+		Description: Sets up docks to produce naval units.
+	Selectable:
+		Priority: 3
+	Health:
+		HP: 1000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 4c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ProvidesPrerequisite:
+		Prerequisite: docking
+	ProvidesPrerequisite@manticore:
+		Prerequisite: ships.manticore
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	Transforms:
+		IntoActor: docks
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: placbldg.aud, build5.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+	Mobile:
+		TerrainSpeeds:
+			Water: 100
+	Targetable:
+		TargetTypes: Ground, Water, Vehicle, Repair
+	ActorLostNotification:
+		Notification: NavalUnitLost
+	GpsDot:
+		String: Ship
+	-EjectOnDeath:
+	-Capturable:
+	-CaptureNotification:
+	Explodes:
+		Weapon: UnitExplodeShip
+		EmptyWeapon: UnitExplodeShip
+		
+DOCKS:
+	Inherits: ^Building
+	RenderSprites:
+		Image: SPEN
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 40
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Pontoon Docks
+		Description: Produces and repairs ships\nand transports.
+	Targetable:
+		TargetTypes: Ground, Water, Structure, C4, DetonateAttack, SpyInfiltrate
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		Adjacent: 8
+		TerrainTypes: Water
+	-GivesBuildableArea:
+	Health:
+		HP: 1000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+	Exit@1:
+		SpawnOffset: -1024,1024,0
+		Facing: 160
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 1024,1024,0
+		Facing: 224
+		ExitCell: 2,2
+	Exit@3:
+		SpawnOffset: -1024,-1024,0
+		Facing: 96
+		ExitCell: 0,0
+	Exit@4:
+		SpawnOffset: 1024,-1024,0
+		Facing: 32
+		ExitCell: 2,0
+	Production:
+		Produces: Ship.Manticore
+	PrimaryBuilding:
+	-EmitInfantryOnSell:
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
+	RallyPoint:
+	ProductionBar:
+	Power:
+		Amount: -30
+	ProvidesPrerequisite:
+		Prerequisite: docking
+	ProvidesPrerequisite@aegis:
+		Prerequisite: ships.manticore
+	ProvidesPrerequisite@buildingname:
+	EditorTilesetFilter:
+		ExcludeTilesets: INTERIOR
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+	Transforms:
+		IntoActor: pntn
+		Offset: 1,1
+		Facing: 96
+		
+ACNT:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: TRUK
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 120
+		Prerequisites: rvan, ~techlevel.medium
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Air Control
+		Description: Sets up FARPs for helicopters.
+	Selectable:
+		Priority: 3
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 4c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ProvidesPrerequisite:
+		Prerequisite: aircontrol
+	ProvidesPrerequisite@manticore:
+		Prerequisite: aircraft.manticore
+	Power:
+		Amount: -10
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	Transforms:
+		IntoActor: farp
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: placbldg.aud, build5.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+
+FARP:
+	Inherits: ^Building
+	RenderSprites:
+		Image: HPAD
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 120
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: FARP
+		Description: Produces and reloads\nhelicopters.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Bib:
+	Exit@1:
+		SpawnOffset: 0,-256,0
+		ExitCell: 0,0
+		MoveIntoWorld: false
+		Facing: 224
+	RallyPoint:
+	Production:
+		Produces: Aircraft.Manticore
+	Reservable:
+	ProductionBar:
+	PrimaryBuilding:
+	Power:
+		Amount: -10
+	ProvidesPrerequisite:
+		Prerequisite: aircontrol
+	ProvidesPrerequisite@manticore:
+		Prerequisite: aircraft.manticore
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	InfiltrateForSupportPower:
+		Proxy: aircraft.upgraded
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
 
 DEAL:
 	Inherits: ^Vehicle
@@ -426,3 +654,21 @@ WORKSHOP:
 	Tooltip:
 		Name: Machinist's Workshop
 		Description: Machinist or Workshop
+	
+DOCKING:
+	AlwaysVisible:
+	Tooltip:
+		Name: Pontoon Docks
+		Description: Pontoon Layer or Docks
+	
+AIRCONTROL:
+	AlwaysVisible:
+	Tooltip:
+		Name: Air Control
+		Description: Air Control Vehicle or FARP
+	
+STOCKPILE:
+	AlwaysVisible:
+	Tooltip:
+		Name: Stockpile
+		Description: Stockpile

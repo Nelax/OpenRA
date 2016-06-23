@@ -396,6 +396,7 @@
 	Tooltip:
 		GenericName: Helicopter
 	Aircraft:
+		RearmBuildings: farp
 		CanHover: True
 	GpsDot:
 		String: Helicopter

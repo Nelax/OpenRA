@@ -3,7 +3,7 @@ MCV:
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 90
-		Prerequisites: fix, ~techlevel.medium
+		Prerequisites: cmdc, ~techlevel.high
 	CustomBuildTimeValue:
 		Value: 2000
 	Valued:
@@ -83,3 +83,238 @@ HARV:
 		DamageCooldown: 500
 	Explodes:
 		Weapon: OreExplosion
+
+STRK:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 1TNK
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 50
+		Prerequisites: ~vehicles.aegis, ~techlevel.low
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Stryker APC
+		Description: Light AFV. Transport Infantry.\n  Strong vs Light armor\n  Weak vs Infantry, Tanks, Aircraft
+	Health:
+		HP: 220
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 128
+		Crushes: wall, mine, crate, infantry
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 7
+	Armament:
+		Weapon: 25mm
+		Recoil: 85
+		RecoilRecovery: 25
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		LoadingUpgrades: notmobile
+	SpawnActorOnDeath:
+		Actor: STRK.Husk
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+HMMV:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: JEEP
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 30
+		Prerequisites: ~vehicles.aegis, ~techlevel.low
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Humvee
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: 0,0,85
+	Armament:
+		Weapon: M60mg
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+VTNK:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 2TNK
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 120
+		Prerequisites: comm, ~vehicles.aegis, ~techlevel.medium
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Vulcan Tank
+		Description: Armored anti-personnel tank.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 340
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 85
+		Crushes: wall, mine, crate, infantry
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: Vulcan
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: VTNK.Husk
+	SelectionDecorations:
+		VisualBounds: 28,28
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+MTNK:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 2TNK
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 120
+		Prerequisites: comm, ~vehicles.aegis, ~techlevel.medium
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Medium Tank
+		Description: Aegis Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+	Health:
+		HP: 450
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 85
+		Crushes: wall, mine, crate, infantry
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: 90mm
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: MTNK.Husk
+	SelectionDecorations:
+		VisualBounds: 28,28
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+HOWI:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: ARTY
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 70
+		Prerequisites: comm, ~vehicles.aegis, ~techlevel.medium
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Howitzer
+		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 2
+		Speed: 85
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: 155mm
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	WithMuzzleOverlay:
+	Explodes:
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 75
+	AutoTarget:
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
+
+ATNK:
+	Inherits: ^Tank
+	RenderSprites:
+		Image: 2TNK
+	Buildable:
+		Queue: Vehicle.Aegis
+		BuildPaletteOrder: 180
+		Prerequisites: cmdc, ~vehicles.aegis, ~techlevel.high
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: Athena Tank
+		Description: Experiment Tank with mounted particle cannon.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+	Health:
+		HP: 400
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 113
+		Crushes: wall, mine, crate, infantry
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: TTankZap
+		LocalOffset: 0,0,213
+	AttackTurreted:
+	Turreted:
+	WithSpriteTurret:
+	SelectionDecorations:
+		VisualBounds: 30,30
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: ATNK.Husk
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
