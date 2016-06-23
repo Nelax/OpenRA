@@ -1,12 +1,3 @@
-MCV.Husk:
-	Inherits: ^Husk
-	Tooltip:
-		Name: Husk (Mobile Construction Vehicle)
-	TransformOnCapture:
-		IntoActor: mcv
-	RenderSprites:
-		Image: mcvhusk
-
 CPLN.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
@@ -24,6 +15,106 @@ CPLN.Husk:
 		MinDamage: Undamaged
 	RenderSprites:
 		Image: badr
+
+FGTR.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Fighter Plane
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 186
+	SmokeTrailWhenDamaged:
+		Offset: -853,0,171
+		Interval: 2
+		MinDamage: Undamaged
+	RevealsShroud:
+		Range: 12c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: mig
+
+TRNS.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Transport Helicopter
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 149
+	WithIdleOverlay@PRIMARY:
+		Offset: -597,0,341
+		Sequence: rotor
+	WithIdleOverlay@SECONDARY:
+		Offset: 597,0,213
+		Sequence: rotor2
+	RevealsShroud:
+		Range: 12c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: tran
+
+TRNS.Husk1:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Transport Helicopter)
+	RenderSprites:
+		Image: tran1husk
+
+TRNS.Husk2:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Transport Helicopter)
+	RenderSprites:
+		Image: tran2husk
+
+GSHP.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Gunship
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 149
+	WithIdleOverlay:
+		Offset: 0,0,85
+		Sequence: rotor
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+		MinDamage: Undamaged
+	RevealsShroud:
+		Range: 12c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: heli
+
+SCOT.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Scout
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 112
+	WithIdleOverlay:
+		Sequence: rotor
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+		MinDamage: Undamaged
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: hind
+
+MCV.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Mobile Construction Vehicle)
+	TransformOnCapture:
+		IntoActor: mcv
+	RenderSprites:
+		Image: mcvhusk
 
 HARV.FullHusk:
 	Inherits: ^Husk
@@ -48,7 +139,7 @@ MIN.FullHusk:
 	Tooltip:
 		Name: Husk (Mining Rig)
 	TransformOnCapture:
-		IntoActor: harv
+		IntoActor: min
 	RenderSprites:
 		Image: hhusk
 
@@ -57,30 +148,75 @@ MIN.EmptyHusk:
 	Tooltip:
 		Name: Husk (Mining Rig)
 	TransformOnCapture:
-		IntoActor: harv
+		IntoActor: min
 	RenderSprites:
 		Image: hhusk2
-
-FGTR.Husk:
-	Inherits: ^PlaneHusk
+		
+STRK.Husk:
+	Inherits: ^Husk
 	Tooltip:
-		Name: Fighter Plane
-	Contrail@1:
-		Offset: -598,-683,0
-	Contrail@2:
-		Offset: -598,683,0
-	Aircraft:
-		TurnSpeed: 5
-		Speed: 186
-	SmokeTrailWhenDamaged:
-		Offset: -853,0,171
-		Interval: 2
-		MinDamage: Undamaged
-	RevealsShroud:
-		Range: 12c0
-		Type: CenterPosition
+		Name: Husk (Stryker)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: strk
 	RenderSprites:
-		Image: mig
+		Image: 1tnk.destroyed
+
+VTNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Vulcan Tank)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: vtnk
+	RenderSprites:
+		Image: 2tnk.destroyed
+
+MTNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Medium Tank)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: mtnk
+	RenderSprites:
+		Image: 2tnk.destroyed
+
+ATNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Athena Tank)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: atnk
+	RenderSprites:
+		Image: 2tnk.destroyed
+		
+LTNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Light Tank)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: ltnk
+	RenderSprites:
+		Image: 1tnk.destroyed
+
+HTNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Heavy Tank)
+	ThrowsParticle@turret:
+		Anim: turret
+	TransformOnCapture:
+		IntoActor: htnk
+	RenderSprites:
+		Image: 3tnk.destroyed
 
 T01.Husk:
 	Inherits: ^TreeHusk

@@ -92,3 +92,176 @@ FGTR:
 		Interval: 2
 	ProducibleWithLevel:
 		Prerequisites: aircraft.upgraded
+
+SCOT:
+	Inherits: ^Helicopter
+	RenderSprites:
+		Image: HIND
+	Buildable:
+		Queue: Aircraft.Manticore
+		BuildPaletteOrder: 20
+		Prerequisites: ~farp, ~techlevel.medium
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: Scout
+		Description: Helicopter gunship armed\nwith dual chainguns.\n  Strong vs Infantry, Light armor.\n  Weak vs Tanks, Aircraft
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: ChainGun
+		LocalOffset: 85,-213,-85
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: ChainGun
+		LocalOffset: 85,213,-85
+		MuzzleSequence: muzzle
+	AttackHeli:
+		FacingTolerance: 20
+	Aircraft:
+		LandWhenIdle: false
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 112
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	WithIdleOverlay@ROTORAIR:
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@ROTORGROUND:
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	AmmoPool:
+		Ammo: 24
+		PipCount: 6
+		ReloadDelay: 8
+	SelectionDecorations:
+		VisualBounds: 38,32
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: SCOT.Husk
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
+
+GSHP:
+	Inherits: ^Helicopter
+	RenderSprites:
+		Image: HELI
+	Buildable:
+		Queue: Aircraft.Manticore
+		BuildPaletteOrder: 40
+		Prerequisites: ~farp, deal, ~techlevel.high
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Gunship
+		Description: Helicopter gunship armed\nwith a multi-purpose cannon and missiles.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft, Anti-Aircraft
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 12c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: HellfireAG
+		LocalOffset: 0,-213,-85
+	Armament@SECONDARY:
+		Weapon: HellfireAG
+		LocalOffset: 0,213,-85
+	AttackHeli:
+		FacingTolerance: 20
+	Aircraft:
+		LandWhenIdle: false
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 149
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,85
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,85
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	AmmoPool:
+		Ammo: 10
+	SelectionDecorations:
+		VisualBounds: 36,28
+	SpawnActorOnDeath:
+		Actor: GSHP.Husk
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
+		
+TRNS:
+	Inherits: ^Helicopter
+	RenderSprites:
+		Image: TRAN
+	Buildable:
+		Queue: Aircraft.Manticore
+		BuildPaletteOrder: 10
+		Prerequisites: ~farp, ~techlevel.medium
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Transport Helicopter
+		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 5
+		Speed: 112
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach,Gems
+		AltitudeVelocity: 0c100
+	WithIdleOverlay@ROTOR1AIR:
+		Offset: 597,0,213
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@ROTOR1GROUND:
+		Offset: 597,0,213
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	WithIdleOverlay@ROTOR2AIR:
+		Offset: -597,0,341
+		Sequence: rotor2
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@ROTOR2GROUND:
+		Offset: -597,0,341
+		Sequence: slow-rotor2
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 8
+		PipCount: 8
+	SpawnActorOnDeath:
+		Actor: TRNS.Husk
+	SelectionDecorations:
+		VisualBounds: 40,36
