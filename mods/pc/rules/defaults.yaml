@@ -105,7 +105,7 @@
 	Tooltip:
 		GenericName: Vehicle
 	EjectOnDeath:
-		PilotActor: e1
+		PilotActor: plt
 		SuccessRate: 20
 		EjectOnGround: true
 		EjectInAir: false
@@ -273,6 +273,30 @@
 		StandSequences: stand,stand2
 	DetectCloaked:
 		CloakTypes: Hijacker
+		
+PLT:
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: E1
+	Buildable:
+		Queue: Infantry.Aegis
+		BuildAtProductionType: Soldier.Aegis
+		BuildPaletteOrder: 10
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Pilot
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 50
+	Armament@PRIMARY:
+		Weapon: AssaultRifle
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 
 ^CivInfantry:
 	Inherits: ^Infantry
@@ -375,7 +399,7 @@
 	ProximityCaptor:
 		Types: Plane
 	EjectOnDeath:
-		PilotActor: E1
+		PilotActor: plt
 		SuccessRate: 50
 		EjectOnGround: false
 		EjectInAir: true
@@ -450,7 +474,7 @@
 	ExternalCapturable:
 	ExternalCapturableBar:
 	EmitInfantryOnSell:
-		ActorTypes: e1,e1,e1,e1,e1,e1,e1,e1,e1,e1,e1,e1,e1,e1,e1,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,e6,e6,e6,e6,e6
+		ActorTypes: pk,pk,pk,pk,pk,pk,pk,pk,pk,pk,pk,pk,pk,pk,pk,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,eng,eng,eng,eng,eng
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	GpsDot:
@@ -461,7 +485,7 @@
 ^ScienceBuilding:
 	Inherits: ^Building
 	EmitInfantryOnSell:
-		ActorTypes: e1,e1,e1,e1,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,e6,e6,e6,e6,e6,chan,chan,chan,chan
+		ActorTypes: pk,pk,pk,pk,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,eng,eng,eng,eng,eng
 
 ^Defense:
 	Inherits: ^Building

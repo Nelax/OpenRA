@@ -15,11 +15,7 @@ PK:
 	Health:
 		HP: 50
 	Armament@PRIMARY:
-		Weapon: M1Carbine
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: Vulcan
-		MuzzleSequence: garrison-muzzle
+		Weapon: PKCarbine
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -43,14 +39,11 @@ RK:
 	Health:
 		HP: 45
 	Armament@PRIMARY:
-		Weapon: RedEye
+		Weapon: PortableSAM
 		LocalOffset: 0,0,555
 	Armament@SECONDARY:
-		Weapon: Dragon
+		Weapon: PortableRL
 		LocalOffset: 0,0,555
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: Dragon
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -131,12 +124,9 @@ HGN:
 	Health:
 		HP: 40
 	Armament@PRIMARY:
-		Weapon: M60mg
+		Weapon: Minigun
 		LocalOffset: 427,0,341
 		FireDelay: 8
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: Vulcan
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -162,11 +152,8 @@ LEG:
 	RevealsShroud:
 		Range: 5c0
 	Armament@PRIMARY:
-		Weapon: PortaTesla
+		Weapon: ManPartCan
 		LocalOffset: 427,0,341
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: PortaTesla
 	AttackFrontal:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -217,18 +204,9 @@ SPY:
 	DetectCloaked:
 		CloakTypes: Cloak, Hijacker
 	Armament:
-		Weapon: SilencedPPK
+		Weapon: SuppressedPistol
 	AttackFrontal:
 	AttackMove:
 		Voice: Move
 	Voiced:
 		VoiceSet: SpyVoice
-
-CHAN:
-	Inherits: ^CivInfantry
-	Valued:
-		Cost: 500
-	Selectable:
-		Class: CHAN
-	Tooltip:
-		Name: Scientist

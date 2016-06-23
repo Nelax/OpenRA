@@ -465,7 +465,7 @@ AFLD:
 		MoveIntoWorld: false
 	RallyPoint:
 	Production:
-		Produces: Aircraft.Aegis, Plane
+		Produces: Aircraft.Aegis
 	Reservable:
 	ProvidesPrerequisite@aegis
 		Prerequisite: aircraft.aegis
@@ -690,15 +690,7 @@ HPNT:
 	Armament@VULCPRIMARY:
 		UpgradeTypes: hardpoint.vulcan
 		UpgradeMinEnabledLevel: 1
-		Weapon: Vulcan
-		LocalOffset: 512,0,112
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-	Armament@VULCSECONDARY:
-		UpgradeTypes: hardpoint.vulcan
-		UpgradeMinEnabledLevel: 1
-		Name: secondary
-		Weapon: Vulcan
+		Weapon: TurretVulcan
 		LocalOffset: 512,0,112
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
@@ -707,14 +699,14 @@ HPNT:
 		UpgradeMinEnabledLevel: 1
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 64, -64
-		Weapon: Stinger
+		Weapon: TurretMissile
 	Armament@ROCKETAA:
 		UpgradeTypes: hardpoint.missile
 		UpgradeMinEnabledLevel: 1
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 64, -64
 		Name: secondary
-		Weapon: StingerAA
+		Weapon: TurretMissileAA
 	Power@base:
 		Amount: -10
 	Power@turrets:

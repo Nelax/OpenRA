@@ -60,7 +60,7 @@ DEST:
 		TurnSpeed: 7
 		Offset: 341,0,128
 	Armament@PRIMARY:
-		Weapon: Stinger
+		Weapon: ShipMissile
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 64, -64
 	Armament@SECONDARY:
@@ -68,7 +68,7 @@ DEST:
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 80, -80
 	Armament@TERTIARY:
-		Weapon: StingerAA
+		Weapon: ShipSAM
 		LocalOffset: 0,-100,0, 0,100,0
 		LocalYaw: 64, -64
 	AttackTurreted:
@@ -120,7 +120,7 @@ SUB:
 		WhileCloakedUpgrades: underwater
 		Palette: submerged
 	Armament:
-		Weapon: TorpTube
+		Weapon: Torpedo
 		LocalOffset: 0,-171,0, 0,171,0
 		FireDelay: 2
 	AttackFrontal:
@@ -170,7 +170,7 @@ CRUS:
 		TurnSpeed: 3
 	Armament@PRIMARY:
 		Turret: primary
-		Weapon: 8Inch
+		Weapon: CruiserCannon
 		LocalOffset: 480,-100,40, 480,100,40
 		Recoil: 171
 		RecoilRecovery: 34
@@ -178,7 +178,7 @@ CRUS:
 	Armament@SECONDARY:
 		Name: secondary
 		Turret: secondary
-		Weapon: 8Inch
+		Weapon: CruiserCannon
 		LocalOffset: 480,-100,40, 480,100,40
 		Recoil: 171
 		RecoilRecovery: 34

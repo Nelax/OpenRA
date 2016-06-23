@@ -73,11 +73,11 @@ FBGY:
 	RevealsShroud:
 		Range: 8c0
 	Armament@AA:
-		Weapon: FLAK-23-AA
+		Weapon: BuggyFlakAA
 		LocalOffset: 512,0,192
 		MuzzleSequence: muzzle
 	Armament@AG:
-		Weapon: FLAK-23-AG
+		Weapon: BuggyFlakAG
 		LocalOffset: 512,0,192
 		MuzzleSequence: muzzle
 	AttackFrontal:
@@ -114,7 +114,7 @@ ACAR:
 		TurnSpeed: 10
 		Offset: 0,0,85
 	Armament:
-		Weapon: M60mg
+		Weapon: CarMount
 		MuzzleSequence: muzzle
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -153,7 +153,7 @@ LTNK:
 	Turreted:
 		TurnSpeed: 7
 	Armament:
-		Weapon: 25mm
+		Weapon: LightCannon
 		Recoil: 85
 		RecoilRecovery: 25
 		LocalOffset: 768,0,90
@@ -193,7 +193,7 @@ FTNK:
 		TurnSpeed: 10
 		Offset: -298,0,298
 	Armament@AG:
-		Weapon: Flamer
+		Weapon: FireballLauncher
 		Recoil: 85
 		LocalOffset: 512,0,192
 		MuzzleSequence: muzzle
@@ -228,7 +228,7 @@ RTRK:
 	RevealsShroud:
 		Range: 5c0
 	Armament:
-		Weapon: SCUD
+		Weapon: FROG
 	AttackFrontal:
 	SelectionDecorations:
 		VisualBounds: 28,28
@@ -266,14 +266,14 @@ HTNK:
 	Turreted:
 		TurnSpeed: 5
 	Armament@PRIMARY:
-		Weapon: 105mm
+		Weapon: HeavyCannons
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 768,85,90, 768,-85,90
 		MuzzleSequence: muzzle
 	Armament@SECONDARY:
 		Name: secondary
-		Weapon: MammothTusk
+		Weapon: TankRocketPods
 		LocalOffset: -85,384,340, -85,-384,340
 		LocalYaw: -100,100
 		Recoil: 43
