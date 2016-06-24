@@ -20,7 +20,7 @@
 		InternalName: manticore
 		Description: Manticore
 	Faction@random:
-		Name: Any
+		Name: Random
 		InternalName: Random
 		RandomFactionMembers: aegis, manticore
 		Description: Random
