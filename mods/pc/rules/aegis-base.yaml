@@ -602,8 +602,8 @@ BRIK:
 		Name: Concrete Wall
 		Description: Stop units and blocks enemy fire.
 	SoundOnDamageTransition:
-		DamagedSounds: crmble2.aud
-		DestroyedSounds: kaboom30.aud
+		DamagedSounds: expcrumble2.aud
+		DestroyedSounds: expmatsm.aud
 	Health:
 		HP: 500
 	Armor:
@@ -753,6 +753,9 @@ CYCL:
 		Types: chain
 	WithWallSpriteBody:
 		Type: chain
+	SoundOnDamageTransition:
+		DamagedSounds: expcrumble3.aud
+		DestroyedSounds: expmatsm.aud
 
 BARB:
 	Inherits: ^Wall
@@ -766,6 +769,9 @@ BARB:
 		Types: barbwire
 	WithWallSpriteBody:
 		Type: barbwire
+	SoundOnDamageTransition:
+		DamagedSounds: expcrumble3.aud
+		DestroyedSounds: expmatsm.aud
 
 WOOD:
 	Inherits: ^Wall

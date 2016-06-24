@@ -16,7 +16,7 @@ CrateNapalm:
 		SmudgeType: Scorch
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
-		ImpactSounds: firebl3.aud
+		ImpactSounds: lgflame.aud
 
 CrateExplosion:
 	Warhead@1Dam: SpreadDamage
@@ -32,43 +32,7 @@ CrateExplosion:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: self_destruct
-		ImpactSounds: kaboom15.aud
-
-CrateNuke:
-	ValidTargets: Ground, Trees, Water, Air
-	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
-		Damage: 100
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Trees, Water, Air
-		Versus:
-			Concrete: 25
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
-	Warhead@2Res_impact: DestroyResource
-	Warhead@3Eff_impact: CreateEffect
-		Explosions: nuke
-		ImpactSounds: kaboom1.aud
-	Warhead@4Dam_areanuke: SpreadDamage
-		Spread: 1c0
-		Damage: 60
-		Falloff: 1000, 600, 400, 250, 150, 100, 0
-		Delay: 4
-		ValidTargets: Ground, Trees, Water, Air
-		Versus:
-			Concrete: 25
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
-	Warhead@5Res_areanuke: DestroyResource
-		Size: 5,4
-		Delay: 4
-	Warhead@6Smu_areanuke: LeaveSmudge
-		SmudgeType: Scorch
-		Size: 5,4
-		Delay: 4
-	Warhead@7Eff_areanuke: CreateEffect
-		ImpactSounds: kaboom22.aud
-		Delay: 4
+		ImpactSounds: expfiremd.aud
 
 UnitExplode:
 	Warhead@1Dam: SpreadDamage
@@ -83,11 +47,11 @@ UnitExplode:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: self_destruct
-		ImpactSounds: kaboom22.aud
+		ImpactSounds: expmatlg.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: large_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashlg.aud
 		ValidImpactTypes: Water
 
 UnitExplodeShip:
@@ -102,7 +66,7 @@ UnitExplodeShip:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: building
-		ImpactSounds: kaboom25.aud
+		ImpactSounds: expfirelg.aud
 
 UnitExplodeSubmarine:
 	Warhead@1Dam: SpreadDamage
@@ -116,7 +80,7 @@ UnitExplodeSubmarine:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashlg.aud
 
 UnitExplodeSmall:
 	Warhead@1Dam: SpreadDamage
@@ -130,11 +94,11 @@ UnitExplodeSmall:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expmatmd.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: large_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashmd.aud
 		ValidImpactTypes: Water
 
 ArtilleryExplode:
@@ -149,11 +113,11 @@ ArtilleryExplode:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: self_destruct
-		ImpactSounds: kaboom22.aud
+		ImpactSounds: expcrumble.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: large_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashalt.aud
 		ValidImpactTypes: Water
 
 V2Explode:
@@ -180,28 +144,8 @@ BarrelExplode:
 		Delay: 5
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
-		ImpactSounds: firebl3.aud
+		ImpactSounds: lgflame.aud
 		Delay: 5
-
-ATMine:
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 400
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
-		ImpactSounds: mineblo1.aud
-
-APMine:
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 400
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: napalm
-		ImpactSounds: mine1.aud
 
 OreExplosion:
 	Warhead@1Dam: SpreadDamage
@@ -218,4 +162,4 @@ OreExplosion:
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
 		Explosions: med_explosion
-		ImpactSounds: kaboom25.aud
+		ImpactSounds: expmatsm.aud

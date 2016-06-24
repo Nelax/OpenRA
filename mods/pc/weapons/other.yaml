@@ -3,32 +3,19 @@ Crush:
 		Damage: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
-		ImpactSounds: squishy2.aud
+		ImpactSounds: crushperson.aud
 
 Demolish:
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: DefaultDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: building
-		ImpactSounds: kaboom25.aud
-
-PartCannon:
-	ReloadDelay: 3
-	Range: 8c512
-	Report: tesla1.aud
-	Projectile: TeslaZap
-	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 100
-		Versus:
-			None: 1000
-			Wood: 60
-		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
+		ImpactSounds: expdemolish.aud
 		
 Heal:
 	ReloadDelay: 80
 	Range: 4c0
-	Report: heal2.aud
+	Report: firstaid.aud
 	ValidTargets: Infantry
 	Projectile: Bullet
 		Speed: 1c682
@@ -38,11 +25,32 @@ Heal:
 		ValidTargets: Infantry
 		DebugOverlayColor: 00FF00
 
+PartCannon:
+	ReloadDelay: 3
+	Range: 8c512
+	Report: partcanbig.aud
+	Projectile: LaserZap
+		Width: 50
+		BeamDuration: 5
+		ZOffset: 2047
+		Color: B7D8E8
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 100
+		Versus:
+			None: 1000
+			Wood: 60
+		DamageTypes: Prone50Percent, TriggerProne, ElectricityDeath
+
 ManPartCan:
 	ReloadDelay: 70
 	Range: 6c0
-	Report: tesla1.aud
-	Projectile: TeslaZap
+	Report: partcan.aud
+	Projectile: LaserZap
+		Width: 50
+		BeamDuration: 5
+		ZOffset: 2047
+		Color: B7D8E8
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 45
@@ -53,8 +61,12 @@ ManPartCan:
 TankPartCan:
 	ReloadDelay: 120
 	Range: 7c0
-	Report: tesla1.aud
-	Projectile: TeslaZap
+	Report: partcan.aud
+	Projectile: LaserZap
+		Width: 50
+		BeamDuration: 5
+		ZOffset: 2047
+		Color: B7D8E8
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 100
@@ -86,16 +98,16 @@ DepthCharge:
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
 		Explosions: large_splash
-		ImpactSounds: h2obomb2.aud
+		ImpactSounds: expsplashalt.aud
 	Warhead@4EffHit: CreateEffect
 		Explosions: small_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expmatsm.aud
 		ValidImpactTypes: WaterHit
 
 Torpedo:
 	ReloadDelay: 100
 	Range: 9c0
-	Report: torpedo1.aud
+	Report: torpedo.aud
 	ValidTargets: Water, Underwater, Bridge
 	Burst: 2
 	BurstDelay: 20
@@ -122,21 +134,21 @@ Torpedo:
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
 		Explosions: large_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expmatmd.aud
 		InvalidImpactTypes: Water, WaterHit
 	Warhead@4EffWaterHit: CreateEffect
 		Explosions: artillery_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expmatmd.aud
 		ValidImpactTypes: WaterHit
 	Warhead@5EffWater: CreateEffect
 		Explosions: large_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashlg.aud
 		ValidImpactTypes: Water
 
 Firebomb:
 	ReloadDelay: 60
 	Range: 4c0
-	Report: grenade1.aud
+	Report: toss.aud
 	Projectile: Bullet
 		Speed: 136
 		Blockable: false
@@ -155,18 +167,18 @@ Firebomb:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
-		Explosions: med_explosion
-		ImpactSounds: kaboom25.aud
+		Explosions: small_napalm
+		ImpactSounds: smflame.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashsm.aud
 		ValidImpactTypes: Water
 
 Repair:
 	ReloadDelay: 80
 	Range: 4c0
-	Report: fixit1.aud
+	Report: wrench.aud
 	ValidTargets: Repair
 	Projectile: Bullet
 		Speed: 1c682
@@ -203,7 +215,7 @@ Flamer:
 		SmudgeType: Scorch
 	Warhead@3Eff: CreateEffect
 		Explosions: small_napalm
-		ImpactSounds: firebl3.aud
+		ImpactSounds: smflame.aud
 		
 FireballLauncher:
 	ValidTargets: Ground, Water, Trees
@@ -211,6 +223,7 @@ FireballLauncher:
 	Range: 5c0
 	Burst: 2
 	BurstDelay: 20
+	Report: flamer.aud
 	Projectile: Bullet
 		Speed: 204
 		TrailImage: fb2
@@ -230,4 +243,4 @@ FireballLauncher:
 		SmudgeType: Scorch
 	Warhead@3Eff: CreateEffect
 		Explosions: napalm
-		ImpactSounds: firebl3.aud
+		ImpactSounds: lgflame.aud

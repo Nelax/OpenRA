@@ -299,7 +299,7 @@ ftnk:
 	icon: ftrkicon
 
 howi:
-	idle: 1tnk
+	idle: 3tnk
 		Facings: 32
 		UseClassicFacingFudge: True
 	turret: arty

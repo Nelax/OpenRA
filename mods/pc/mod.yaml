@@ -32,6 +32,15 @@ Packages:
 	~movies2.mix
 	ra|bits
 	ra|bits/desert
+	pc|bits
+	pc|bits/audio
+	pc|bits/audio/automatic
+	pc|bits/audio/energy
+	pc|bits/audio/explosions
+	pc|bits/audio/missiles
+	pc|bits/audio/other
+	pc|bits/audio/shells
+	pc|bits/audio/interface
 	pc|uibits
 
 MapFolders:

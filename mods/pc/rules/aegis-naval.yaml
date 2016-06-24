@@ -109,8 +109,8 @@ SUB:
 		CloakTypes: Underwater
 		InitialDelay: 0
 		CloakDelay: 50
-		CloakSound: subshow1.aud
-		UncloakSound: subshow1.aud
+		CloakSound: submerge.aud
+		UncloakSound: submerge.aud
 		WhileCloakedUpgrades: underwater
 		Palette: submerged
 	Armament:
