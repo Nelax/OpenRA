@@ -41,6 +41,7 @@ Player:
 			afld: 4%
 			vulc: 7%
 			rock: 7%
+			pcan: 5%
 			fix: 1%
 			cmdc: 1%
 			stoc: 10%

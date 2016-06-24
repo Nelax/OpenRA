@@ -301,6 +301,23 @@ vulc:
 
 rock:
 	icon: samicon
+	
+pcan:
+	idle: fcom
+	damaged-idle: fcom
+		Start: 1
+	turret: 2tnk
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	make: fcommake
+		Length: *
+	bib: bib3
+		Length: *
+		UseTilesetExtension: true
+		TilesetOverrides:
+			INTERIOR: TEMPERAT
+	icon: tslaicon
 
 vgate:
 	make:
