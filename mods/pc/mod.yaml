@@ -20,8 +20,6 @@ Packages:
 	~conquer.mix
 	~hires.mix
 	~local.mix
-	~sounds.mix
-	~speech.mix
 	~allies.mix
 	~russian.mix
 	~temperat.mix
@@ -41,6 +39,12 @@ Packages:
 	pc|bits/audio/other
 	pc|bits/audio/shells
 	pc|bits/audio/interface
+	pc|bits/voices
+	pc|bits/voices/generic
+	pc|bits/eva
+	pc|bits/eva/aegis
+	pc|bits/eva/manticore
+	pc|bits/eva/remnant
 	pc|uibits
 
 MapFolders:
@@ -84,7 +88,7 @@ TileSets:
 	ra|tilesets/desert.yaml
 
 Cursors:
-	ra|cursors.yaml
+	pc|cursors.yaml
 
 Chrome:
 	pc|chrome.yaml

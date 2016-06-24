@@ -444,6 +444,7 @@ PLT:
 		Footprint: x
 		TerrainTypes: Clear,Road
 		RequiresBaseProvider: True
+		BuildSounds: place.aud, build.aud
 	SoundOnDamageTransition:
 		DamagedSounds: expdamage.aud
 		DestroyedSounds: expdemolish.aud

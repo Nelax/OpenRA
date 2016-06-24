@@ -1,10 +1,10 @@
 GenericVoice:
 	Variants:
 		aegis: .v01,.v03
-		manticore: .r01,.r03
+		manticore: .v01,.v03
 	Voices:
 		Select: await1,ready,report1,yessir1
-		Action: ackno,affirm1,noprob,overout,ritaway,roger,ugotit
+		Action: ackno,affirm1,noprob,ritaway,roger,ugotit
 		Die: dedman1,dedman2,dedman3,dedman4,dedman5,dedman7,dedman8
 		Burned: dedman10
 		Zapped: dedman6
@@ -73,10 +73,11 @@ ShokVoice:
 VehicleVoice:
 	Variants:
 		aegis: .v00,.v02
-		manticore: .r00,.r02
+		manticore: .v00,.v02
 	Voices:
-		Select: vehic1,yessir1,report1,await1
-		Action: ackno,affirm1
+		Select: vehic1,yessir1,report1,await1,unit1
+		Action: ackno,affirm1,movout1
+		Unload: movout1
 		
 CivilianMaleVoice:
 	Voices:
