@@ -18,9 +18,11 @@ StrykerGun:
 		SmudgeType: Crater
 	Warhead@3EffGround: CreateEffect
 		Explosions: small_explosion
+		ImpactSounds: expfiremd.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
+		ImpactSounds: expsplashsm.aud
 		ValidImpactTypes: Water
 
 MediumCannon:
@@ -169,9 +171,11 @@ LightCannon:
 		SmudgeType: Crater
 	Warhead@3EffGround: CreateEffect
 		Explosions: small_explosion
+		ImpactSounds: expfiremd.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
+		ImpactSounds: expsplashsm.aud
 		ValidImpactTypes: Water
 
 HeavyCannons:

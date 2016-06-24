@@ -22,24 +22,24 @@ gtrukhusk:
 		UseClassicFacingFudge: True
 
 gbus:
-	idle: truk
+	idle: 1tnk
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: trukicon
+	icon: 1tnkicon
 
 gbushusk:
-	idle: truk
+	idle: 1tnk
 		Facings: 32
 		UseClassicFacingFudge: True
 
 bus:
-	idle: truk
+	idle: apc
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: trukicon
+	icon: apcicon
 
 bushusk:
-	idle: truk
+	idle: apc
 		Facings: 32
 		UseClassicFacingFudge: True
 
@@ -78,13 +78,13 @@ stoc:
 	icon: procicon
 
 mach:
-	idle: truk
+	idle: 2tnk
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: trukicon
+	icon: 2tnkicon
 
 machhusk:
-	idle: truk
+	idle: 2tnk
 		Facings: 32
 		UseClassicFacingFudge: True
 
@@ -107,24 +107,27 @@ work:
 	icon: weapicon
 
 rvan:
-	idle: truk
+	idle: mrj
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: trukicon
+	spinner: mrj
+		Start: 32
+		Length: 32
+	icon: mrjicon
 
 rvanhusk:
-	idle: truk
+	idle: rjam
 		Facings: 32
 		UseClassicFacingFudge: True
 
 acnt:
-	idle: truk
+	idle: v2rl
 		Facings: 32
 		UseClassicFacingFudge: True
 	icon: trukicon
 
 acnthusk:
-	idle: truk
+	idle: v2rl
 		Facings: 32
 		UseClassicFacingFudge: True
 
@@ -164,13 +167,13 @@ docks:
 	icon: spenicon
 	
 deal:
-	idle: mcv
+	idle: 4tnk
 		Facings: 32
 		UseClassicFacingFudge: True
-	icon: mcvicon
+	icon: 4tnkicon
 
 dealhusk:
-	idle: mcvhusk
+	idle: 4tnk
 		Facings: 32
 		UseClassicFacingFudge: True
-		ZOffset: -1023
+		ZOffset: -512

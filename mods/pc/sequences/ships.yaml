@@ -14,7 +14,7 @@ lsta:
 	icon: lsticon
 
 dest:
-	idle: dd
+	idle: pt
 		Facings: 16
 	turret: ssam
 		Facings: 32
@@ -61,6 +61,6 @@ gbt:
 fri:
 	idle: dd
 		Facings: 16
-	turret: ssam
+	turret: turr
 		Facings: 32
 	icon: ddicon
