@@ -187,11 +187,10 @@ FTNK:
 		Range: 6c0
 	Turreted:
 		TurnSpeed: 10
-		Offset: -298,0,298
 	Armament@AG:
 		Weapon: FireballLauncher
 		Recoil: 85
-		LocalOffset: 512,0,192
+		LocalOffset: 768,0,90
 		MuzzleSequence: muzzle
 	AttackTurreted:
 	WithMuzzleOverlay:

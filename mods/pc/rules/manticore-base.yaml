@@ -18,8 +18,29 @@ MHQ:
 	ProductionBar@Defense:
 		ProductionType: Defense.Manticore
 	Exit@1:
+		SpawnOffset: 0,-1024,0
+		ExitCell: 0,-1
+	Exit@2:
+		SpawnOffset: 1024,-1024,0
+		ExitCell: 1,-1
+	Exit@3:
 		SpawnOffset: 0,1024,0
 		ExitCell: 0,1
+	Exit@4:
+		SpawnOffset: 1024,1024,0
+		ExitCell: 1,1
+	Exit@5:
+		SpawnOffset: 1024,0,0
+		ExitCell: 1,0
+	Exit@6:
+		SpawnOffset: -1024,1024,0
+		ExitCell: -1,1
+	Exit@7:
+		SpawnOffset: -1024,0,0
+		ExitCell: -1,0
+	Exit@8:
+		SpawnOffset: -1024,-1024,0
+		ExitCell: -1,-1
 	Production:
 		Produces: Building.Manticore, Defense.Manticore
 		Color: 8A8A8A
@@ -491,6 +512,9 @@ RVAN:
 		Speed: 128
 	RevealsShroud:
 		Range: 10c0
+	WithIdleOverlay@SPINNER:
+		Sequence: spinner
+		Offset: -256,0,256
 	ProvidesRadar:
 	InfiltrateForExploration:
 	RequiresPower:

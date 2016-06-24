@@ -1,20 +1,20 @@
 Player:
-	HackyAI@AegisAI:
-		Name: Aegis AI
+	HackyAI@TestAI:
+		Name: Test AI
 		MinimumExcessPower: 60
-		BuildingQueues: Building.Aegis, Defense.Aegis
-		UnitQueues: Infantry.Aegis, Vehicle.Aegis, Ship.Aegis, Aircraft.Aegis
+		BuildingQueues: Building.Aegis, Defense.Aegis, Building.Manticore, Defense.Manticore
+		UnitQueues: Infantry.Aegis, Vehicle.Aegis, Ship.Aegis, Aircraft.Aegis, Infantry.Manticore, Vehicle.Manticore, Ship.Manticore, Aircraft.Manticore
 		BuildingCommonNames:
-			ConstructionYard: fact
-			Refinery: refn
-			Power: pwr
-			Barracks: barr
-			VehiclesFactory: weap
-			Production: barr,weap,afld
-			NavalProduction: syrd
+			ConstructionYard: fact, mhq
+			Refinery: refn,mrig,stoc
+			Power: pwr,gtruk, gbus
+			Barracks: barr,bus
+			VehiclesFactory: weap,mach,work
+			Production: barr,weap,afld,bus,work,hpad
+			NavalProduction: syrd,pntn,dock
 			Silo: silo
 		UnitsCommonNames:
-			Mcv: mcv
+			Mcv: mcv,mrig,mach,pntn
 		BuildingLimits:
 			refn: 4
 			barr: 1
@@ -24,6 +24,13 @@ Player:
 			afld: 4
 			cmdc: 1
 			fix: 1
+			stoc: 4
+			bus: 1
+			work: 1
+			docks: 1
+			hpad: 4
+			rvan: 1
+			deal: 1
 		BuildingFractions:
 			refn: 10%
 			pwr: 31%
@@ -36,6 +43,19 @@ Player:
 			rock: 7%
 			fix: 1%
 			cmdc: 1%
+			stoc: 10%
+			work: 6%
+			docks: 1%
+			hpad: 4%
+			gtruk: 1%
+			gbus: 30%
+			mrig: 10%
+			bus: 1%
+			rvan: 1%
+			mach: 6%
+			pntn: 1%
+			acnt: 4%
+			deal: 1%
 		UnitsToBuild:
 			pk: 50%
 			e2: 10%
@@ -53,6 +73,21 @@ Player:
 			dest: 10%
 			sub: 10%
 			crus: 10%
+			ftr: 50%
+			arsn: 10%
+			flam: 5%
+			mort: 5%
+			min: 10%
+			acar: 30%
+			fbgy: 50%
+			howi: 15%
+			ltnk: 50%
+			htnk: 15%
+			scot: 30%
+			gshp: 30%
+			gbt: 10%
+			fri: 10%
 		UnitLimits:
 			harv: 8
+			min: 8
 		SquadSize: 40
