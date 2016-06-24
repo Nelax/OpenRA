@@ -1,7 +1,5 @@
 PK:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E1
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis
@@ -24,8 +22,6 @@ PK:
 
 RK:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E3
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis
@@ -52,8 +48,6 @@ RK:
 
 ENG:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E6
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis
@@ -76,8 +70,6 @@ ENG:
 
 MED:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: MEDI
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis
@@ -109,8 +101,6 @@ MED:
 
 HGN:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E4
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis
@@ -135,8 +125,6 @@ HGN:
 
 LEG:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: SHOK
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis
@@ -162,8 +150,6 @@ LEG:
 
 SPY:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: SPY
 	Buildable:
 		Queue: Infantry.Aegis
 		BuildAtProductionType: Soldier.Aegis

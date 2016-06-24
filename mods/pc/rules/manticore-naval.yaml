@@ -1,7 +1,5 @@
 LSTM:
 	Inherits: ^Ship
-	RenderSprites:
-		Image: LST
 	Buildable:
 		Queue: Ship.Manticore
 		BuildPaletteOrder: 10
@@ -36,8 +34,6 @@ LSTM:
 
 GBT:
 	Inherits: ^Ship
-	RenderSprites:
-		Image: PT
 	Buildable:
 		Queue: Ship.Manticore
 		BuildPaletteOrder: 20
@@ -80,8 +76,6 @@ GBT:
 
 FRI:
 	Inherits: ^Ship
-	RenderSprites:
-		Image: DD
 	Buildable:
 		Queue: Ship.Manticore
 		BuildPaletteOrder: 40

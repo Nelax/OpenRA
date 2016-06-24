@@ -50,8 +50,6 @@ MIN:
 
 FBGY:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: JEEP
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 30
@@ -80,16 +78,18 @@ FBGY:
 		Weapon: BuggyFlakAG
 		LocalOffset: 512,0,192
 		MuzzleSequence: muzzle
-	AttackFrontal:
+	Turreted:
+		TurnSpeed: 10
+		Offset: 0,0,85
+	AttackTurreted:
 	WithMuzzleOverlay:
+	WithSpriteTurret:
 	AutoTarget:
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 
 ACAR:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: JEEP
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 40
@@ -130,8 +130,6 @@ ACAR:
 
 LTNK:
 	Inherits: ^Tank
-	RenderSprites:
-		Image: 1TNK
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 50
@@ -169,8 +167,6 @@ LTNK:
 
 FTNK:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: FTRK
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 60
@@ -208,8 +204,6 @@ FTNK:
 
 HOWI:
 	Inherits: ^Tank
-	RenderSprites:
-		Image: ARTY
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 70
@@ -232,7 +226,11 @@ HOWI:
 		Weapon: HowiCannon
 		LocalOffset: 624,0,208
 		MuzzleSequence: muzzle
-	AttackFrontal:
+	Turreted:
+		TurnSpeed: 2
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
 	WithMuzzleOverlay:
 	Explodes:
 		Weapon: ArtilleryExplode
@@ -244,8 +242,6 @@ HOWI:
 
 HTNK:
 	Inherits: ^Tank
-	RenderSprites:
-		Image: 3TNK
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 130

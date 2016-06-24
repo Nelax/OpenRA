@@ -86,8 +86,6 @@ HARV:
 
 STRK:
 	Inherits: ^Tank
-	RenderSprites:
-		Image: 1TNK
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 50
@@ -130,8 +128,6 @@ STRK:
 
 HMMV:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: JEEP
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 30
@@ -167,8 +163,6 @@ HMMV:
 
 VTNK:
 	Inherits: ^Tank
-	RenderSprites:
-		Image: 2TNK
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 120
@@ -208,8 +202,6 @@ VTNK:
 
 MTNK:
 	Inherits: ^Tank
-	RenderSprites:
-		Image: 2TNK
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 120
@@ -249,8 +241,6 @@ MTNK:
 		
 RTRK:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: V2RL
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 80
@@ -284,8 +274,6 @@ RTRK:
 
 ATNK:
 	Inherits: ^Tank
-	RenderSprites:
-		Image: 2TNK
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 180

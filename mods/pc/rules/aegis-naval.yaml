@@ -1,7 +1,5 @@
 LSTA:
 	Inherits: ^Ship
-	RenderSprites:
-		Image: LST
 	Buildable:
 		Queue: Ship.Aegis
 		BuildPaletteOrder: 10
@@ -36,8 +34,6 @@ LSTA:
 
 DEST:
 	Inherits: ^Ship
-	RenderSprites:
-		Image: DD
 	Buildable:
 		Queue: Ship.Aegis
 		BuildPaletteOrder: 40
@@ -83,8 +79,6 @@ DEST:
 	
 SUB:
 	Inherits: ^Ship
-	RenderSprites:
-		Image: SS
 	Buildable:
 		Queue: Ship.Aegis
 		BuildPaletteOrder: 30
@@ -140,8 +134,6 @@ SUB:
 
 CRUS:
 	Inherits: ^Ship
-	RenderSprites:
-		Image: CA
 	Buildable:
 		Queue: Ship.Aegis
 		BuildPaletteOrder: 50
