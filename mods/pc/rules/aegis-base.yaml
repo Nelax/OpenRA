@@ -740,6 +740,56 @@ ROCK:
 		Type: hardpoint.missile
 	Power:
 		Amount: -20
+		
+PCAN:
+	Inherits: ^Defense
+	Tooltip:
+		Name: Particle Cannon
+		Description: Advanced base defense.\nRequires power to operate.\nCan detect cloaked units.\n  Strong vs Vehicles, Infantry\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense.Aegis
+		BuildPaletteOrder: 80
+		Prerequisites: comm, ~techlevel.medium
+	Valued:
+		Cost: 1200
+	RequiresPower:
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Bib:
+		HasMinibib: Yes
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, Defense
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	DetectCloaked:
+		Range: 8c0
+	WithBuildingExplosion:
+		Sequences: building, building_napalm, large_explosion, self_destruct
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 224
+	AttackCharge:
+		ChargeAudio: partcanchg.aud
+		ReloadDelay: 120
+	WithSpriteTurret:
+		Recoils: no
+	Armament:
+		Weapon: PartCannon
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+	Power:
+		Amount: -100
+	DetectCloaked:
+		Range: 8c0
+	ProvidesPrerequisite@buildingname:
 
 CYCL:
 	Inherits: ^Wall

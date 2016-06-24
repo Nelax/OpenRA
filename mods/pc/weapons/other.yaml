@@ -36,7 +36,7 @@ PartCannon:
 		Color: B7D8E8
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 100
+		Damage: 300
 		Versus:
 			None: 1000
 			Wood: 60
