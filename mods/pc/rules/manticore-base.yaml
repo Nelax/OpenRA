@@ -212,6 +212,40 @@ STOC:
 		Delay: 1
 	ProvidesPrerequisite@buildingname:
 
+STRK:
+	Inherits: ^Vehicle
+	RenderSprites:
+		Image: TRUK
+	Buildable:
+		Queue: Defense.Manticore
+		BuildPaletteOrder: 35
+		Prerequisites: stockpile, ~techlevel.low
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Supply Truck
+		Description: Stores excess refined\nOre and Gems.
+	Selectable:
+		Priority: 5
+	Health:
+		HP: 300
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -10
+	StoresResources:
+		PipCount: 5
+		Capacity: 1500
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ProvidesPrerequisite@buildingname:
+
 BUS:
 	Inherits: ^Vehicle
 	RenderSprites:

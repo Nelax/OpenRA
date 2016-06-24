@@ -1,0 +1,58 @@
+Player:
+	HackyAI@AegisAI:
+		Name: Aegis AI
+		MinimumExcessPower: 60
+		BuildingQueues: Building.Aegis, Defense.Aegis
+		UnitQueues: Infantry.Aegis, Vehicle.Aegis, Ship.Aegis, Aircraft.Aegis
+		BuildingCommonNames:
+			ConstructionYard: fact
+			Refinery: refn
+			Power: pwr
+			Barracks: barr
+			VehiclesFactory: weap
+			Production: barr,weap,afld
+			NavalProduction: syrd
+			Silo: silo
+		UnitsCommonNames:
+			Mcv: mcv
+		BuildingLimits:
+			refn: 4
+			barr: 1
+			comm: 1
+			weap: 1
+			syrd: 1
+			afld: 4
+			cmdc: 1
+			fix: 1
+		BuildingFractions:
+			refn: 10%
+			pwr: 31%
+			barr: 1%
+			comm: 1%
+			weap: 6%
+			syrd: 1%
+			afld: 4%
+			vulc: 7%
+			rock: 7%
+			fix: 1%
+			cmdc: 1%
+		UnitsToBuild:
+			pk: 50%
+			e2: 10%
+			rk: 10%
+			hgn: 5%
+			leg: 5%
+			harv: 10%
+			strk: 70%
+			hmmv: 40%
+			vtnk: 15%
+			mtnk: 25%
+			mtrk: 15%
+			atnk: 15%			
+			fgtr: 30%
+			dest: 10%
+			sub: 10%
+			crus: 10%
+		UnitLimits:
+			harv: 8
+		SquadSize: 40

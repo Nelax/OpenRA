@@ -79,7 +79,6 @@ Player:
 	PlayerResources:
 		InsufficientFundsNotification: InsufficientFunds
 	ActorGroupProxy:
-	DeveloperMode:
 	GpsWatcher:
 	Shroud:
 	FrozenActorLayer:

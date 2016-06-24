@@ -205,39 +205,40 @@ FTNK:
 		VisualBounds: 28,28
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
-		
-RTRK:
-	Inherits: ^Vehicle
+
+HOWI:
+	Inherits: ^Tank
 	RenderSprites:
-		Image: V2RL
+		Image: ARTY
 	Buildable:
 		Queue: Vehicle.Manticore
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 70
 		Prerequisites: rvan, ~vehicles.manticore, ~techlevel.medium
 	Valued:
-		Cost: 900
+		Cost: 800
 	Tooltip:
-		Name: Missile Truck
-		Description: Long-range rocket artillery.\n  Strong vs Infantry, Light armor, Buildings\n  Weak vs Tanks, Aircraft
+		Name: Howitzer
+		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 200
+		HP: 100
 	Armor:
 		Type: Light
 	Mobile:
+		TurnSpeed: 2
 		Speed: 85
 	RevealsShroud:
 		Range: 5c0
 	Armament:
-		Weapon: FROG
+		Weapon: HowiCannon
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
 	AttackFrontal:
-	SelectionDecorations:
-		VisualBounds: 28,28
-	AutoTarget:
+	WithMuzzleOverlay:
 	Explodes:
-		Weapon: V2Explode
-	WithAttackAnimation:
-		AimSequence: aim
-		ReloadPrefix: empty-
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 75
+	AutoTarget:
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 
