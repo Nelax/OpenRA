@@ -1,7 +1,7 @@
 Pistol:
 	ReloadDelay: 7
 	Range: 3c0
-	Report: gun27.aud
+	Report: pistol.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -23,7 +23,7 @@ Pistol:
 TurretVulcan:
 	ReloadDelay: 30
 	Range: 6c0
-	Report: gun13.aud
+	Report: vulcan.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam_1: SpreadDamage
@@ -141,7 +141,7 @@ TurretVulcan:
 PKCarbine:
 	ReloadDelay: 20
 	Range: 5c0
-	Report: gun11.aud
+	Report: carbine.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -163,7 +163,7 @@ PKCarbine:
 Minigun:
 	ReloadDelay: 30
 	Range: 4c0
-	Report: pillbox1.aud
+	Report: chaingun.aud
 	Burst: 5
 	Projectile: Bullet
 		Speed: 1c682
@@ -186,7 +186,7 @@ Minigun:
 SuppressedPistol:
 	ReloadDelay: 80
 	Range: 2c512
-	Report: silppk.aud
+	Report: suppressed.aud
 	ValidTargets: Ground, Infantry
 	InvalidTargets: Vehicle, Tank, Water, Structure, Wall, Husk
 	Projectile: Bullet
@@ -206,7 +206,7 @@ SuppressedPistol:
 HVMount:
 	ReloadDelay: 30
 	Range: 4c0
-	Report: pillbox1.aud
+	Report: mounted.aud
 	Burst: 5
 	Projectile: Bullet
 		Speed: 1c682
@@ -229,7 +229,7 @@ HVMount:
 TankVulcan:
 	ReloadDelay: 30
 	Range: 6c0
-	Report: gun13.aud
+	Report: vulcan.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam_1: SpreadDamage
@@ -347,7 +347,7 @@ TankVulcan:
 AssaultRifle:
 	ReloadDelay: 20
 	Range: 5c0
-	Report: gun11.aud
+	Report: asrifle.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -369,7 +369,7 @@ AssaultRifle:
 BuggyFlakAA:
 	ReloadDelay: 10
 	Range: 8c0
-	Report: aacanon3.aud
+	Report: flak.aud
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 1c682
@@ -392,7 +392,7 @@ BuggyFlakAA:
 BuggyFlakAG:
 	ReloadDelay: 10
 	Range: 6c0
-	Report: aacanon3.aud
+	Report: flak.aud
 	ValidTargets: Ground, Water
 	Projectile: Bullet
 		Speed: 1c682
@@ -418,7 +418,7 @@ BuggyFlakAG:
 CarMount:
 	ReloadDelay: 30
 	Range: 4c0
-	Report: pillbox1.aud
+	Report: mounted2.aud
 	Burst: 5
 	Projectile: Bullet
 		Speed: 1c682
@@ -441,7 +441,7 @@ CarMount:
 ShipFlakAA:
 	ReloadDelay: 10
 	Range: 8c0
-	Report: aacanon3.aud
+	Report: flak.aud
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 1c682
@@ -465,7 +465,7 @@ HeliMount:
 	ReloadDelay: 10
 	Range: 5c0
 	MinRange: 0c768
-	Report: gun13.aud
+	Report: vulcan2.aud
 	Projectile: Bullet
 		Speed: 1c682
 		Blockable: false

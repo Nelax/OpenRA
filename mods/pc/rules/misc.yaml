@@ -1,13 +1,3 @@
-MINP:
-	Inherits: ^Mine
-	Explodes:
-		Weapon: APMine
-
-MINV:
-	Inherits: ^Mine
-	Explodes:
-		Weapon: ATMine
-
 CRATE:
 	Inherits: ^Crate
 	GiveCashCrateAction:
@@ -26,7 +16,7 @@ CRATE:
 		SelectionShares: 5
 		Effect: hide-map
 	HealUnitsCrateAction:
-		Notification: heal2.aud
+		Notification: firstaid.aud
 		SelectionShares: 2
 		Effect: heal
 	RevealMapCrateAction:
@@ -37,12 +27,6 @@ CRATE:
 		MaxAmount: 5
 		MinAmount: 1
 		MaxDuplicateValue: 1500
-	GrantUpgradeCrateAction@invuln:
-		SelectionShares: 5
-		Effect: invuln
-		Notification: ironcur9.aud
-		Upgrades: invulnerability
-		Duration: 600
 
 MONEYCRATE:
 	Inherits: ^Crate
@@ -60,7 +44,7 @@ HEALCRATE:
 	Tooltip:
 		Name: Heal Crate
 	HealUnitsCrateAction:
-		Notification: heal2.aud
+		Notification: heal.aud
 		SelectionShares: 1
 		Effect: heal
 

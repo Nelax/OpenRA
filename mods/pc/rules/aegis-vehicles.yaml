@@ -28,7 +28,7 @@ MCV:
 		IntoActor: fact
 		Offset: -1,-1
 		Facing: 96
-		TransformSounds: placbldg.aud, build5.aud
+		TransformSounds: place.aud, build.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -297,6 +297,7 @@ ATNK:
 		LocalOffset: 0,0,213
 	AttackTurreted:
 	Turreted:
+		TurnSpeed: 5
 	WithSpriteTurret:
 	SelectionDecorations:
 		VisualBounds: 30,30

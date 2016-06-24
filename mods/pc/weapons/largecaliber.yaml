@@ -1,7 +1,7 @@
 StrykerGun:
 	ReloadDelay: 13
 	Range: 4c0
-	Report: cannon2.aud
+	Report: fieldgun.aud
 	Projectile: Bullet
 		Speed: 853
 		Image: 50CAL
@@ -26,7 +26,7 @@ StrykerGun:
 MediumCannon:
 	ReloadDelay: 50
 	Range: 4c768
-	Report: cannon1.aud
+	Report: mdcannon.aud
 	Projectile: Bullet
 		Speed: 682
 		Image: 120MM
@@ -43,18 +43,18 @@ MediumCannon:
 		SmudgeType: Crater
 	Warhead@3EffGround: CreateEffect
 		Explosions: small_explosion
-		ImpactSounds: kaboom12.aud
+		ImpactSounds: expfiremd.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashsm.aud
 		ValidImpactTypes: Water
 
 HowiCannon:
 	ReloadDelay: 85
 	Range: 12c0
 	MinRange: 3c0
-	Report: tank5.aud
+	Report: howitzer.aud
 	Projectile: Bullet
 		Speed: 204
 		Blockable: false
@@ -76,18 +76,18 @@ HowiCannon:
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
 		Explosions: artillery_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expfirelg.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: med_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashlg.aud
 		ValidImpactTypes: Water
 
 CruiserCannon:
 	ReloadDelay: 250
 	Range: 16c0
 	Burst: 2
-	Report: turret1.aud
+	Report: mdshipgun.aud
 	Projectile: Bullet
 		Speed: 204
 		Blockable: false
@@ -109,18 +109,18 @@ CruiserCannon:
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
 		Explosions: artillery_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expfirelg.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: large_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashlg.aud
 		ValidImpactTypes: Water
 
 Mortar:
 	ReloadDelay: 85
 	Range: 12c0
 	MinRange: 3c0
-	Report: tank5.aud
+	Report: mortar.aud
 	Projectile: Bullet
 		Speed: 204
 		Blockable: false
@@ -142,17 +142,17 @@ Mortar:
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
 		Explosions: artillery_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expfirelg.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: med_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashlg.aud
 		ValidImpactTypes: Water
 
 LightCannon:
 	ReloadDelay: 13
 	Range: 4c0
-	Report: cannon2.aud
+	Report: smcannon.aud
 	Projectile: Bullet
 		Speed: 853
 		Image: 50CAL
@@ -177,7 +177,7 @@ LightCannon:
 HeavyCannons:
 	ReloadDelay: 90
 	Range: 4c768
-	Report: cannon1.aud
+	Report: lgcannon.aud
 	Burst: 2
 	InvalidTargets: Air, Infantry
 	Projectile: Bullet
@@ -197,17 +197,17 @@ HeavyCannons:
 		SmudgeType: Crater
 	Warhead@3EffGround: CreateEffect
 		Explosions: small_explosion
-		ImpactSounds: kaboom12.aud
+		ImpactSounds: expfiremd.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashmd.aud
 		ValidImpactTypes: Water
 
 ShipCannon:
 	ReloadDelay: 60
 	Range: 5c512
-	Report: cannon2.aud
+	Report: smshipgun.aud
 	Projectile: Bullet
 		Speed: 426
 		Image: 120MM
@@ -224,18 +224,18 @@ ShipCannon:
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
 		Explosions: small_explosion
-		ImpactSounds: kaboom12.aud
+		ImpactSounds: expfiremd.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: small_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashmd.aud
 		ValidImpactTypes: Water
 
 ShipBombard:
 	ReloadDelay: 85
 	Range: 12c0
 	MinRange: 3c0
-	Report: tank5.aud
+	Report: lgshipgun.aud
 	Projectile: Bullet
 		Speed: 204
 		Blockable: false
@@ -257,9 +257,9 @@ ShipBombard:
 		SmudgeType: Crater
 	Warhead@3Eff: CreateEffect
 		Explosions: artillery_explosion
-		ImpactSounds: kaboom15.aud
+		ImpactSounds: expfirelg.aud
 		InvalidImpactTypes: Water
 	Warhead@4EffWater: CreateEffect
 		Explosions: med_splash
-		ImpactSounds: splash9.aud
+		ImpactSounds: expsplashlg.aud
 		ValidImpactTypes: Water

@@ -147,7 +147,7 @@ MRIG:
 		IntoActor: stoc
 		Offset: -1,-1
 		Facing: 96
-		TransformSounds: placbldg.aud, build5.aud
+		TransformSounds: place.aud, build.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	SpawnActorOnDeath:
 		Actor: MRIG.Husk
@@ -285,7 +285,7 @@ MACH:
 		IntoActor: work
 		Offset: -1,-1
 		Facing: 96
-		TransformSounds: placbldg.aud, build5.aud
+		TransformSounds: place.aud, build.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	SpawnActorOnDeath:
 		Actor: MACH.Husk
@@ -381,7 +381,7 @@ PNTN:
 		IntoActor: docks
 		Offset: -1,-1
 		Facing: 96
-		TransformSounds: placbldg.aud, build5.aud
+		TransformSounds: place.aud, build.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	Mobile:
 		TerrainSpeeds:

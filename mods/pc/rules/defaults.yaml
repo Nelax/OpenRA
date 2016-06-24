@@ -214,7 +214,7 @@
 	GpsDot:
 		String: Infantry
 	Crushable:
-		CrushSound: squishy2.aud
+		CrushSound: crushperson.aud
 	Guard:
 	Guardable:
 	Tooltip:
@@ -240,8 +240,8 @@
 	Parachutable:
 		FallRate: 26
 		KilledOnImpassableTerrain: true
-		GroundImpactSound: squishy2.aud
-		WaterImpactSound: splash9.aud
+		GroundImpactSound: crushperson.aud
+		WaterImpactSound: expsplashsm.aud
 		WaterCorpseSequence: small_splash
 	Cloneable:
 		Types: Infantry
@@ -445,8 +445,8 @@ PLT:
 		TerrainTypes: Clear,Road
 		RequiresBaseProvider: True
 	SoundOnDamageTransition:
-		DamagedSounds: kaboom1.aud
-		DestroyedSounds: kaboom22.aud
+		DamagedSounds: expdamage.aud
+		DestroyedSounds: expdemolish.aud
 	WithSpriteBody:
 	WithBuildingExplosion:
 		Sequences: building, building_napalm, large_explosion, self_destruct, large_napalm
@@ -480,7 +480,7 @@ PLT:
 	GpsDot:
 		String: Structure
 	Sellable:
-		SellSounds: cashturn.aud
+		SellSounds: sell.aud
 
 ^ScienceBuilding:
 	Inherits: ^Building
@@ -502,7 +502,7 @@ PLT:
 ^BuildingPlug:
 	AlwaysVisible:
 	Building:
-		BuildSounds: placbldg.aud
+		BuildSounds: place.aud
 	KillsSelf:
 		RemoveInstead: true
 	RenderSprites:
@@ -513,12 +513,12 @@ PLT:
 	Building:
 		Dimensions: 1,1
 		Footprint: x
-		BuildSounds: placbldg.aud
+		BuildSounds: place.aud
 		Adjacent: 7
 		TerrainTypes: Clear,Road
 	SoundOnDamageTransition:
-		DamagedSounds: sandbag2.aud
-		DestroyedSounds: sandbag2.aud
+		DamagedSounds: crushsbag.aud
+		DestroyedSounds: crushsbag.aud
 	Crushable:
 		CrushClasses: wall
 	LineBuild:
@@ -533,7 +533,7 @@ PLT:
 	WithWallSpriteBody:
 	AutoTargetIgnore:
 	Sellable:
-		SellSounds: cashturn.aud
+		SellSounds: sell.aud
 	Guardable:
 	FrozenUnderFog:
 	FrozenUnderFogUpdatedByGps:
@@ -562,9 +562,9 @@ PLT:
 	Gate:
 		Adjacent: 4
 		BlocksProjectilesHeight: 0
-		BuildSounds: place2.aud
-		OpeningSound: cashturn.aud
-		ClosingSound: cashturn.aud
+		BuildSounds: place.aud
+		OpeningSound: gatedown.aud
+		ClosingSound: gateup.aud
 		TerrainTypes: Clear, Road
 
 ^TechBuilding:
