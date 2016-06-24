@@ -775,11 +775,8 @@ PCAN:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 224
-	AttackCharge:
-		ChargeAudio: partcanchg.aud
-		ReloadDelay: 120
+	AttackTurreted:
 	WithSpriteTurret:
-		Recoils: no
 	Armament:
 		Weapon: PartCannon
 		LocalOffset: 512,0,112
