@@ -241,9 +241,8 @@ fbgy:
 		Start: 32
 		Facings: 32
 		UseClassicFacingFudge: True
-	muzzle: minigun
-		Length: 6
-		Facings: 8
+	muzzle: gunfire2
+		Length: 2
 	icon: jeepicon
 
 acar:
