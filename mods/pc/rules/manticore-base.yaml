@@ -1,7 +1,5 @@
 MHQ:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: MCV
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 90
@@ -12,7 +10,7 @@ MHQ:
 		Cost: 2000
 	Tooltip:
 		Name: Mobile Headquarters
-		Description: Produces base vehicles.
+		Description: Produces caravan vehicles.
 	ProvidesPrerequisite@manticore:
 		Prerequisite: structures.manticore
 	ProductionBar@Building:
@@ -41,13 +39,11 @@ MHQ:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	SpawnActorOnDeath:
-		Actor: MCV.Husk
+		Actor: MHQ.Husk
 	ProvidesPrerequisite@buildingname:
 
 GTRUK:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 20
@@ -79,11 +75,11 @@ GTRUK:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
+	SpawnActorOnDeath:
+		Actor: GTRUK.Husk
 
 GBUS:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 110
@@ -115,11 +111,11 @@ GBUS:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
+	SpawnActorOnDeath:
+		Actor: GBUS.Husk
 
 MRIG:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 60
@@ -153,11 +149,11 @@ MRIG:
 		Facing: 96
 		TransformSounds: placbldg.aud, build5.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
+	SpawnActorOnDeath:
+		Actor: MRIG.Husk
 
 STOC:
 	Inherits: ^Building
-	RenderSprites:
-		Image: PROC
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 60
@@ -212,44 +208,8 @@ STOC:
 		Delay: 1
 	ProvidesPrerequisite@buildingname:
 
-STRK:
-	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
-	Buildable:
-		Queue: Defense.Manticore
-		BuildPaletteOrder: 35
-		Prerequisites: stockpile, ~techlevel.low
-	Valued:
-		Cost: 150
-	Tooltip:
-		Name: Supply Truck
-		Description: Stores excess refined\nOre and Gems.
-	Selectable:
-		Priority: 5
-	Health:
-		HP: 300
-	Armor:
-		Type: Wood
-	Mobile:
-		Speed: 128
-	RevealsShroud:
-		Range: 4c0
-	Power:
-		Amount: -10
-	StoresResources:
-		PipCount: 5
-		Capacity: 1500
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	ProvidesPrerequisite@buildingname:
-
 BUS:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 30
@@ -257,7 +217,7 @@ BUS:
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Barracks Bus
+		Name: Recruiter
 		Description: Trains infantry.
 	Selectable:
 		Priority: 3
@@ -286,11 +246,11 @@ BUS:
 	ProvidesPrerequisite@buildingname:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	SpawnActorOnDeath:
+		Actor: BUS.Husk
 
 MACH:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 80
@@ -327,11 +287,11 @@ MACH:
 		Facing: 96
 		TransformSounds: placbldg.aud, build5.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
+	SpawnActorOnDeath:
+		Actor: MACH.Husk
 		
 WORK:
 	Inherits: ^Building
-	RenderSprites:
-		Image: WEAP
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 80
@@ -384,56 +344,13 @@ WORK:
 		IntoActor: mach
 		Offset: 1,1
 		Facing: 96
-
-RVAN:
-	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
-	Buildable:
-		Queue: Building.Manticore
-		BuildPaletteOrder: 90
-		Prerequisites: stockpile, ~techlevel.medium
-	Valued:
-		Cost: 1800
-	Tooltip:
-		Name: Radar Van
-		Description: Provides radar.
-	Selectable:
-		Priority: 5
-	Health:
-		HP: 1000
-	Armor:
-		Type: Wood
-	Mobile:
-		Speed: 128
-	RevealsShroud:
-		Range: 10c0
-	ProvidesRadar:
-	InfiltrateForExploration:
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
-	DisabledOverlay:
-	DetectCloaked:
-		Range: 10c0
-	RenderDetectionCircle:
-	Power:
-		Amount: -40
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	ProvidesPrerequisite@buildingname:
 	
 PNTN:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: LST
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 80
-		Prerequisites: rvan, ~techlevel.medium
+		Prerequisites: anypower, ~techlevel.low
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -484,8 +401,6 @@ PNTN:
 		
 DOCKS:
 	Inherits: ^Building
-	RenderSprites:
-		Image: SPEN
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 40
@@ -554,11 +469,50 @@ DOCKS:
 		IntoActor: pntn
 		Offset: 1,1
 		Facing: 96
+
+RVAN:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Building.Manticore
+		BuildPaletteOrder: 90
+		Prerequisites: stockpile, ~techlevel.medium
+	Valued:
+		Cost: 1800
+	Tooltip:
+		Name: Radar Van
+		Description: Provides radar.
+	Selectable:
+		Priority: 5
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 10c0
+	ProvidesRadar:
+	InfiltrateForExploration:
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
+	DetectCloaked:
+		Range: 10c0
+	RenderDetectionCircle:
+	Power:
+		Amount: -40
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	ProvidesPrerequisite@buildingname:
+	SpawnActorOnDeath:
+		Actor: RVAN.Husk
 		
 ACNT:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: TRUK
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 120
@@ -595,6 +549,8 @@ ACNT:
 		Facing: 96
 		TransformSounds: placbldg.aud, build5.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
+	SpawnActorOnDeath:
+		Actor: ACNT.Husk
 
 FARP:
 	Inherits: ^Building
@@ -652,8 +608,6 @@ FARP:
 
 DEAL:
 	Inherits: ^Vehicle
-	RenderSprites:
-		Image: MCV
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 150
@@ -682,6 +636,8 @@ DEAL:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
+	SpawnActorOnDeath:
+		Actor: DEAL.Husk
 	
 WORKSHOP:
 	AlwaysVisible:

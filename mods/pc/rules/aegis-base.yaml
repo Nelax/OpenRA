@@ -99,8 +99,6 @@ PWR:
 
 PWRUP:
 	Inherits: ^BuildingPlug
-	RenderSprites:
-		Image: pwr
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -200,8 +198,6 @@ BARR:
 
 REFN:
 	Inherits: ^Building
-	RenderSprites:
-		Image: PROC
 	Buildable:
 		Queue: Building.Aegis
 		BuildPaletteOrder: 60
@@ -401,8 +397,6 @@ SYRD:
 
 COMM:
 	Inherits: ^Building
-	RenderSprites:
-		Image: DOME
 	Buildable:
 		Queue: Building.Aegis
 		BuildPaletteOrder: 90
@@ -526,8 +520,6 @@ FIX:
 
 CMDC:
 	Inherits: ^ScienceBuilding
-	RenderSprites:
-		Image: STEK
 	Buildable:
 		Queue: Building.Aegis
 		BuildPaletteOrder: 150
@@ -629,8 +621,6 @@ BRIK:
 
 HPNT:
 	Inherits: ^Building
-	RenderSprites:
-		Image: HPNT
 	Tooltip:
 		Name: Hardpoint
 		Description: Static concrete base capable of\nsupporting a variety of defenses.
@@ -721,8 +711,6 @@ HPNT:
 
 VULC:
 	Inherits: ^BuildingPlug
-	RenderSprites:
-		Image: GUN
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -739,8 +727,6 @@ VULC:
 
 ROCK:
 	Inherits: ^BuildingPlug
-	RenderSprites:
-		Image: SAM
 	Valued:
 		Cost: 600
 	Tooltip:

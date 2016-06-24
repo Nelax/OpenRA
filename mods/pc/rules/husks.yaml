@@ -14,7 +14,7 @@ CPLN.Husk:
 		Interval: 2
 		MinDamage: Undamaged
 	RenderSprites:
-		Image: badr
+		Image: cpln
 
 FGTR.Husk:
 	Inherits: ^PlaneHusk
@@ -35,7 +35,7 @@ FGTR.Husk:
 		Range: 12c0
 		Type: CenterPosition
 	RenderSprites:
-		Image: mig
+		Image: fgtr
 
 TRNS.Husk:
 	Inherits: ^HelicopterHusk
@@ -54,21 +54,21 @@ TRNS.Husk:
 		Range: 12c0
 		Type: CenterPosition
 	RenderSprites:
-		Image: tran
+		Image: trns
 
 TRNS.Husk1:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Transport Helicopter)
 	RenderSprites:
-		Image: tran1husk
+		Image: trns1husk
 
 TRNS.Husk2:
 	Inherits: ^Husk
 	Tooltip:
 		Name: Husk (Transport Helicopter)
 	RenderSprites:
-		Image: tran2husk
+		Image: trns2husk
 
 GSHP.Husk:
 	Inherits: ^HelicopterHusk
@@ -87,7 +87,7 @@ GSHP.Husk:
 		Range: 12c0
 		Type: CenterPosition
 	RenderSprites:
-		Image: heli
+		Image: gshp
 
 SCOT.Husk:
 	Inherits: ^HelicopterHusk
@@ -105,7 +105,7 @@ SCOT.Husk:
 		Range: 10c0
 		Type: CenterPosition
 	RenderSprites:
-		Image: hind
+		Image: scot
 
 MCV.Husk:
 	Inherits: ^Husk
@@ -115,6 +115,87 @@ MCV.Husk:
 		IntoActor: mcv
 	RenderSprites:
 		Image: mcvhusk
+
+MHQ.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Mobile Headquarters)
+	TransformOnCapture:
+		IntoActor: mhq
+	RenderSprites:
+		Image: mhqhusk
+
+GTRUK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Generator Truck)
+	TransformOnCapture:
+		IntoActor: gtruk
+	RenderSprites:
+		Image: gtrukhusk
+
+GBUS.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Generator Bus)
+	TransformOnCapture:
+		IntoActor: gbus
+	RenderSprites:
+		Image: gbushusk
+
+BUS.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Recruiter)
+	TransformOnCapture:
+		IntoActor: bus
+	RenderSprites:
+		Image: bushusk
+
+MRIG.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Mobile Stockpile)
+	TransformOnCapture:
+		IntoActor: mrig
+	RenderSprites:
+		Image: mrighusk
+
+MACH.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Machinist)
+	TransformOnCapture:
+		IntoActor: mach
+	RenderSprites:
+		Image: machhusk
+
+RVAN.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Radar Van)
+	TransformOnCapture:
+		IntoActor: rvan
+	RenderSprites:
+		Image: rvanhusk
+
+ACNT.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Air Control)
+	TransformOnCapture:
+		IntoActor: acnt
+	RenderSprites:
+		Image: acnthusk
+
+DEAL.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Arms Dealer)
+	TransformOnCapture:
+		IntoActor: deal
+	RenderSprites:
+		Image: dealhusk
 
 HARV.FullHusk:
 	Inherits: ^Husk
@@ -141,7 +222,7 @@ MIN.FullHusk:
 	TransformOnCapture:
 		IntoActor: min
 	RenderSprites:
-		Image: hhusk
+		Image: minhusk
 
 MIN.EmptyHusk:
 	Inherits: ^Husk
@@ -150,7 +231,7 @@ MIN.EmptyHusk:
 	TransformOnCapture:
 		IntoActor: min
 	RenderSprites:
-		Image: hhusk2
+		Image: minhusk2
 		
 STRK.Husk:
 	Inherits: ^Husk
@@ -161,7 +242,7 @@ STRK.Husk:
 	TransformOnCapture:
 		IntoActor: strk
 	RenderSprites:
-		Image: 1tnk.destroyed
+		Image: strk.destroyed
 
 VTNK.Husk:
 	Inherits: ^Husk
@@ -172,7 +253,7 @@ VTNK.Husk:
 	TransformOnCapture:
 		IntoActor: vtnk
 	RenderSprites:
-		Image: 2tnk.destroyed
+		Image: vtnk.destroyed
 
 MTNK.Husk:
 	Inherits: ^Husk
@@ -183,7 +264,7 @@ MTNK.Husk:
 	TransformOnCapture:
 		IntoActor: mtnk
 	RenderSprites:
-		Image: 2tnk.destroyed
+		Image: mtnk.destroyed
 
 ATNK.Husk:
 	Inherits: ^Husk
@@ -194,7 +275,7 @@ ATNK.Husk:
 	TransformOnCapture:
 		IntoActor: atnk
 	RenderSprites:
-		Image: 2tnk.destroyed
+		Image: atnk.destroyed
 		
 LTNK.Husk:
 	Inherits: ^Husk
@@ -205,7 +286,7 @@ LTNK.Husk:
 	TransformOnCapture:
 		IntoActor: ltnk
 	RenderSprites:
-		Image: 1tnk.destroyed
+		Image: ltnk.destroyed
 
 HTNK.Husk:
 	Inherits: ^Husk
@@ -216,7 +297,7 @@ HTNK.Husk:
 	TransformOnCapture:
 		IntoActor: htnk
 	RenderSprites:
-		Image: 3tnk.destroyed
+		Image: htnk.destroyed
 
 T01.Husk:
 	Inherits: ^TreeHusk

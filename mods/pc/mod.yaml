@@ -62,6 +62,7 @@ Sequences:
 	pc|sequences/ships.yaml
 	pc|sequences/vehicles.yaml
 	pc|sequences/structures.yaml
+	pc|sequences/caravan.yaml
 	pc|sequences/infantry.yaml
 	pc|sequences/aircraft.yaml
 	pc|sequences/misc.yaml

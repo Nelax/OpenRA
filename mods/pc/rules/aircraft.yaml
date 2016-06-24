@@ -1,7 +1,5 @@
 CPLN:
 	Inherits: ^Plane
-	RenderSprites:
-		Image: badr
 	ParaDrop:
 		DropRange: 4c0
 	Health:
@@ -38,8 +36,6 @@ CPLN:
 
 FGTR:
 	Inherits: ^Plane
-	RenderSprites:
-		Image: MIG
 	Buildable:
 		Queue: Aircraft.Aegis
 		BuildPaletteOrder: 50
@@ -94,8 +90,6 @@ FGTR:
 
 SCOT:
 	Inherits: ^Helicopter
-	RenderSprites:
-		Image: HIND
 	Buildable:
 		Queue: Aircraft.Manticore
 		BuildPaletteOrder: 20
@@ -155,8 +149,6 @@ SCOT:
 
 GSHP:
 	Inherits: ^Helicopter
-	RenderSprites:
-		Image: HELI
 	Buildable:
 		Queue: Aircraft.Manticore
 		BuildPaletteOrder: 40
@@ -212,8 +204,6 @@ GSHP:
 		
 TRNS:
 	Inherits: ^Helicopter
-	RenderSprites:
-		Image: TRAN
 	Buildable:
 		Queue: Aircraft.Manticore
 		BuildPaletteOrder: 10

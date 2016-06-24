@@ -1,7 +1,5 @@
 FTR:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E1
 	Buildable:
 		Queue: Infantry.Manticore
 		BuildAtProductionType: Soldier.Manticore
@@ -24,8 +22,6 @@ FTR:
 
 ARSN:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E2
 	Buildable:
 		Queue: Infantry.Manticore
 		BuildAtProductionType: Soldier.Manticore
@@ -55,8 +51,6 @@ ARSN:
 
 SAL:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E6
 	Buildable:
 		Queue: Infantry.Manticore
 		BuildAtProductionType: Soldier.Manticore
@@ -79,8 +73,6 @@ SAL:
 
 MCH:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: MECH
 	Buildable:
 		Queue: Infantry.Manticore
 		BuildAtProductionType: Soldier.Manticore
@@ -118,8 +110,6 @@ MCH:
 
 FLAM:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E4
 	Buildable:
 		Queue: Infantry.Manticore
 		BuildAtProductionType: Soldier.Manticore
@@ -144,8 +134,6 @@ FLAM:
 
 JACK:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: HIJACKER
 	Buildable:
 		Queue: Infantry.Manticore
 		BuildAtProductionType: Soldier.Manticore
@@ -184,8 +172,6 @@ JACK:
 
 MORT:
 	Inherits: ^Soldier
-	RenderSprites:
-		Image: E3
 	Buildable:
 		Queue: Infantry.Manticore
 		BuildAtProductionType: Soldier.Manticore
