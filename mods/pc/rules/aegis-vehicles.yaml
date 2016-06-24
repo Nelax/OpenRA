@@ -246,40 +246,39 @@ MTNK:
 		VisualBounds: 28,28
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
-
-HOWI:
-	Inherits: ^Tank
+		
+RTRK:
+	Inherits: ^Vehicle
 	RenderSprites:
-		Image: ARTY
+		Image: V2RL
 	Buildable:
 		Queue: Vehicle.Aegis
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 80
 		Prerequisites: comm, ~vehicles.aegis, ~techlevel.medium
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
-		Name: Howitzer
-		Description: Long-range artillery.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Name: Missile Launcher
+		Description: Long-range rocket artillery.\n  Strong vs Infantry, Light armor, Buildings\n  Weak vs Tanks, Aircraft
 	Health:
-		HP: 100
+		HP: 200
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 2
 		Speed: 85
 	RevealsShroud:
 		Range: 5c0
 	Armament:
-		Weapon: HowiCannon
-		LocalOffset: 624,0,208
-		MuzzleSequence: muzzle
+		Weapon: FROG
 	AttackFrontal:
-	WithMuzzleOverlay:
-	Explodes:
-		Weapon: ArtilleryExplode
-		EmptyWeapon: UnitExplodeSmall
-		LoadedChance: 75
+	SelectionDecorations:
+		VisualBounds: 28,28
 	AutoTarget:
+	Explodes:
+		Weapon: V2Explode
+	WithAttackAnimation:
+		AimSequence: aim
+		ReloadPrefix: empty-
 	ProducibleWithLevel:
 		Prerequisites: vehicles.upgraded
 

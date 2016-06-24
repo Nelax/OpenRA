@@ -39,6 +39,7 @@ MapFolders:
 	~^maps/pc/{DEV_VERSION}: User
 
 Rules:
+	pc|rules/ai.yaml
 	pc|rules/misc.yaml
 	pc|rules/player.yaml
 	pc|rules/palettes.yaml
