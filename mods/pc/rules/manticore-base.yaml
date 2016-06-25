@@ -228,6 +228,7 @@ STOC:
 	WithBuildingExplosion:
 		Delay: 1
 	ProvidesPrerequisite@buildingname:
+	-Sellable:
 
 BUS:
 	Inherits: ^Vehicle
@@ -269,6 +270,14 @@ BUS:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	SpawnActorOnDeath:
 		Actor: BUS.Husk
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
 
 MACH:
 	Inherits: ^Vehicle
@@ -365,6 +374,7 @@ WORK:
 		IntoActor: mach
 		Offset: 1,1
 		Facing: 96
+	-Sellable:
 	
 PNTN:
 	Inherits: ^Vehicle
@@ -490,6 +500,7 @@ DOCKS:
 		IntoActor: pntn
 		Offset: 1,1
 		Facing: 96
+	-Sellable:
 
 RVAN:
 	Inherits: ^Vehicle
@@ -629,6 +640,7 @@ FARP:
 		ZOffset: 256
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
+	-Sellable:
 
 DEAL:
 	Inherits: ^Vehicle

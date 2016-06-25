@@ -26,7 +26,7 @@ Heal:
 		DebugOverlayColor: 00FF00
 
 PartCannon:
-	ReloadDelay: 3
+	ReloadDelay: 120
 	Range: 8c512
 	Report: partcanbig.aud
 	Projectile: LaserZap
