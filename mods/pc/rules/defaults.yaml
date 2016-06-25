@@ -52,20 +52,9 @@
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 4
 
-^IronCurtainable:
-	UpgradeOverlay@IRONCURTAIN:
-		UpgradeTypes: invulnerability
-		UpgradeMinEnabledLevel: 1
-	DamageMultiplier@IRONCURTAIN:
-		UpgradeTypes: invulnerability
-		Modifier: 0
-	TimedUpgradeBar:
-		Upgrade: invulnerability
-
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^GainsExperience
-	Inherits@3: ^IronCurtainable
 	Inherits@4: ^SpriteActor
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
@@ -325,7 +314,6 @@ PLT:
 ^Ship:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^GainsExperience
-	Inherits@3: ^IronCurtainable
 	Inherits@4: ^SpriteActor
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
@@ -340,8 +328,6 @@ PLT:
 		TargetTypes: Ground, Water, Repair
 	HiddenUnderFog:
 	AttackMove:
-	ActorLostNotification:
-		Notification: NavalUnitLost
 	ProximityCaptor:
 		Types: Ship
 	GivesBounty:
@@ -367,7 +353,6 @@ PLT:
 ^Plane:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^GainsExperience
-	Inherits@3: ^IronCurtainable
 	Inherits@4: ^SpriteActor
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
@@ -394,12 +379,10 @@ PLT:
 	AttackMove:
 	Guard:
 	Guardable:
-	ActorLostNotification:
-		Notification: AirUnitLost
 	ProximityCaptor:
 		Types: Plane
 	EjectOnDeath:
-		PilotActor: plt
+		PilotActor: pk
 		SuccessRate: 50
 		EjectOnGround: false
 		EjectInAir: true
@@ -429,10 +412,11 @@ PLT:
 		UpgradeMinEnabledLevel: 1
 	BodyOrientation:
 		UseClassicFacingFudge: True
+	EjectOnDeath:
+		PilotActor: ftr
 
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^IronCurtainable
 	Inherits@3: ^SpriteActor
 	SelectionDecorations:
 	Selectable:

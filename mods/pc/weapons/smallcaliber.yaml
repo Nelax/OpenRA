@@ -233,8 +233,8 @@ TankVulcan:
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam_1: SpreadDamage
-		Spread: 128
-		Damage: 10
+		Spread: 64
+		Damage: 5
 		Versus:
 			None: 200
 			Wood: 50
@@ -249,8 +249,8 @@ TankVulcan:
 		Explosions: water_piffs
 		ValidImpactTypes: Water
 	Warhead@3Dam_2: SpreadDamage
-		Spread: 128
-		Damage: 10
+		Spread: 64
+		Damage: 5
 		Delay: 2
 		Versus:
 			None: 200
@@ -268,8 +268,8 @@ TankVulcan:
 		ValidImpactTypes: Water
 		Delay: 2
 	Warhead@5Dam_3: SpreadDamage
-		Spread: 128
-		Damage: 10
+		Spread: 64
+		Damage: 5
 		Delay: 4
 		Versus:
 			None: 200
@@ -287,8 +287,8 @@ TankVulcan:
 		ValidImpactTypes: Water
 		Delay: 4
 	Warhead@7Dam_4: SpreadDamage
-		Spread: 128
-		Damage: 10
+		Spread: 64
+		Damage: 5
 		Delay: 6
 		Versus:
 			None: 200
@@ -306,8 +306,8 @@ TankVulcan:
 		ValidImpactTypes: Water
 		Delay: 6
 	Warhead@9Dam_5: SpreadDamage
-		Spread: 128
-		Damage: 10
+		Spread: 64
+		Damage: 5
 		Delay: 8
 		Versus:
 			None: 200
@@ -325,8 +325,8 @@ TankVulcan:
 		ValidImpactTypes: Water
 		Delay: 8
 	Warhead@11Dam_6: SpreadDamage
-		Spread: 128
-		Damage: 10
+		Spread: 64
+		Damage: 5
 		Delay: 10
 		Versus:
 			None: 200
