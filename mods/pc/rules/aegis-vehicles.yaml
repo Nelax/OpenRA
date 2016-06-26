@@ -1,5 +1,5 @@
 MCV:
-	Inherits: ^Vehicle
+	Inherits: ^AegisVehicle
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 90
@@ -37,7 +37,7 @@ MCV:
 		Actor: MCV.Husk
 
 HARV:
-	Inherits: ^Vehicle
+	Inherits: ^AegisVehicle
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 10
@@ -85,7 +85,7 @@ HARV:
 		Weapon: OreExplosion
 
 STRK:
-	Inherits: ^Tank
+	Inherits: ^AegisTank
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 50
@@ -127,7 +127,7 @@ STRK:
 		Prerequisites: vehicles.upgraded
 
 HMMV:
-	Inherits: ^Vehicle
+	Inherits: ^AegisVehicle
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 30
@@ -162,7 +162,7 @@ HMMV:
 		Prerequisites: vehicles.upgraded
 
 VTNK:
-	Inherits: ^Tank
+	Inherits: ^AegisTank
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 120
@@ -207,7 +207,7 @@ VTNK:
 		Prerequisites: vehicles.upgraded
 
 MTNK:
-	Inherits: ^Tank
+	Inherits: ^AegisTank
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 120
@@ -246,7 +246,7 @@ MTNK:
 		Prerequisites: vehicles.upgraded
 		
 RTRK:
-	Inherits: ^Vehicle
+	Inherits: ^AegisVehicle
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 80
@@ -279,7 +279,7 @@ RTRK:
 		Prerequisites: vehicles.upgraded
 
 ATNK:
-	Inherits: ^Tank
+	Inherits: ^AegisTank
 	Buildable:
 		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 180

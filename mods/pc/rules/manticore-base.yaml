@@ -1,5 +1,5 @@
 MHQ:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Vehicle.Manticore
 		BuildPaletteOrder: 90
@@ -64,7 +64,7 @@ MHQ:
 	ProvidesPrerequisite@buildingname:
 
 GTRUK:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 20
@@ -100,7 +100,7 @@ GTRUK:
 		Actor: GTRUK.Husk
 
 GBUS:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 110
@@ -136,7 +136,7 @@ GBUS:
 		Actor: GBUS.Husk
 
 MRIG:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 60
@@ -280,7 +280,7 @@ BUS:
 		UpgradeMinEnabledLevel: 1
 
 MACH:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 80
@@ -377,10 +377,10 @@ WORK:
 	-Sellable:
 	
 PNTN:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 40
 		Prerequisites: anypower, ~techlevel.low
 	Valued:
 		Cost: 1000
@@ -503,7 +503,7 @@ DOCKS:
 	-Sellable:
 
 RVAN:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 90
@@ -547,7 +547,7 @@ RVAN:
 		Actor: RVAN.Husk
 		
 ACNT:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 120
@@ -643,7 +643,7 @@ FARP:
 	-Sellable:
 
 DEAL:
-	Inherits: ^Vehicle
+	Inherits: ^Caravan
 	Buildable:
 		Queue: Building.Manticore
 		BuildPaletteOrder: 150

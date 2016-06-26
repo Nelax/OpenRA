@@ -192,7 +192,8 @@ GSHP:
 		UpgradeTypes: airborne
 		UpgradeMaxEnabledLevel: 0
 	AmmoPool:
-		Ammo: 10
+		Ammo: 16
+		PipCount: 8
 	SelectionDecorations:
 		VisualBounds: 36,28
 	SpawnActorOnDeath:
