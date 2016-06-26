@@ -345,7 +345,7 @@ GunshipPods:
 	Range: 5c0
 	MinRange: 1c256
 	Report: sidewinder.aud
-	Burst: 5
+	Burst: 4
 	BurstDelay: 14
 	ValidTargets: Ground, Water
 	Projectile: Missile
@@ -359,7 +359,7 @@ GunshipPods:
 		RangeLimit: 8c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 60
+		Damage: 35
 		ValidTargets: Ground, Water
 		Versus:
 			None: 30
