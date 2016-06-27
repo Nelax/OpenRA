@@ -116,7 +116,7 @@ rvan:
 	icon: mrjicon
 
 rvanhusk:
-	idle: rjam
+	idle: mrj
 		Facings: 32
 		UseClassicFacingFudge: True
 
