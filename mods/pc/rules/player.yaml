@@ -7,6 +7,7 @@ Player:
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: BuildingReady
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@BuildingManticore:
 		Type: Building.Manticore
@@ -14,6 +15,7 @@ Player:
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: BuildingReady
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@DefenseAegis:
 		Type: Defense.Aegis
@@ -21,6 +23,7 @@ Player:
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: BuildingReady
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@DefenseManticore:
 		Type: Defense.Manticore
@@ -28,46 +31,61 @@ Player:
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: BuildingReady
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@VehicleAegis:
 		Type: Vehicle.Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@VehicleManticore:
 		Type: Vehicle.Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@InfantryAegis:
 		Type: Infantry.Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@InfantryManticore:
 		Type: Infantry.Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@ShipAegis:
 		Type: Ship.Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@ShipManticore:
 		Type: Ship.Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@AircraftAegis:
 		Type: Aircraft.Aegis
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	ClassicProductionQueue@AircraftManticore:
 		Type: Aircraft.Manticore
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		BlockedAudio: NoRoom
 		SpeedUp: True
 	PlaceBuilding:
 	SupportPowerManager:
