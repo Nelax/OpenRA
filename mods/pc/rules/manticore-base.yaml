@@ -59,6 +59,9 @@ MHQ:
 		Range: 4c0
 	MustBeDestroyed:
 		RequiredForShortGame: true
+	WithIdleOverlay@SPINNER:
+		Sequence: spinner
+		Offset: -256,0,256
 	SpawnActorOnDeath:
 		Actor: MHQ.Husk
 	ProvidesPrerequisite@buildingname:

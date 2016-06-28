@@ -1,14 +1,20 @@
 mhq:
-	idle: mcv
+	idle:
 		Facings: 32
 		UseClassicFacingFudge: True
+	spinner: dish
+		Length: 32
+		UseClassicFacingFudge: False
 	icon: mcvicon
 
 mhqhusk:
-	idle: mcv
+	idle: mhq
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -1023
+	spinner: dish
+		Start: 5
+		UseClassicFacingFudge: False
 
 gtruk:
 	idle: truk
