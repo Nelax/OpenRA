@@ -418,6 +418,7 @@
 	GivesBounty:
 	Chronoshiftable:
 	RepairableNear:
+		Buildings: syrd,docks
 	GpsDot:
 		String: Ship
 	WithDamageOverlay:

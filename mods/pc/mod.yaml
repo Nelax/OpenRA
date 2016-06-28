@@ -44,6 +44,7 @@ Packages:
 	pc|bits/eva
 	pc|bits/eva/aegis
 	pc|bits/eva/manticore
+	pc|bits/caravan
 	pc|uibits
 
 MapFolders:

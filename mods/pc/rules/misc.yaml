@@ -186,3 +186,15 @@ CTFLAG:
 		Modifier: 0
 	-Selectable:
 	-Targetable:
+
+barracks.upgraded:
+	AlwaysVisible:
+	ProvidesPrerequisite:
+
+vehicles.upgraded:
+	AlwaysVisible:
+	ProvidesPrerequisite:
+
+aircraft.upgraded:
+	AlwaysVisible:
+	ProvidesPrerequisite:

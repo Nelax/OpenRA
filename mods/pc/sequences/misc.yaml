@@ -220,9 +220,6 @@ moveflsh:
 		Length: *
 		Tick: 80
 		ZOffset: 2047
-		UseTilesetExtension: true
-		TilesetOverrides:
-			DESERT: TEMPERAT
 
 select:
 	repair:
