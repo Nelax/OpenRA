@@ -1,0 +1,39 @@
+MapFormat: 11
+
+RequiresMod: pc
+
+Title: testmap
+
+Author: Nelax
+
+Tileset: TEMPERATE
+
+MapSize: 130,146
+
+Bounds: 1,17,128,128
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Enemies: Multi0
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 101,-27

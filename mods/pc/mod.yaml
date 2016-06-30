@@ -1,0 +1,262 @@
+Metadata:
+	Title: Phoenix Chronicles
+	Description: Developer stub, not yet ready for release!
+	Version: {DEV_VERSION}
+	Author: the Phoenix Chronicles Developers
+
+RequiresMods:
+	modchooser: {DEV_VERSION}
+
+Packages:
+	~^Content/ts
+	.
+	./mods/common: common
+	$ts: ts
+	$ra: ra
+	$cnc: cnc
+	$d2k: d2k
+	$pc: pc
+
+# Tiberian Sun
+	~scores.mix
+	~sidenc01.mix
+	~sidenc02.mix
+	~e01scd01.mix
+	~e01scd02.mix
+	~movies01.mix
+	~movies02.mix
+	~sidecd01.mix
+	~sidecd02.mix
+	~tibsun.mix
+	~cache.mix
+	~conquer.mix
+	~isosnow.mix
+	~isotemp.mix
+	~local.mix
+	~sidec01.mix: sidebar-gdi
+	~sidec02.mix: sidebar-nod
+	~sno.mix
+	~snow.mix
+	~sounds.mix
+	~speech01.mix: speech-gdi
+	~speech02.mix: speech-nod
+	~tem.mix
+	~temperat.mix
+# Firestorm
+	~scores01.mix
+	~expand01.mix
+	~sounds01.mix
+	~e01sc01.mix
+	~e01sc02.mix
+	~e01vox01.mix
+	~e01vox02.mix
+	~ecache01.mix
+# TS Mod Bits
+	ts|bits
+	ts|uibits
+# PC Mod Bits
+	pc|uibits
+
+MapFolders:
+	pc|maps: System
+	~^maps/pc/{DEV_VERSION}: User
+
+Rules:
+	pc|rules/misc.yaml
+	pc|rules/player.yaml
+	pc|rules/world.yaml
+	pc|rules/palettes.yaml
+	pc|rules/defaults.yaml
+	pc|rules/trees.yaml
+	pc|rules/husks.yaml
+	pc|rules/civilian-infantry.yaml
+	pc|rules/civilian-structures.yaml
+	pc|rules/civilian-vehicles.yaml
+	pc|rules/aegis-base.yaml
+	pc|rules/aegis-support.yaml
+	pc|rules/aegis-infantry.yaml
+	pc|rules/aegis-vehicles.yaml
+	pc|rules/aegis-aircraft.yaml
+	pc|rules/manticore-infantry.yaml
+	pc|rules/manticore-base.yaml
+	pc|rules/manticore-support.yaml
+	pc|rules/manticore-vehicles.yaml
+	pc|rules/manticore-aircraft.yaml
+	pc|rules/remnant-infantry.yaml
+	pc|rules/remnant-base.yaml
+	pc|rules/remnant-support.yaml
+	pc|rules/remnant-vehicles.yaml
+	pc|rules/remnant-aircraft.yaml
+	pc|rules/shared-base.yaml
+	pc|rules/shared-support.yaml
+	pc|rules/shared-infantry.yaml
+	pc|rules/shared-vehicles.yaml
+	pc|rules/shared-aircraft.yaml
+	pc|rules/placeholder.yaml
+
+Weapons:
+	pc|weapons/explosions.yaml
+	pc|weapons/placeholder.yaml
+
+Sequences:
+	pc|sequences/misc.yaml
+	pc|sequences/trees.yaml
+	pc|sequences/civilian.yaml
+	pc|sequences/placeholdersprites.yaml
+
+VoxelSequences:
+	pc|sequences/placeholdervoxels.yaml
+
+TileSets:
+	ts|tilesets/temperate.yaml
+	ts|tilesets/snow.yaml
+
+MapGrid:
+	TileSize: 48,24
+	Type: RectangularIsometric
+	MaximumTerrainHeight: 16
+	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
+	DefaultSubCell: 2
+
+Cursors:
+	pc|cursors.yaml
+
+Chrome:
+	pc|chrome.yaml
+
+Assemblies:
+	common|OpenRA.Mods.Common.dll
+	ra|OpenRA.Mods.RA.dll
+	cnc|OpenRA.Mods.Cnc.dll
+	ts|OpenRA.Mods.TS.dll
+	pc|OpenRA.Mods.PC.dll
+
+ChromeLayout:
+	ra|chrome/ingame.yaml
+	ra|chrome/ingame-chat.yaml
+	ra|chrome/ingame-fmvplayer.yaml
+	ra|chrome/ingame-menu.yaml
+	ts|chrome/ingame-info.yaml
+	ra|chrome/ingame-infoscripterror.yaml
+	ra|chrome/ingame-infobriefing.yaml
+	ra|chrome/ingame-infoobjectives.yaml
+	ra|chrome/ingame-infostats.yaml
+	d2k|chrome/ingame-observer.yaml
+	ts|chrome/ingame-observerstats.yaml
+	ts|chrome/ingame-player.yaml
+	ra|chrome/ingame-perf.yaml
+	ts|chrome/ingame-debug.yaml
+	ra|chrome/mainmenu.yaml
+	ra|chrome/settings.yaml
+	ra|chrome/credits.yaml
+	ra|chrome/lobby.yaml
+	ra|chrome/lobby-mappreview.yaml
+	ra|chrome/lobby-players.yaml
+	ra|chrome/lobby-options.yaml
+	ra|chrome/lobby-music.yaml
+	ra|chrome/lobby-kickdialogs.yaml
+	ra|chrome/lobby-globalchat.yaml
+	ts|chrome/color-picker.yaml
+	ra|chrome/map-chooser.yaml
+	ra|chrome/multiplayer.yaml
+	ra|chrome/multiplayer-browser.yaml
+	ra|chrome/multiplayer-createserver.yaml
+	ra|chrome/multiplayer-directconnect.yaml
+	ra|chrome/multiplayer-globalchat.yaml
+	ra|chrome/connection.yaml
+	ra|chrome/replaybrowser.yaml
+	ts|chrome/dropdowns.yaml
+	ra|chrome/musicplayer.yaml
+	ra|chrome/tooltips.yaml
+	ra|chrome/assetbrowser.yaml
+	ra|chrome/missionbrowser.yaml
+	ra|chrome/confirmation-dialogs.yaml
+	ra|chrome/editor.yaml
+
+Voices:
+	pc|audio/voices.yaml
+
+Notifications:
+	pc|audio/speech-generic.yaml
+	pc|audio/speech-singleplayer.yaml
+	pc|audio/sounds-generic.yaml
+
+Music:
+	ts|audio/music.yaml
+
+Translations:
+	ts|languages/english.yaml
+
+LoadScreen: LogoStripeLoadScreen
+	Image: pc|uibits/loadscreen.png
+	Text: Updating EVA installation...
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	pc|metrics.yaml
+
+Fonts:
+	Regular:
+		Font: common|FreeSans.ttf
+		Size:14
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size:14
+	Title:
+		Font: common|FreeSansBold.ttf
+		Size:32
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size:18
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size:24
+	Small:
+		Font: common|FreeSans.ttf
+		Size:12
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size:10
+
+SupportsMapsFrom: pc
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpTS, TmpTS, ShpTD
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERATE: .tem
+		SNOW: .sno
+	TilesetCodes:
+		TEMPERATE: t
+		SNOW: a
+
+GameSpeeds:
+	slower:
+		Name: Slower
+		Timestep: 50
+		OrderLatency: 3
+	default:
+		Name: Normal
+		Timestep: 40
+		OrderLatency: 3
+	faster:
+		Name: Faster
+		Timestep: 30
+		OrderLatency: 4
+	fastest:
+		Name: Fastest
+		Timestep: 20
+		OrderLatency: 6
+
+ColorValidator:

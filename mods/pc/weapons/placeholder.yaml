@@ -1,0 +1,190 @@
+EMPulseCannon:
+	ReloadDelay: 100
+	Range: 40c0
+	Report: plsecan2.aud
+	Projectile: Bullet
+		Speed: 425
+		Blockable: false
+		Shadow: true
+		Angle: 62
+		Image: pulsball
+	Warhead@1Eff: CreateEffect
+		Explosions: pulse_explosion
+	Warhead@emp: GrantUpgrade
+		Range: 4c0
+		Duration: 250
+		Upgrades: empdisable, notmobile
+
+
+Pistola:
+	ReloadDelay: 20
+	Range: 3c0
+	Report: gun18.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 2
+		Versus:
+			Wood: 60
+			Light: 40
+			Heavy: 25
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piff
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+
+Minigun:
+	ReloadDelay: 21
+	Range: 4c0
+	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 8
+		Versus:
+			Wood: 60
+			Light: 40
+			Heavy: 25
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+
+M1Carbine:
+	ReloadDelay: 20
+	Range: 4c0
+	Report: infgun3.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 15
+		Versus:
+			Wood: 60
+			Light: 40
+			Heavy: 25
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+		
+Grenade:
+	ReloadDelay: 60
+	Range: 4c512
+	Projectile: Bullet # TODO: Add bounce effect
+		Speed: 85
+		Blockable: false
+		Shadow: true
+		Angle: 45
+		Inaccuracy: 384
+		Image: DISCUS
+	Warhead@1Dam: SpreadDamage
+		Spread: 171
+		Damage: 40
+		Versus:
+			None: 100
+			Wood: 85
+			Light: 70
+			Heavy: 35
+			Concrete: 28
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_grey_explosion
+		ImpactSounds: expnew13.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		
+Heal:
+	ReloadDelay: 80
+	Range: 2c849
+	Report: healer1.aud
+	ValidTargets: Infantry
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		DebugOverlayColor: 00FF00
+		Spread: 213
+		Damage: -50
+		ValidTargets: Infantry
+		
+Bazooka:
+	ReloadDelay: 60
+	Range: 6c0
+	MinRange: 0c512
+	Report: rketinf1.aud
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 213
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 7c204
+		Palette: ra
+		MinimumLaunchSpeed: 75
+		Speed: 384
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 25
+		ValidTargets: Ground, Air
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSounds: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSounds: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		ValidImpactTypes: Air, AirHit
+		Explosions: tiny_twlt
+		ImpactSounds: expnew05.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+
+TiberiumHeal:
+	ReloadDelay: 16
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: -2
+
+
+Tiberium:
+	ReloadDelay: 16
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 2
+		DamageTypes: ExplosionDeath, TriggerVisceroid
