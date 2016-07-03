@@ -116,11 +116,11 @@ TileSets:
 	pc|tilesets/snow.yaml
 
 MapGrid:
+	TileSize: 96,48
 	Type: RectangularIsometric
-	TileSize: 60,30
-	SubCellsOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
-	DefaultSubCell: 2
 	MaximumTerrainHeight: 16
+	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
+	DefaultSubCell: 2
 
 Cursors:
 	pc|cursors.yaml
