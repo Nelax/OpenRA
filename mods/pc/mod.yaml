@@ -58,8 +58,6 @@ Packages:
 	pc|bits
 	pc|bits/voxels
 	pc|bits/voxels/caravan
-	pc|bits/terrain
-	pc|bits/terrain/wasteland
 	pc|uibits
 
 MapFolders:
