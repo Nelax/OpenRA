@@ -34,7 +34,7 @@
 		PipColor: Green
 		AllowedTerrainTypes: Clear, Rough, DirtRoad
 		AllowUnderActors: true
-		TerrainType: Tiberium
+		TerrainType: Ore
 	ResourceType@Scrap:
 		ResourceType: 2
 		Palette: bluetiberium
@@ -45,7 +45,7 @@
 		PipColor: Blue
 		AllowedTerrainTypes: Clear, Rough, DirtRoad
 		AllowUnderActors: true
-		TerrainType: BlueTiberium
+		TerrainType: Scrap
 	TerrainGeometryOverlay:
 
 World:
@@ -95,11 +95,21 @@ World:
 	MapBuildRadius:
 	MapOptions:
 	CreateMPPlayers:
-	MPStartUnits@MCV:
+	MPStartUnits@BaseAegis:
 		Class: none
-		ClassName: MCV Only
-		Factions: aegis,manticore,remnant
+		ClassName: Construction Only
+		Factions: aegis
 		BaseActor: mcv
+	MPStartUnits@BaseManticore:
+		Class: none
+		ClassName: Construction Only
+		Factions: manticore
+		BaseActor: mhq
+	MPStartUnits@BaseRemnant:
+		Class: none
+		ClassName: Construction Only
+		Factions: remnant
+		BaseActor: fortress
 	MPStartLocations:
 	SpawnMPUnits:
 	CrateSpawner:

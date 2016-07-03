@@ -82,9 +82,8 @@ FLAMEGUY:
 			Rail: 45
 			DirtRoad: 50
 			Rough: 40
-			Tiberium: 45
-			BlueTiberium: 45
-			Veins: 25
+			Ore: 45
+			Scrap: 45
 	HiddenUnderFog:
 	WithInfantryBody:
 		IdleSequences: run
@@ -185,46 +184,6 @@ E3:
 		AttackSequence: attack
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
-		
-MCV:
-	Inherits: ^VoxelTank
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 110
-		Prerequisites: ~disabled
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Mobile Construction Vehicle
-		Description: Deploys into another Construction Yard.\n  Unarmed
-	Selectable:
-		Priority: 3
-	Health:
-		HP: 600
-	Armor:
-		Type: Light
-	Mobile:
-		Speed: 85
-	RevealsShroud:
-		Range: 4c0
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	BaseBuilding:
-	Transforms:
-		IntoActor: gacnst
-		Offset: -1,-1
-		Facing: 96
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
-	SelectionDecorations:
-		VisualBounds: 42,42
-	RenderSprites:
-		Image: mcv.gdi
-		FactionImages:
-			aegis: mcv.gdi
-			manticore: mcv.nod
-			remnant: mcv.nod
 
 HARV:
 	Inherits: ^VoxelTank
@@ -257,9 +216,8 @@ HARV:
 			Rough: 70
 			Road: 100
 			Beach: 70
-			Tiberium: 80
-			BlueTiberium: 80
-			Veins: 80
+			Ore: 80
+			Scrap: 80
 	Health:
 		HP: 1000
 	SelfHealing:
@@ -286,64 +244,6 @@ HARV:
 			aegis: harv.gdi
 			manticore: harv.nod
 			remnant: harv.nod
-	
-GACNST:
-	Inherits: ^Building
-	Building:
-		Footprint: xxx xxx xxx
-		BuildSounds: facbld1.aud
-		Dimensions: 3,3
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 1000
-		Prerequisites: ~disabled
-	Health:
-		HP: 1500
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 5c0
-	Production:
-		Produces: Building,Defense
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Construction Yard
-		Description: Builds base structures.
-	CustomSellValue:
-		Value: 2500
-	BaseBuilding:
-	Transforms:
-		IntoActor: mcv
-		Offset: 1,1
-		Facing: 96
-		DeployCursor: undeploy
-	ProductionBar@Building:
-		ProductionType: Building
-	ProductionBar@Defense:
-		ProductionType: Defense
-	WithIdleOverlay@TOP:
-		Sequence: idle-top
-	WithIdleOverlay@SIDE:
-		Sequence: idle-side
-	WithIdleOverlay@FRONT:
-		Sequence: idle-front
-	WithBuildingPlacedOverlay:
-	Power:
-		Amount: 0
-	Selectable:
-		Bounds: 144, 60, 0, -6
-	ProvidesPrerequisite@aegis:
-		Factions: aegis
-		Prerequisite: structures.aegis
-	ProvidesPrerequisite@manticore:
-		Factions: manticore
-		Prerequisite: structures.manticore
-	ProvidesPrerequisite@remnant:
-		Factions: remnant
-		Prerequisite: structures.remnant
-	SelectionDecorations:
-		VisualBounds: 144, 80, 0, -12
 
 PROC:
 	Inherits: ^Building

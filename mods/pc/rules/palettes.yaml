@@ -12,6 +12,11 @@
 		Tileset: TEMPERATE
 		Filename: unittem.pal
 		ShadowIndex: 1
+	PaletteFromFile@playerwas:
+		Name: player
+		Tileset: WASTES
+		Filename: unittem.pal
+		ShadowIndex: 1
 	PaletteFromFile@depth:
 		Name: depth
 		Filename: depth.pal

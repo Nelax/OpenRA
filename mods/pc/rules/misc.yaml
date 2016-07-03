@@ -20,12 +20,12 @@ waypoint:
 	BodyOrientation:
 		QuantizedFacings: 1
 
-^mcv.colorpicker:
-	Inherits: MCV
+^mhq.colorpicker:
+	Inherits: MHQ
 	Mobile:
 		InitialFacing: 160
 	RenderVoxels:
-		Image: mcv
+		Image: mhq
 		Palette: colorpicker
 	RenderSprites:
 		Image: mcv.gdi

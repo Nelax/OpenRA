@@ -1,0 +1,48 @@
+FORTRESS:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GACNST
+	Building:
+		Footprint: xxx xxx xxx
+		BuildSounds: facbld1.aud
+		Dimensions: 3,3
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+	Health:
+		HP: 1500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Production:
+		Produces: Building,Defense
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Fortress
+		Description: Builds base structures.\nMassive Base Defense
+	CustomSellValue:
+		Value: 2500
+	BaseBuilding:
+	ProductionBar@Building:
+		ProductionType: Building
+	ProductionBar@Defense:
+		ProductionType: Defense
+	WithIdleOverlay@TOP:
+		Sequence: idle-top
+	WithIdleOverlay@SIDE:
+		Sequence: idle-side
+	WithIdleOverlay@FRONT:
+		Sequence: idle-front
+	WithBuildingPlacedOverlay:
+	Power:
+		Amount: 0
+	Selectable:
+		Bounds: 144, 60, 0, -6
+	ProvidesPrerequisite:
+		Prerequisite: structures.remnant
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 144, 80, 0, -12

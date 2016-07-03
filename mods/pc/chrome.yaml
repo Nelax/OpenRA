@@ -2,73 +2,73 @@
 # AEGIS
 # ----------------------------------------------------------------------
 
-sidebar-aegis: chrome.png
+sidebar-aegis: chrome-aegis.png
 	background-top: 0,0,235,260
 	background-iconrow: 0,260,235,52
 	background-bottom: 0,312,235,26
 	background-supportoverlay: 168,392,64,48
 
-sidebar-button-aegis: chrome.png
+sidebar-button-aegis: chrome-aegis.png
 	background: 265,289,30,31
-sidebar-button-aegis-hover: chrome.png
+sidebar-button-aegis-hover: chrome-aegis.png
 	background: 265,321,30,31
-sidebar-button-aegis-pressed: chrome.png
+sidebar-button-aegis-pressed: chrome-aegis.png
 	background: 265,353,30,31
-sidebar-button-aegis-highlighted: chrome.png
+sidebar-button-aegis-highlighted: chrome-aegis.png
 	background: 265,385,30,31
-sidebar-button-aegis-highlighted-hover: chrome.png
+sidebar-button-aegis-highlighted-hover: chrome-aegis.png
 	background: 265,417,30,31
-sidebar-button-aegis-highlighted-pressed: chrome.png
+sidebar-button-aegis-highlighted-pressed: chrome-aegis.png
 	background: 265,449,30,31
-sidebar-button-aegis-highlighted-disabled: chrome.png
+sidebar-button-aegis-highlighted-disabled: chrome-aegis.png
 	background: 265,481,30,31
-sidebar-button-aegis-disabled: chrome.png
+sidebar-button-aegis-disabled: chrome-aegis.png
 	background: 265,481,30,31
 
 	
 
-scrollup-buttons-aegis: chrome.png
+scrollup-buttons-aegis: chrome-aegis.png
 	background: 0,363,34,27
-scrollup-buttons-aegis-hover: chrome.png
+scrollup-buttons-aegis-hover: chrome-aegis.png
 	background: 35,363,34,27
-scrollup-buttons-aegis-pressed: chrome.png
+scrollup-buttons-aegis-pressed: chrome-aegis.png
 	background: 70,363,34,27
-scrollup-buttons-aegis-highlighted: chrome.png
+scrollup-buttons-aegis-highlighted: chrome-aegis.png
 	background: 35,363,34,27
-scrollup-buttons-aegis-highlighted-hover: chrome.png
+scrollup-buttons-aegis-highlighted-hover: chrome-aegis.png
 	background: 35,363,34,27
-scrollup-buttons-aegis-highlighted-pressed: chrome.png
+scrollup-buttons-aegis-highlighted-pressed: chrome-aegis.png
 	background: 70,363,34,27
-scrollup-button-aegis-highlighted-disabled: chrome.png
+scrollup-button-aegis-highlighted-disabled: chrome-aegis.png
 	background: 0,363,34,27
-scrollup-buttons-aegis-disabled: chrome.png
+scrollup-buttons-aegis-disabled: chrome-aegis.png
 	background: 0,363,34,27
 	
-scrolldown-buttons-aegis: chrome.png
+scrolldown-buttons-aegis: chrome-aegis.png
 	background: 105,363,34,27
-scrolldown-buttons-aegis-hover: chrome.png
+scrolldown-buttons-aegis-hover: chrome-aegis.png
 	background: 140,363,34,27
-scrolldown-buttons-aegis-pressed: chrome.png
+scrolldown-buttons-aegis-pressed: chrome-aegis.png
 	background: 175,363,34,27
-scrolldown-buttons-aegis-highlighted: chrome.png
+scrolldown-buttons-aegis-highlighted: chrome-aegis.png
 	background: 140,363,34,27
-scrolldown-buttons-aegis-highlighted-hover: chrome.png
+scrolldown-buttons-aegis-highlighted-hover: chrome-aegis.png
 	background: 140,363,34,27
-scrolldown-buttons-aegis-highlighted-pressed: chrome.png
+scrolldown-buttons-aegis-highlighted-pressed: chrome-aegis.png
 	background: 175,363,34,27
-scrolldown-button-aegis-highlighted-disabled: chrome.png
+scrolldown-button-aegis-highlighted-disabled: chrome-aegis.png
 	background: 105,363,34,27
-scrolldown-buttons-aegis-disabled: chrome.png
+scrolldown-buttons-aegis-disabled: chrome-aegis.png
 	background: 105,363,34,27
 
 	
 	
-radar-aegis: chrome.png
+radar-aegis: chrome-aegis.png
 	insignia: 1,392,164,119
 
 	
 	
-production-icons-aegis: chrome.png
+production-icons-aegis: chrome-aegis.png
 	building: 416,0,16,16
 	building-disabled: 432,0,16,16
 	building-alert: 448,0,16,16
@@ -85,7 +85,7 @@ production-icons-aegis: chrome.png
 	air-disabled: 432,64,16,16
 	air-alert: 448,64,16,16
 
-order-icons-aegis: chrome.png
+order-icons-aegis: chrome-aegis.png
 	debug: 296,289,30,31
 	debug-disabled: 327,289,30,31
 	debug-active: 296,289,30,31	
@@ -109,17 +109,17 @@ order-icons-aegis: chrome.png
 	diplomacy-active: 296,481,30,31
 
 # make this paragraph AddFactionSuffixLogic compatible
-sidebar-bits-aegis: chrome.png
+sidebar-bits-aegis: chrome-aegis.png
 	production-tooltip-time: 416,208,16,16
 	production-tooltip-power: 480,160,16,16
 	production-tooltip-cost: 480,144,16,16
 	production-iconoverlay: 168,392,64,48
 	
-power-icons-aegis: chrome.png
+power-icons-aegis: chrome-aegis.png
 	power-normal: 480,160,16,16
 	power-critical: 496,160,16,16
 
-cash-icons-aegis: chrome.png
+cash-icons-aegis: chrome-aegis.png
 	cash-normal: 480,144,16,16
 	cash-critical: 496,144,16,16
 	
@@ -128,243 +128,215 @@ cash-icons-aegis: chrome.png
 # MANTICORE
 # ----------------------------------------------------------------------
 
-sidebar-manticore: chrome.png
-	background-top: 512,0,235,260
-	background-iconrow: 512,260,235,52
-	background-bottom: 512,312,235,26
+sidebar-manticore: chrome-manticore.png
+	background-top: 0,0,235,260
+	background-iconrow: 0,260,235,52
+	background-bottom: 0,312,235,26
 	background-supportoverlay: 168,392,64,48
 
-sidebar-button-manticore: chrome.png
-	background: 777,289,30,31
-sidebar-button-manticore-hover: chrome.png
-	background: 777,321,30,31
-sidebar-button-manticore-pressed: chrome.png
-	background: 777,353,30,31
-sidebar-button-manticore-highlighted: chrome.png
-	background: 777,385,30,31
-sidebar-button-manticore-highlighted-hover: chrome.png
-	background: 777,417,30,31
-sidebar-button-manticore-highlighted-pressed: chrome.png
-	background: 777,449,30,31
-sidebar-button-manticore-highlighted-disabled: chrome.png
-	background: 777,481,30,31
-sidebar-button-manticore-disabled: chrome.png
-	background: 777,481,30,31
+sidebar-button-manticore: chrome-manticore.png
+	background: 265,289,30,31
+sidebar-button-manticore-hover: chrome-manticore.png
+	background: 265,321,30,31
+sidebar-button-manticore-pressed: chrome-manticore.png
+	background: 265,353,30,31
+sidebar-button-manticore-highlighted: chrome-manticore.png
+	background: 265,385,30,31
+sidebar-button-manticore-highlighted-hover: chrome-manticore.png
+	background: 265,417,30,31
+sidebar-button-manticore-highlighted-pressed: chrome-manticore.png
+	background: 265,449,30,31
+sidebar-button-manticore-highlighted-disabled: chrome-manticore.png
+	background: 265,481,30,31
+sidebar-button-manticore-disabled: chrome-manticore.png
+	background: 265,481,30,31
 
-
-
-scrollup-buttons-manticore: chrome.png
-	background: 512,364,34,27
-scrollup-buttons-manticore-hover: chrome.png
-	background: 547,364,34,27
-scrollup-buttons-manticore-pressed: chrome.png
-	background: 582,364,34,27
-scrollup-buttons-manticore-highlighted: chrome.png
-	background: 547,364,34,27
-scrollup-buttons-manticore-highlighted-hover: chrome.png
-	background: 547,364,34,27
-scrollup-buttons-manticore-highlighted-pressed: chrome.png
-	background: 582,364,34,27
-scrollup-button-manticore-highlighted-disabled: chrome.png
-	background: 512,364,34,27
-scrollup-buttons-manticore-disabled: chrome.png
-	background: 512,364,34,27
 	
-scrolldown-buttons-manticore: chrome.png
-	background: 617,364,34,27
-scrolldown-buttons-manticore-hover: chrome.png
-	background: 652,364,34,27
-scrolldown-buttons-manticore-pressed: chrome.png
-	background: 687,364,34,27
-scrolldown-buttons-manticore-highlighted: chrome.png
-	background: 652,364,34,27
-scrolldown-buttons-manticore-highlighted-hover: chrome.png
-	background: 652,364,34,27
-scrolldown-buttons-manticore-highlighted-pressed: chrome.png
-	background: 687,364,34,27
-scrolldown-button-manticore-highlighted-disabled: chrome.png
-	background: 617,364,34,27
-scrolldown-buttons-manticore-disabled: chrome.png
-	background: 617,364,34,27
+	
+radar-manticore: chrome-manticore.png
+	insignia: 1,392,164,119
 
-radar-manticore: chrome.png
-	insignia: 513,392,164,119
+	
+	
+production-icons-manticore: chrome-manticore.png
+	building: 416,0,16,16
+	building-disabled: 432,0,16,16
+	building-alert: 448,0,16,16
+	defense: 416,16,16,16
+	defense-disabled: 432,16,16,16
+	defense-alert: 448,16,16,16
+	infantry: 416,32,16,16
+	infantry-disabled: 432,32,16,16
+	infantry-alert: 448,32,16,16
+	vehicle: 416,48,16,16
+	vehicle-disabled: 432,48,16,16
+	vehicle-alert: 448,48,16,16
+	air: 416,64,16,16
+	air-disabled: 432,64,16,16
+	air-alert: 448,64,16,16
 
-production-icons-manticore: chrome.png
-	building: 928,0,16,16
-	building-disabled: 944,0,16,16
-	building-alert: 960,0,16,16
-	defense: 928,16,16,16
-	defense-disabled: 944,16,16,16
-	defense-alert: 960,16,16,16		
-	infantry: 928,32,16,16
-	infantry-disabled: 944,32,16,16
-	infantry-alert: 960,32,16,16
-	vehicle: 928,48,16,16
-	vehicle-disabled: 944,48,16,16
-	vehicle-alert: 960,48,16,16
-	air: 928,64,16,16
-	air-disabled: 944,64,16,16
-	air-alert: 960,64,16,16
-
-order-icons-manticore: chrome.png
-	debug: 808,289,30,31
-	debug-disabled: 839,289,30,31
-	debug-active: 808,808,30,31
-	repair: 808,321,30,31
-	repair-disabled: 839,321,30,31
-	repair-active: 808,321,30,31
-	sell: 808,353,30,31
-	sell-disabled: 839,353,30,31
-	sell-active: 808,353,30,31
-	options: 808,385,30,31
-	options-disabled: 839,385,30,31
-	options-active: 808,385,30,31  
-	beacon: 808,417,30,31
-	beacon-disabled: 839,417,30,31
-	beacon-active: 808,417,30,31
-	power: 808,449,30,31
-	power-disabled: 839,449,30,31
-	power-active: 808,449,30,31
-	diplomacy: 808,481,30,31
-	diplomacy-disabled: 839,481,30,31
-	diplomacy-active: 808,481,30,31
+order-icons-manticore: chrome-manticore.png
+	debug: 296,289,30,31
+	debug-disabled: 327,289,30,31
+	debug-active: 296,289,30,31	
+	repair: 296,321,30,31
+	repair-disabled: 327,321,30,31
+	repair-active: 296,321,30,31	
+	sell: 296,353,30,31
+	sell-disabled: 327,353,30,31
+	sell-active: 296,353,30,31	
+	options: 296,385,30,31
+	options-disabled: 327,385,30,31
+	options-active: 296,385,30,31	
+	beacon: 296,417,30,31
+	beacon-disabled: 327,417,30,31
+	beacon-active: 296,417,30,31	
+	power: 296,449,30,31
+	power-disabled: 327,449,30,31
+	power-active: 296,449,30,31	
+	diplomacy: 296,481,30,31
+	diplomacy-disabled: 327,481,30,31
+	diplomacy-active: 296,481,30,31
 
 # make this paragraph AddFactionSuffixLogic compatible
-sidebar-bits-manticore: chrome.png
-	production-tooltip-time: 928,208,16,16
-	production-tooltip-power: 992,160,16,16
-	production-tooltip-cost: 992,144,16,16
+sidebar-bits-manticore: chrome-manticore.png
+	production-tooltip-time: 416,208,16,16
+	production-tooltip-power: 480,160,16,16
+	production-tooltip-cost: 480,144,16,16
 	production-iconoverlay: 168,392,64,48
+	
+power-icons-manticore: chrome-manticore.png
+	power-normal: 480,160,16,16
+	power-critical: 496,160,16,16
 
-power-icons-manticore: chrome.png
-	power-normal: 992,160,16,16
-	power-critical: 1008,160,16,16
-
-cash-icons-manticore: chrome.png
-	cash-normal: 992,144,16,16
-	cash-critical: 1008,144,16,16
+cash-icons-manticore: chrome-manticore.png
+	cash-normal: 480,144,16,16
+	cash-critical: 496,144,16,16
 	
 # ----------------------------------------------------------------------
 # REMNANT
 # ----------------------------------------------------------------------
 
-sidebar-remnant: chrome.png
-	background-top: 512,0,235,260
-	background-iconrow: 512,260,235,52
-	background-bottom: 512,312,235,26
+sidebar-remnant: chrome-remnant.png
+	background-top: 0,0,235,260
+	background-iconrow: 0,260,235,52
+	background-bottom: 0,312,235,26
 	background-supportoverlay: 168,392,64,48
 
-sidebar-button-remnant: chrome.png
-	background: 777,289,30,31
-sidebar-button-remnant-hover: chrome.png
-	background: 777,321,30,31
-sidebar-button-remnant-pressed: chrome.png
-	background: 777,353,30,31
-sidebar-button-remnant-highlighted: chrome.png
-	background: 777,385,30,31
-sidebar-button-remnant-highlighted-hover: chrome.png
-	background: 777,417,30,31
-sidebar-button-remnant-highlighted-pressed: chrome.png
-	background: 777,449,30,31
-sidebar-button-remnant-highlighted-disabled: chrome.png
-	background: 777,481,30,31
-sidebar-button-remnant-disabled: chrome.png
-	background: 777,481,30,31
+sidebar-button-remnant: chrome-remnant.png
+	background: 265,289,30,31
+sidebar-button-remnant-hover: chrome-remnant.png
+	background: 265,321,30,31
+sidebar-button-remnant-pressed: chrome-remnant.png
+	background: 265,353,30,31
+sidebar-button-remnant-highlighted: chrome-remnant.png
+	background: 265,385,30,31
+sidebar-button-remnant-highlighted-hover: chrome-remnant.png
+	background: 265,417,30,31
+sidebar-button-remnant-highlighted-pressed: chrome-remnant.png
+	background: 265,449,30,31
+sidebar-button-remnant-highlighted-disabled: chrome-remnant.png
+	background: 265,481,30,31
+sidebar-button-remnant-disabled: chrome-remnant.png
+	background: 265,481,30,31
 
-
-
-scrollup-buttons-remnant: chrome.png
-	background: 512,364,34,27
-scrollup-buttons-remnant-hover: chrome.png
-	background: 547,364,34,27
-scrollup-buttons-remnant-pressed: chrome.png
-	background: 582,364,34,27
-scrollup-buttons-remnant-highlighted: chrome.png
-	background: 547,364,34,27
-scrollup-buttons-remnant-highlighted-hover: chrome.png
-	background: 547,364,34,27
-scrollup-buttons-remnant-highlighted-pressed: chrome.png
-	background: 582,364,34,27
-scrollup-button-remnant-highlighted-disabled: chrome.png
-	background: 512,364,34,27
-scrollup-buttons-remnant-disabled: chrome.png
-	background: 512,364,34,27
 	
-scrolldown-buttons-remnant: chrome.png
-	background: 617,364,34,27
-scrolldown-buttons-remnant-hover: chrome.png
-	background: 652,364,34,27
-scrolldown-buttons-remnant-pressed: chrome.png
-	background: 687,364,34,27
-scrolldown-buttons-remnant-highlighted: chrome.png
-	background: 652,364,34,27
-scrolldown-buttons-remnant-highlighted-hover: chrome.png
-	background: 652,364,34,27
-scrolldown-buttons-remnant-highlighted-pressed: chrome.png
-	background: 687,364,34,27
-scrolldown-button-remnant-highlighted-disabled: chrome.png
-	background: 617,364,34,27
-scrolldown-buttons-remnant-disabled: chrome.png
-	background: 617,364,34,27
 
-radar-remnant: chrome.png
-	insignia: 513,392,164,119
+scrollup-buttons-remnant: chrome-remnant.png
+	background: 0,363,34,27
+scrollup-buttons-remnant-hover: chrome-remnant.png
+	background: 35,363,34,27
+scrollup-buttons-remnant-pressed: chrome-remnant.png
+	background: 70,363,34,27
+scrollup-buttons-remnant-highlighted: chrome-remnant.png
+	background: 35,363,34,27
+scrollup-buttons-remnant-highlighted-hover: chrome-remnant.png
+	background: 35,363,34,27
+scrollup-buttons-remnant-highlighted-pressed: chrome-remnant.png
+	background: 70,363,34,27
+scrollup-button-remnant-highlighted-disabled: chrome-remnant.png
+	background: 0,363,34,27
+scrollup-buttons-remnant-disabled: chrome-remnant.png
+	background: 0,363,34,27
+	
+scrolldown-buttons-remnant: chrome-remnant.png
+	background: 105,363,34,27
+scrolldown-buttons-remnant-hover: chrome-remnant.png
+	background: 140,363,34,27
+scrolldown-buttons-remnant-pressed: chrome-remnant.png
+	background: 175,363,34,27
+scrolldown-buttons-remnant-highlighted: chrome-remnant.png
+	background: 140,363,34,27
+scrolldown-buttons-remnant-highlighted-hover: chrome-remnant.png
+	background: 140,363,34,27
+scrolldown-buttons-remnant-highlighted-pressed: chrome-remnant.png
+	background: 175,363,34,27
+scrolldown-button-remnant-highlighted-disabled: chrome-remnant.png
+	background: 105,363,34,27
+scrolldown-buttons-remnant-disabled: chrome-remnant.png
+	background: 105,363,34,27
 
-production-icons-remnant: chrome.png
-	building: 928,0,16,16
-	building-disabled: 944,0,16,16
-	building-alert: 960,0,16,16
-	defense: 928,16,16,16
-	defense-disabled: 944,16,16,16
-	defense-alert: 960,16,16,16		
-	infantry: 928,32,16,16
-	infantry-disabled: 944,32,16,16
-	infantry-alert: 960,32,16,16
-	vehicle: 928,48,16,16
-	vehicle-disabled: 944,48,16,16
-	vehicle-alert: 960,48,16,16
-	air: 928,64,16,16
-	air-disabled: 944,64,16,16
-	air-alert: 960,64,16,16
+	
+	
+radar-remnant: chrome-remnant.png
+	insignia: 1,392,164,119
 
-order-icons-remnant: chrome.png
-	debug: 808,289,30,31
-	debug-disabled: 839,289,30,31
-	debug-active: 808,808,30,31
-	repair: 808,321,30,31
-	repair-disabled: 839,321,30,31
-	repair-active: 808,321,30,31
-	sell: 808,353,30,31
-	sell-disabled: 839,353,30,31
-	sell-active: 808,353,30,31
-	options: 808,385,30,31
-	options-disabled: 839,385,30,31
-	options-active: 808,385,30,31  
-	beacon: 808,417,30,31
-	beacon-disabled: 839,417,30,31
-	beacon-active: 808,417,30,31
-	power: 808,449,30,31
-	power-disabled: 839,449,30,31
-	power-active: 808,449,30,31
-	diplomacy: 808,481,30,31
-	diplomacy-disabled: 839,481,30,31
-	diplomacy-active: 808,481,30,31
+	
+	
+production-icons-remnant: chrome-remnant.png
+	building: 416,0,16,16
+	building-disabled: 432,0,16,16
+	building-alert: 448,0,16,16
+	defense: 416,16,16,16
+	defense-disabled: 432,16,16,16
+	defense-alert: 448,16,16,16
+	infantry: 416,32,16,16
+	infantry-disabled: 432,32,16,16
+	infantry-alert: 448,32,16,16
+	vehicle: 416,48,16,16
+	vehicle-disabled: 432,48,16,16
+	vehicle-alert: 448,48,16,16
+	air: 416,64,16,16
+	air-disabled: 432,64,16,16
+	air-alert: 448,64,16,16
+
+order-icons-remnant: chrome-remnant.png
+	debug: 296,289,30,31
+	debug-disabled: 327,289,30,31
+	debug-active: 296,289,30,31	
+	repair: 296,321,30,31
+	repair-disabled: 327,321,30,31
+	repair-active: 296,321,30,31	
+	sell: 296,353,30,31
+	sell-disabled: 327,353,30,31
+	sell-active: 296,353,30,31	
+	options: 296,385,30,31
+	options-disabled: 327,385,30,31
+	options-active: 296,385,30,31	
+	beacon: 296,417,30,31
+	beacon-disabled: 327,417,30,31
+	beacon-active: 296,417,30,31	
+	power: 296,449,30,31
+	power-disabled: 327,449,30,31
+	power-active: 296,449,30,31	
+	diplomacy: 296,481,30,31
+	diplomacy-disabled: 327,481,30,31
+	diplomacy-active: 296,481,30,31
 
 # make this paragraph AddFactionSuffixLogic compatible
-sidebar-bits-remnant: chrome.png
-	production-tooltip-time: 928,208,16,16
-	production-tooltip-power: 992,160,16,16
-	production-tooltip-cost: 992,144,16,16
+sidebar-bits-remnant: chrome-remnant.png
+	production-tooltip-time: 416,208,16,16
+	production-tooltip-power: 480,160,16,16
+	production-tooltip-cost: 480,144,16,16
 	production-iconoverlay: 168,392,64,48
+	
+power-icons-remnant: chrome-remnant.png
+	power-normal: 480,160,16,16
+	power-critical: 496,160,16,16
 
-power-icons-remnant: chrome.png
-	power-normal: 992,160,16,16
-	power-critical: 1008,160,16,16
-
-cash-icons-remnant: chrome.png
-	cash-normal: 992,144,16,16
-	cash-critical: 1008,144,16,16
+cash-icons-remnant: chrome-remnant.png
+	cash-normal: 480,144,16,16
+	cash-critical: 496,144,16,16
 
 # ----------------------------------------------------------------------
 # GENERIC
@@ -384,10 +356,10 @@ scrollbar: buttons.png
 	up_pressed: 32,140,16,16	
 	
 flags: buttons.png
-	aegis: 30,112,30,15
-	manticore: 0,112,30,15
-	remnant: 0,112,30,15
-	Random: 60,112,30,15
+	aegis: 0,112,30,15
+	manticore: 30,112,30,15
+	remnant: 60,112,30,15
+	Random: 90,112,30,15
 	spectator: 60,112,30,15	
 	
 lobby-bits: buttons.png

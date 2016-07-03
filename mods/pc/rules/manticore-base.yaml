@@ -1,0 +1,29 @@
+MHQ:
+	Inherits: ^VoxelCaravan
+	RenderSprites:
+		Image: mcv.gdi
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 110
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Headquarters
+		Description: Produces caravan vehicles.\n  Unarmed
+	Health:
+		HP: 600
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 4c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	ProvidesPrerequisite:
+		Prerequisite: structures.manticore
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 42,42

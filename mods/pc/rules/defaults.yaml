@@ -147,6 +147,95 @@
 		Weapons: LargeDebris
 		Pieces: 3, 7
 		Range: 2c0, 5c0
+		
+^Caravan:
+	Inherits@1: ^GainsExperience
+	Inherits@2: ^ExistsInWorld
+	Inherits@3: ^EmpDisableMobile
+	Inherits@4: ^Cloakable
+	DrawLineToTarget:
+	Mobile:
+		Crushes: wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 70
+			Road: 100
+			Rail: 100
+			DirtRoad: 90
+			Rough: 60
+			Ore: 70
+			Scrap: 70
+			Veins: 70
+		TurnSpeed: 5
+		Voice: Move
+	Selectable:
+		Bounds: 40,24
+		Priority: 3
+	SelectionDecorations:
+		Palette: pips
+	Voiced:
+		VoiceSet: Vehicle
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair
+	Repairable:
+		RepairBuildings: gadept
+		Voice: Move
+	Passenger:
+		CargoType: Vehicle
+		Voice: Move
+	AttackMove:
+		Voice: Move
+	HiddenUnderFog:
+	ActorLostNotification:
+	Capturable:
+		Type: Vehicle
+		CaptureThreshold: 100
+		CancelActivity: True
+	Guard:
+		Voice: Move
+	Guardable:
+	BodyOrientation:
+		CameraPitch: 90
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	MustBeDestroyed:
+	RenderSprites:
+	ThrowsShrapnel:
+		Weapons: SmallDebris
+		Pieces: 3, 7
+		Range: 2c0, 5c0
+	UpgradeOnDamage@DAMAGED:
+		Upgrades: damagedspeed
+		ValidDamageStates: Heavy
+	UpgradeOnDamage@CRITICAL:
+		Upgrades: criticalspeed
+		ValidDamageStates: Critical
+	SpeedMultiplier@DAMAGED:
+		UpgradeTypes: damagedspeed
+		Modifier: 80
+	SpeedMultiplier@CRITICAL:
+		UpgradeTypes: criticalspeed
+		Modifier: 60
+	Capturable:
+	RepairableBuilding:
+		IndicatorPalette: mouse
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	EmitInfantryOnSell@aegis:
+		ActorTypes: e1, e1, e2, medic
+		Factions: aegis
+	EmitInfantryOnSell@manticore:
+		ActorTypes: e1, e1, e1, e3, e3
+		Factions: manticore
+	EmitInfantryOnSell@remnant:
+		ActorTypes: e1, e1, e1, e3, e3
+		Factions: remnant
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	CaptureNotification:
+	Sellable:
+		SellSounds: cashturn.aud
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -180,7 +269,7 @@
 		Name: Crate
 	Crate:
 		Lifetime: 180
-		TerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Tiberium, BlueTiberium, Veins, Green, Pavement
+		TerrainTypes: Clear, Rough, Sand, Road, DirtRoad, Ore, Scrap, Green, Pavement
 	RenderSprites:
 		Palette: terraindecoration
 	WithCrateBody:
@@ -261,10 +350,8 @@
 			Rail: 90
 			DirtRoad: 100
 			Rough: 80
-			Tiberium: 90
-				PathingCost: 90
-			BlueTiberium: 90
-				PathingCost: 90
+			Ore: 90
+			Scrap: 90
 			Veins: 50
 	SelectionDecorations:
 		Palette: pips
@@ -385,10 +472,8 @@
 			Rail: 50
 			DirtRoad: 90
 			Rough: 40
-			Tiberium: 50
-			BlueTiberium: 50
-			Veins: 50
-				PathingCost: 90
+			Ore: 50
+			Scrap: 50
 		TurnSpeed: 5
 		Voice: Move
 	Selectable:
@@ -450,9 +535,8 @@
 			Rail: 100
 			DirtRoad: 90
 			Rough: 60
-			Tiberium: 70
-			BlueTiberium: 70
-			Veins: 70
+			Ore: 70
+			Scrap: 70
 
 ^VoxelVehicle:
 	Inherits: ^Vehicle
@@ -463,6 +547,13 @@
 
 ^VoxelTank:
 	Inherits: ^Tank
+	BodyOrientation:
+		QuantizedFacings: 0
+	RenderVoxels:
+	WithVoxelBody:
+
+^VoxelCaravan:
+	Inherits: ^Caravan
 	BodyOrientation:
 		QuantizedFacings: 0
 	RenderVoxels:
@@ -574,7 +665,7 @@
 		Dimensions: 1,1
 	AppearsOnRadar:
 	RadarColorFromTerrain:
-		Terrain: Tiberium
+		Terrain: Ore
 	FrozenUnderFog:
 	SeedsResource:
 		ResourceType: Ore

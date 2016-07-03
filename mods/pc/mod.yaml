@@ -51,10 +51,15 @@ Packages:
 	~e01vox01.mix
 	~e01vox02.mix
 	~ecache01.mix
-# TS Mod Bits
 	ts|bits
 	ts|uibits
+
 # PC Mod Bits
+	pc|bits
+	pc|bits/voxels
+	pc|bits/voxels/caravan
+	pc|bits/terrain
+	pc|bits/terrain/wasteland
 	pc|uibits
 
 MapFolders:
@@ -99,24 +104,25 @@ Weapons:
 	pc|weapons/placeholder.yaml
 
 Sequences:
-	pc|sequences/misc.yaml
-	pc|sequences/trees.yaml
-	pc|sequences/civilian.yaml
-	pc|sequences/placeholdersprites.yaml
+	pc|sequences/sprites/misc.yaml
+	pc|sequences/sprites/trees.yaml
+	pc|sequences/sprites/civilian.yaml
+	pc|sequences/sprites/placeholder.yaml
 
 VoxelSequences:
-	pc|sequences/placeholdervoxels.yaml
+	pc|sequences/voxels/caravan.yaml
+	pc|sequences/voxels/placeholder.yaml
 
 TileSets:
-	ts|tilesets/temperate.yaml
-	ts|tilesets/snow.yaml
+	pc|tilesets/temperate.yaml
+	pc|tilesets/snow.yaml
 
 MapGrid:
-	TileSize: 48,24
 	Type: RectangularIsometric
-	MaximumTerrainHeight: 16
-	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
+	TileSize: 60,30
+	SubCellsOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
 	DefaultSubCell: 2
+	MaximumTerrainHeight: 16
 
 Cursors:
 	pc|cursors.yaml
@@ -260,3 +266,5 @@ GameSpeeds:
 		OrderLatency: 6
 
 ColorValidator:
+
+ModContent:
