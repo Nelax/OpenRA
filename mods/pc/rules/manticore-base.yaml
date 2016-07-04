@@ -1,5 +1,5 @@
 MHQ:
-	Inherits: ^VoxelCaravan
+	Inherits: ^Caravan
 	RenderSprites:
 		Image: mcv.gdi
 	Buildable:

@@ -49,49 +49,9 @@
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 2
 
-^EmpDisable:
-	UpgradeOverlay@EMPDISABLE:
-		UpgradeTypes: empdisable
-		UpgradeMinEnabledLevel: 1
-		Palette: disabled
-	DisableOnUpgrade@EMPDISABLE:
-		UpgradeTypes: empdisable
-		UpgradeMinEnabledLevel: 1
-	TimedUpgradeBar@EMPDISABLE:
-		Upgrade: empdisable
-		Color: FFFFFF
-	WithIdleOverlay@EMPDISABLE:
-		Sequence: emp-overlay
-		Palette: effect
-		UpgradeTypes: empdisable
-		ShowToEnemies: true
-		ZOffset: 512
-		UpgradeMinEnabledLevel: 1
-	PowerMultiplier@EMPDISABLE:
-		UpgradeTypes: empdisable
-		Modifier: 0
-
-^EmpDisableMobile:
-	Inherits: ^EmpDisable
-	Mobile:
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
-
-^Cloakable:
-	Cloak@CLOAKGENERATOR:
-		UpgradeTypes: cloakgenerator
-		UpgradeMinEnabledLevel: 1
-		InitialDelay: 0
-		CloakDelay: 90
-		IsPlayerPalette: true
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
-
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits@3: ^Cloakable
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
@@ -120,7 +80,6 @@
 
 ^Building:
 	Inherits@1: ^BasicBuilding
-	Inherits@2: ^EmpDisable
 	GivesBuildableArea:
 	Capturable:
 	RepairableBuilding:
@@ -147,12 +106,79 @@
 		Weapons: LargeDebris
 		Pieces: 3, 7
 		Range: 2c0, 5c0
+
+^BuildingPlug:
+	AlwaysVisible:
+	Building:
+		BuildSounds: place2.aud
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
+
+^Defense:
+	Inherits: ^Building
+	-GivesBuildableArea:
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	RevealsShroud:
+		Range: 6c0
+	DetectCloaked:
+		Range: 5c0
+
+^CivBuilding:
+	Inherits: ^BasicBuilding
+	-UpdatesPlayerStatistics:
+	Health:
+		HP: 900
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	Tooltip:
+		Description: Civilian Building
+	RenderSprites:
+		Palette: terraindecoration
+
+^Wall:
+	Inherits@1: ^SpriteActor
+	CombatDebugOverlay:
+	HiddenUnderShroud:
+	AppearsOnRadar:
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: place2.aud
+		Adjacent: 7
+		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
+	SoundOnDamageTransition:
+		DamagedSounds: expnew01.aud
+		DestroyedSounds: crmble2.aud
+	Crushable:
+		CrushClasses: wall
+	LineBuild:
+		Range: 8
+		NodeTypes: wall
+	LineBuildNode:
+		Types: wall
+	Targetable:
+		TargetTypes: Ground, Wall, C4
+	WithWallSpriteBody:
+		Type: wall
+	AutoTargetIgnore:
+	Sellable:
+		SellSounds: cashturn.aud
+	Demolishable:
+	ScriptTriggers:
+	UpgradeManager:
+	Health:
+		Shape: Circle
+			Radius: 363
+			VerticalTopOffset: 512
 		
 ^Caravan:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^EmpDisableMobile
-	Inherits@4: ^Cloakable
 	DrawLineToTarget:
 	Mobile:
 		Crushes: wall, crate, infantry
@@ -164,7 +190,6 @@
 			Rough: 60
 			Ore: 70
 			Scrap: 70
-			Veins: 70
 		TurnSpeed: 5
 		Voice: Move
 	Selectable:
@@ -194,7 +219,10 @@
 		Voice: Move
 	Guardable:
 	BodyOrientation:
+		QuantizedFacings: 0
 		CameraPitch: 90
+	RenderVoxels:
+	WithVoxelBody:
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -237,32 +265,6 @@
 	Sellable:
 		SellSounds: cashturn.aud
 
-^CivBuilding:
-	Inherits: ^BasicBuilding
-	-UpdatesPlayerStatistics:
-	Health:
-		HP: 900
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 4c0
-	Tooltip:
-		Description: Civilian Building
-	RenderSprites:
-		Palette: terraindecoration
-
-^CivBillboard:
-	Inherits: ^CivBuilding
-	Building:
-		Footprint: x
-		Dimensions: 1, 1
-	Armor:
-		Type: heavy
-	Health:
-		HP: 400
-	EditorTilesetFilter:
-		RequireTilesets: TEMPERATE
-
 ^Crate:
 	HiddenUnderFog:
 	Tooltip:
@@ -277,56 +279,10 @@
 	CustomSelectionSize:
 		CustomBounds: 24,24
 
-^Wall:
-	Inherits@1: ^SpriteActor
-	Inherits@2: ^Cloakable
-	CombatDebugOverlay:
-	HiddenUnderShroud:
-	AppearsOnRadar:
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-		BuildSounds: place2.aud
-		Adjacent: 7
-		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
-	SoundOnDamageTransition:
-		DamagedSounds: expnew01.aud
-		DestroyedSounds: crmble2.aud
-	Crushable:
-		CrushClasses: wall
-	LineBuild:
-		Range: 8
-		NodeTypes: wall
-	LineBuildNode:
-		Types: wall
-	Targetable:
-		TargetTypes: Ground, Wall, C4
-	WithWallSpriteBody:
-		Type: wall
-	AutoTargetIgnore:
-	Sellable:
-		SellSounds: cashturn.aud
-	Demolishable:
-	ScriptTriggers:
-	UpgradeManager:
-	Health:
-		Shape: Circle
-			Radius: 363
-			VerticalTopOffset: 512
-
-^BuildingPlug:
-	AlwaysVisible:
-	Building:
-		BuildSounds: place2.aud
-	KillsSelf:
-		RemoveInstead: true
-	RenderSprites:
-
 ^Infantry:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	Inherits@4: ^Cloakable
 	DrawLineToTarget:
 	Health:
 		HP: 50
@@ -352,7 +308,6 @@
 			Rough: 80
 			Ore: 90
 			Scrap: 90
-			Veins: 50
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
@@ -461,8 +416,6 @@
 ^Vehicle:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^EmpDisableMobile
-	Inherits@4: ^Cloakable
 	DrawLineToTarget:
 	Mobile:
 		Crushes: crate
@@ -552,13 +505,6 @@
 	RenderVoxels:
 	WithVoxelBody:
 
-^VoxelCaravan:
-	Inherits: ^Caravan
-	BodyOrientation:
-		QuantizedFacings: 0
-	RenderVoxels:
-	WithVoxelBody:
-
 ^CivilianVoxelVehicle:
 	Inherits: ^VoxelVehicle
 	-MustBeDestroyed:
@@ -571,7 +517,6 @@
 ^Aircraft:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^Cloakable
 	DrawLineToTarget:
 	AppearsOnRadar:
 		UseLocation: yes
@@ -653,10 +598,10 @@
 		Moves: true
 		Velocity: 86
 
-^BlossomTree:
+^OreMine:
 	Inherits@1: ^SpriteActor
 	Tooltip:
-		Name: Blossom Tree
+		Name: Ore Mine
 	RenderSprites:
 		Palette: player
 	WithSpriteBody:
@@ -712,106 +657,6 @@
 		Footprint: x
 		Dimensions: 1, 1
 
-^Box:
-	Inherits: ^Decoration
-	Tooltip:
-		Name: Box
-
-^Drum:
-	Inherits: ^Decoration
-	Tooltip:
-		Name: Drum
-
-^Palette:
-	Inherits: ^Decoration
-	Tooltip:
-		Name: Palette
-
-^Defense:
-	Inherits: ^Building
-	-GivesBuildableArea:
-	AutoTarget:
-	RenderRangeCircle:
-	RenderDetectionCircle:
-	RevealsShroud:
-		Range: 6c0
-	DetectCloaked:
-		Range: 5c0
-
-^DeployedVehicle:
-	Inherits@1: ^GainsExperience
-	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Voiced:
-		VoiceSet: Vehicle
-	AttackTurreted:
-		Voice: Attack
-	AutoTarget:
-	RenderRangeCircle:
-	DrawLineToTarget:
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-		TerrainTypes: Clear, Road, DirtRoad, Rough
-	WithSpriteBody:
-	WithMakeAnimation:
-	SelectionDecorations:
-		Palette: pips
-	Selectable:
-	Targetable:
-		TargetTypes: Ground, Repair
-	Guardable:
-	HiddenUnderFog:
-	ActorLostNotification:
-
-^Train:
-	Inherits@1: ^EmpDisableMobile
-	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^Cloakable
-	RenderVoxels:
-	RenderSprites:
-	WithVoxelBody:
-	DrawLineToTarget:
-	Mobile:
-		TerrainSpeeds:
-			Rail: 100
-		Crushes: wall, crate, infantry
-		TurnSpeed: 5
-		Voice: Move
-		Speed: 113
-	Cargo:
-		Types: Infantry
-		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
-	Health:
-		HP: 100
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 5c0
-	Selectable:
-		Bounds: 40,24
-	SelectionDecorations:
-		Palette: pips
-	Voiced:
-		VoiceSet: Vehicle
-	Targetable:
-		TargetTypes: Ground, Vehicle
-	Passenger:
-		CargoType: Infantry
-		Voice: Move
-	HiddenUnderFog:
-	BodyOrientation:
-		CameraPitch: 90
-		QuantizedFacings: 0
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
-	ThrowsShrapnel:
-		Weapons: SmallDebris
-		Pieces: 3, 7
-		Range: 2c0, 5c0
-
 ^TerrainOverlay:
 	AlwaysVisible:
 	Immobile:
@@ -822,16 +667,6 @@
 	BodyOrientation:
 		UseClassicPerspectiveFudge: False
 		QuantizedFacings: 1
-
-^Railway:
-	EditorOnlyTooltip:
-		Name: Railway
-	Inherits: ^TerrainOverlay
-
-^Tunnel:
-	Inherits: ^TerrainOverlay
-	CustomSelectionSize:
-		CustomBounds: 220,220
 
 ^Gate:
 	Inherits: ^Building

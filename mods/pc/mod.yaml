@@ -116,7 +116,6 @@ VoxelSequences:
 
 TileSets:
 	pc|tilesets/temperate.yaml
-	pc|tilesets/snow.yaml
 
 MapGrid:
 	TileSize: 96,48
@@ -243,10 +242,8 @@ SpriteFormats: ShpTS, TmpTS, ShpTD
 SpriteSequenceFormat: TilesetSpecificSpriteSequence
 	TilesetExtensions:
 		TEMPERATE: .tem
-		SNOW: .sno
 	TilesetCodes:
 		TEMPERATE: t
-		SNOW: a
 
 GameSpeeds:
 	slower:

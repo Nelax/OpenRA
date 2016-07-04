@@ -1,21 +1,3 @@
-EMPulseCannon:
-	ReloadDelay: 100
-	Range: 40c0
-	Report: plsecan2.aud
-	Projectile: Bullet
-		Speed: 425
-		Blockable: false
-		Shadow: true
-		Angle: 62
-		Image: pulsball
-	Warhead@1Eff: CreateEffect
-		Explosions: pulse_explosion
-	Warhead@emp: GrantUpgrade
-		Range: 4c0
-		Duration: 250
-		Upgrades: empdisable, notmobile
-
-
 Pistola:
 	ReloadDelay: 20
 	Range: 3c0
