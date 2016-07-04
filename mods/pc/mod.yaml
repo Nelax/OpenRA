@@ -56,6 +56,7 @@ Packages:
 
 # PC Mod Bits
 	pc|bits
+	pc|bits/terrain
 	pc|bits/voxels
 	pc|bits/voxels/caravan
 	pc|uibits
