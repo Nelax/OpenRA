@@ -56,7 +56,9 @@ Packages:
 
 # PC Mod Bits
 	pc|bits
+	pc|bits/palettes
 	pc|bits/terrain
+	pc|bits/terrain/temperate
 	pc|bits/voxels
 	pc|bits/voxels/caravan
 	pc|uibits
@@ -148,7 +150,7 @@ ChromeLayout:
 	ra|chrome/ingame-infostats.yaml
 	d2k|chrome/ingame-observer.yaml
 	ts|chrome/ingame-observerstats.yaml
-	ts|chrome/ingame-player.yaml
+	pc|chrome/ingame-player.yaml
 	ra|chrome/ingame-perf.yaml
 	ts|chrome/ingame-debug.yaml
 	ra|chrome/mainmenu.yaml

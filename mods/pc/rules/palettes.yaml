@@ -2,20 +2,9 @@
 	PaletteFromFile@mouse:
 		Name: mouse
 		Filename: mousepal.pal
-	PaletteFromFile@playersno:
+	PaletteFromFile@player:
 		Name: player
-		Tileset: SNOW
-		Filename: unitsno.pal
-		ShadowIndex: 1
-	PaletteFromFile@playertem:
-		Name: player
-		Tileset: TEMPERATE
-		Filename: unittem.pal
-		ShadowIndex: 1
-	PaletteFromFile@playerwas:
-		Name: player
-		Tileset: WASTES
-		Filename: unittem.pal
+		Filename: unit.pal
 		ShadowIndex: 1
 	PaletteFromFile@depth:
 		Name: depth
@@ -56,7 +45,7 @@
 		AllowModifiers: false
 	PaletteFromFile@colorpicker:
 		Name: colorpicker
-		Filename: unittem.pal
+		Filename: unit.pal
 		AllowModifiers: false
 		ShadowIndex: 1
 	PaletteFromFile@alpha:

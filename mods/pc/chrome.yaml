@@ -84,6 +84,9 @@ production-icons-aegis: chrome-aegis.png
 	air: 416,64,16,16
 	air-disabled: 432,64,16,16
 	air-alert: 448,64,16,16
+	ship: 416,80,16,16
+	ship-disabled: 432,80,16,16
+	ship-alert: 448,80,16,16
 
 order-icons-aegis: chrome-aegis.png
 	debug: 296,289,30,31
@@ -174,6 +177,9 @@ production-icons-manticore: chrome-manticore.png
 	air: 416,64,16,16
 	air-disabled: 432,64,16,16
 	air-alert: 448,64,16,16
+	ship: 416,80,16,16
+	ship-disabled: 432,80,16,16
+	ship-alert: 448,80,16,16
 
 order-icons-manticore: chrome-manticore.png
 	debug: 296,289,30,31
@@ -299,6 +305,9 @@ production-icons-remnant: chrome-remnant.png
 	air: 416,64,16,16
 	air-disabled: 432,64,16,16
 	air-alert: 448,64,16,16
+	ship: 416,80,16,16
+	ship-disabled: 432,80,16,16
+	ship-alert: 448,80,16,16
 
 order-icons-remnant: chrome-remnant.png
 	debug: 296,289,30,31
