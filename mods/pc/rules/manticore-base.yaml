@@ -3,7 +3,7 @@ MHQ:
 	RenderSprites:
 		Image: mcv.gdi
 	Buildable:
-		Queue: Vehicle
+		Queue: Building.Manticore
 		BuildPaletteOrder: 110
 		Prerequisites: ~disabled
 	Valued:
@@ -27,3 +27,9 @@ MHQ:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 42,42
+	Production:
+		Produces: Building.Manticore,Defense.Manticore
+	ProductionBar@BuildingManticore:
+		ProductionType: Building.Manticore
+	ProductionBar@DefenseManticore:
+		ProductionType: Defense.Manticore

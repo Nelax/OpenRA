@@ -7,7 +7,7 @@ CONYARD:
 		BuildSounds: facbld1.aud
 		Dimensions: 3,3
 	Buildable:
-		Queue: Building
+		Queue: Building.Aegis
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 	Health:
@@ -17,7 +17,7 @@ CONYARD:
 	RevealsShroud:
 		Range: 5c0
 	Production:
-		Produces: Building,Defense
+		Produces: Building.Aegis,Defense.Aegis
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -31,10 +31,10 @@ CONYARD:
 		Offset: 1,1
 		Facing: 96
 		DeployCursor: undeploy
-	ProductionBar@Building:
-		ProductionType: Building
-	ProductionBar@Defense:
-		ProductionType: Defense
+	ProductionBar@BuildingAegis:
+		ProductionType: Building.Aegis
+	ProductionBar@DefenseAegis:
+		ProductionType: Defense.Aegis
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
 	WithIdleOverlay@SIDE:
@@ -46,8 +46,462 @@ CONYARD:
 		Amount: 0
 	Selectable:
 		Bounds: 144, 60, 0, -6
-	ProvidesPrerequisite:
-		Prerequisite: structures.aegis
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
+		
+POWER:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GAPOWR
+	Buildable:
+		Queue: Building.Aegis
+		BuildPaletteOrder: 0
+		Prerequisites: ~conyard
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Power Plant
+		Description: Provides power for other structures.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 750
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithIdleOverlay@PLUG:
+		Sequence: idle-plug
+	Selectable:
+		Bounds: 90, 48, 0, -6
+	Power:
+		Amount: 100
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	PowerTooltip:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	DisabledOverlay:
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 90, 84, 0, -12
+
+REFINE:
+	Inherits: ^Building
+	RenderSprites:
+		Image: proc.gdi
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Refinery
+		Description: Processes raw ore and\nscrap into useable resources.
+	Buildable:
+		Queue: Building.Aegis
+		BuildPaletteOrder: 20
+		Prerequisites: power, ~conyard
+	Building:
+		Footprint: xxx= xx== xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 134, 96, 0, -12
+	Health:
+		HP: 900
+	RevealsShroud:
+		Range: 6c0
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 2,1
+		DiscardExcessResources: true
+	StoresResources:
+		PipColor: Green
+		PipCount: 15
+		Capacity: 3000
+	CustomSellValue:
+		Value: 600
+	FreeActor:
+		Actor: HARV
+		SpawnOffset: 2,1
+		Facing: 160
+	WithIdleOverlay@REDLIGHTS:
+		Sequence: idle-redlights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	WithDockedOverlay@FLAME:
+		Sequence: flame
+		Palette: effect
+	WithDockingOverlay@UNLOAD:
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 134, 122, 0, -18
+		
+BARR:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GAPILE
+	Buildable:
+		Queue: Building.Aegis
+		BuildPaletteOrder: 30
+		Prerequisites: power, ~conyard
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Barracks
+		Description: Produces infantry.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 48, 0, -8
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+		Offset: 2,3
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -256,1024,0
+		ExitCell: 2,2
+	Production:
+		Produces: Infantry.Aegis
+	PrimaryBuilding:
+	ProductionBar:
+	WithProductionOverlay@LIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@LIGHT:
+		Sequence: idle-light
+	WithIdleOverlay@FLAG:
+		Sequence: idle-flag
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 88, 56, 0, -8
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+MACHPLANT:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GAWEAP
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Machine Plant
+		Description: Produces vehicles.
+	Buildable:
+		Queue: Building.Aegis
+		BuildPaletteOrder: 50
+		Prerequisites: refine, ~conyard
+	Building:
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 154, 96, -2, -12
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 4c0
+	Armor:
+		Type: Heavy
+	RallyPoint:
+		Offset: 4,1
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 3,1
+		ExitDelay: 5
+	Production:
+		Produces: Vehicle.Aegis
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithProductionDoorOverlay@DOOR:
+	WithProductionOverlay@WHITELIGHTS:
+		Sequence: production-lights-white
+	WithProductionOverlay@REDLIGHTS:
+		Sequence: production-lights-red
+	WithIdleOverlay@TURBINES:
+		Sequence: idle-turbines
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 154, 100, -2, -12
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+SHIPYARD:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GAWEAP
+	Buildable:
+		Queue: Building.Aegis
+		BuildPaletteOrder: 40
+		Prerequisites: power, ~conyard
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Shipyard
+		Description: Produces and repairs ships\nand transports.
+	Targetable:
+		TargetTypes: Ground, Water, Structure, C4, DetonateAttack, SpyInfiltrate
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		Adjacent: 8
+		TerrainTypes: Water
+	-GivesBuildableArea:
+	Health:
+		HP: 1000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+	Exit@1:
+		SpawnOffset: -1024,1024,0
+		Facing: 160
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 1024,1024,0
+		Facing: 224
+		ExitCell: 2,2
+	Exit@3:
+		SpawnOffset: -1024,-1024,0
+		Facing: 96
+		ExitCell: 0,0
+	Exit@4:
+		SpawnOffset: 1024,-1024,0
+		Facing: 32
+		ExitCell: 2,0
+	Production:
+		Produces: Ship.Aegis
+	PrimaryBuilding:
+	-EmitInfantryOnSell@aegis:
+	-EmitInfantryOnSell@manticore:
+	-EmitInfantryOnSell@remnant:
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
+	RallyPoint:
+	ProductionBar:
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	EditorTilesetFilter:
+		ExcludeTilesets: INTERIOR
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+		
+VTOLBAY:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GAHPAD
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Dropship Bay
+		Description: Produces VTOL aircraft.
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Building.Aegis
+		Prerequisites: comm, ~conyard
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: false
+	Production:
+		Produces: Air.Aegis
+	PrimaryBuilding:
+	Reservable:
+	RepairsUnits:
+	ProductionBar:
+	WithIdleOverlay@PLATFORM:
+		Sequence: idle-platform
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithDeathAnimation@BIB:
+		DeathSequence: dead-platform
+		UseDeathTypeSuffix: false
+	Power:
+		Amount: -10
+	Selectable:
+		Bounds: 88, 66, 0, -5
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 88, 66, 0, -5
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+REPDEPT:
+	Inherits: ^Building
+	RenderSprites:
+		Image: gadept.gdi
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Repair Bay
+		Description: Repairs vehicles.
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: machplant, ~conyard
+		Queue: Building.Aegis
+	Building:
+		Footprint: =x= xxx =x=
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 96, 64, -6, -6
+	Health:
+		HP: 1100
+	RevealsShroud:
+		Range: 5c0
+	Reservable:
+	RepairsUnits:
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: false
+	WithIdleOverlay@LIGHT:
+		Sequence: idle-light
+	WithIdleOverlay@GROUND:
+		Sequence: ground
+	WithIdleOverlay@CIRCUITS:
+		Sequence: circuits
+	WithRepairOverlay@CRANE:
+		Sequence: crane
+	WithRepairOverlay@PLATFORM:
+		Sequence: platform
+	WithDeathAnimation@BIB:
+		DeathSequence: dead-ground
+		UseDeathTypeSuffix: false
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 98, 68, -6, -6
+
+COMM:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GARADR
+	Buildable:
+		Queue: Building.Aegis
+		BuildPaletteOrder: 90
+		Prerequisites: refine, ~conyard
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Communications Center
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 48, 0, -6
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 10c0
+	RenderDetectionCircle:
+	RevealsShroud:
+		Range: 10c0
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+		PauseOnLowPower: yes
+	Targetable:
+		TargetTypes: Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 96, 118, 0, -38
+
+CMMD:
+	Inherits: ^Building
+	RenderSprites:
+		Image: GATECH
+	Buildable:
+		Queue: Building.Aegis
+		BuildPaletteOrder: 100
+		Prerequisites: machplant, comm, ~conyard
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Command Center
+		Description: Provides access to advanced Aegis technologies.
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Selectable:
+		Bounds: 110, 60, 3, -4
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 110, 60, 3, -4

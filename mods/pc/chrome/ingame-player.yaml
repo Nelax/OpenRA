@@ -206,7 +206,7 @@ Container@PLAYER_WIDGETS:
 							ImageCollection: power-icons
 							ImageName: power-normal
 		Container@SIDEBAR_PRODUCTION:
-			Logic: ClassicProductionLogic
+			Logic: PagedProductionLogic
 			X: WINDOW_RIGHT - 235
 			Y: 260
 			Width: 235
@@ -228,6 +228,66 @@ Container@PLAYER_WIDGETS:
 							ClickThrough: false
 							ImageCollection: sidebar
 							ImageName: background-bottom
+				Container@PRODUCTION_PAGES:
+					X: 0
+					Y: PARENT_BOTTOM-36
+					Width: 240
+					Height: 29
+					Children:
+						ProductionTypeButton@AEGIS:
+							Logic: AddFactionSuffixLogic
+							X: 41
+							Y: 1
+							Width: 30
+							Height: 31
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Aegis Production
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Aegis
+							HotkeyName: ProductionTypePageOneKey
+							Children:
+								Image@ICON:
+									Logic: AddFactionSuffixLogic
+									X: 7
+									Y: 7
+									ImageCollection: page-icons
+						ProductionTypeButton@MANTICORE:
+							Logic: AddFactionSuffixLogic
+							X: 72
+							Y: 1
+							Width: 30
+							Height: 31
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Manticore Production
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Manticore
+							HotkeyName: ProductionTypePageTwoKey
+							Children:
+								Image@ICON:
+									Logic: AddFactionSuffixLogic
+									X: 7
+									Y: 7
+									ImageCollection: page-icons
+						ProductionTypeButton@REMNANT:
+							Logic: AddFactionSuffixLogic
+							X: 103
+							Y: 1
+							Width: 30
+							Height: 31
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Remnant Production
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Remnant
+							HotkeyName: ProductionTypePageThreeKey
+							Children:
+								Image@ICON:
+									Logic: AddFactionSuffixLogic
+									X: 6
+									Y: 7
+									ImageCollection: page-icons
 				LogicTicker@PRODUCTION_TICKER:
 				ProductionPalette@PRODUCTION_PALETTE:
 					X: 24

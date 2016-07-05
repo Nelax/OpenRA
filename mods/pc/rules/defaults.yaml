@@ -534,8 +534,8 @@
 	Aircraft:
 		AirborneUpgrades: airborne
 		CruisingUpgrades: cruising
-		RepairBuildings: gadept
-		RearmBuildings: gahpad, nahpad
+		RepairBuildings: repdept
+		RearmBuildings: vtolbay
 		LandWhenIdle: no
 		Voice: Move
 		IdealSeparation: 853

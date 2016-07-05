@@ -7,7 +7,7 @@ FORTRESS:
 		BuildSounds: facbld1.aud
 		Dimensions: 3,3
 	Buildable:
-		Queue: Building
+		Queue: Building.Remnant
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 	Health:
@@ -17,7 +17,7 @@ FORTRESS:
 	RevealsShroud:
 		Range: 5c0
 	Production:
-		Produces: Building,Defense
+		Produces: Building.Remnant,Defense.Remnant
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -26,10 +26,10 @@ FORTRESS:
 	CustomSellValue:
 		Value: 2500
 	BaseBuilding:
-	ProductionBar@Building:
-		ProductionType: Building
-	ProductionBar@Defense:
-		ProductionType: Defense
+	ProductionBar@BuildingRemnant:
+		ProductionType: Building.Remnant
+	ProductionBar@DefenseRemnant:
+		ProductionType: Defense.Remnant
 	WithIdleOverlay@TOP:
 		Sequence: idle-top
 	WithIdleOverlay@SIDE:
@@ -41,8 +41,390 @@ FORTRESS:
 		Amount: 0
 	Selectable:
 		Bounds: 144, 60, 0, -6
-	ProvidesPrerequisite:
-		Prerequisite: structures.remnant
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
+		
+REACT:
+	Inherits: ^Building
+	RenderSprites:
+		Image: NAPOWR
+	Buildable:
+		Queue: Building.Remnant
+		BuildPaletteOrder: 0
+		Prerequisites: ~fortress
+	ProvidesPrerequisite:
+		Prerequisite: anyreactor
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Reactor
+		Description: Provides power for other structures.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 48, 2, -6
+	Health:
+		HP: 750
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: 100
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	PowerTooltip:
+	DisabledOverlay:
+	SelectionDecorations:
+		VisualBounds: 88, 80, 2, -12
+
+LRGREACT:
+	Inherits: ^Building
+	RenderSprites:
+		Image: NAAPWR
+	Buildable:
+		Queue: Building.Remnant
+		BuildPaletteOrder: 5
+		Prerequisites: warplant, ~fortress
+	ProvidesPrerequisite:
+		Prerequisite: anyreactor
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Large Reactor
+		Description: Provides twice as much power as\nthe normal Reactor.
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 2,3
+	Selectable:
+		Bounds: 100, 54, 0, -4
+	Health:
+		HP: 750
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: 200
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	DisabledOverlay:
+	PowerTooltip:
+	SelectionDecorations:
+		VisualBounds: 100, 74, 0, -12
+
+WKCAMP:
+	Inherits: ^Building
+	RenderSprites:
+		Image: proc.gdi
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Workcamp
+		Description: Processes raw ore and\nscrap into useable resources.
+	Buildable:
+		Queue: Building.Remnant
+		BuildPaletteOrder: 20
+		Prerequisites: anyreactor
+	Building:
+		Footprint: xxx= xx== xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 134, 96, 0, -12
+	Health:
+		HP: 900
+	RevealsShroud:
+		Range: 6c0
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 2,1
+		DiscardExcessResources: true
+	StoresResources:
+		PipColor: Green
+		PipCount: 15
+		Capacity: 3000
+	CustomSellValue:
+		Value: 600
+	FreeActor:
+		Actor: HARV
+		SpawnOffset: 2,1
+		Facing: 160
+	WithIdleOverlay@REDLIGHTS:
+		Sequence: idle-redlights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	WithDockedOverlay@FLAME:
+		Sequence: flame
+		Palette: effect
+	WithDockingOverlay@UNLOAD:
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 134, 122, 0, -18
+
+CLONE:
+	Inherits: ^Building
+	RenderSprites:
+		Image: NAHAND
+	Buildable:
+		Queue: Building.Remnant
+		BuildPaletteOrder: 30
+		Prerequisites: anyreactor, ~fortress
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Cloning Vats
+		Description: Produces infantry.
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Selectable:
+		Bounds: 116, 60, 3, -6
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 384,768,0
+		ExitCell: 3,2
+	RallyPoint:
+		Offset: 3,3
+		Palette: mouse
+		IsPlayerPalette: false
+	Production:
+		Produces: Infantry.Remnant
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithProductionOverlay@LIGHT:
+		Sequence: production-light
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 116, 78, 3, -8
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+WARPLANT:
+	Inherits: ^Building
+	RenderSprites:
+		Image: NAWEAP
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: War Plant
+		Description: Produces vehicles.
+	Buildable:
+		Queue: Building.Remnant
+		BuildPaletteOrder: 50
+		Prerequisites: wkcamp, ~fortress
+	Building:
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 149, 80, -3, -10
+	Health:
+		HP: 1000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+		Offset: 4,1
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 3,1
+		ExitDelay: 5
+	Production:
+		Produces: Vehicle.Remnant
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithProductionDoorOverlay@DOOR:
+	WithProductionOverlay@LIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 149, 116, -3, -20
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+AFLD:
+	Inherits: ^Building
+	RenderSprites:
+		Image: NAHPAD
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Airstrip
+		Description: Produces, rearms and\nrepairs planes.
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Building.Remnant
+		Prerequisites: clone, ~fortress
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: false
+	Production:
+		Produces: Air.Remnant
+	PrimaryBuilding:
+	Reservable:
+	RepairsUnits:
+	ProductionBar:
+	WithIdleOverlay@PLATFORM:
+		Sequence: idle-platform
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithDeathAnimation@BIB:
+		DeathSequence: dead-platform
+		UseDeathTypeSuffix: false
+	Power:
+		Amount: -10
+	Selectable:
+		Bounds: 78, 48, 0, -6
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 78, 54, 0, -8
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: pips
+		ReferencePoint: Center
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+UPRADAR:
+	Inherits: ^Building
+	RenderSprites:
+		Image: NARADR
+	Buildable:
+		Queue: Building.Remnant
+		BuildPaletteOrder: 90
+		Prerequisites: wkcamp, ~fortress
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Operations Center Upgrade
+		Description: Fortress Upgrade\nProvides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+	ProvidesPrerequisite:
+		Prerequisite: radar
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 48, 0, -6
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 10c0
+	RenderDetectionCircle:
+	RevealsShroud:
+		Range: 10c0
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+		PauseOnLowPower: yes
+	Targetable:
+		TargetTypes: Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 96, 72, 0, -12
+
+UPTECH:
+	Inherits: ^Building
+	RenderSprites:
+		Image: NATECH
+	Buildable:
+		Queue: Building.Remnant
+		BuildPaletteOrder: 100
+		Prerequisites: warplant, upradar, ~fortress
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Laboratory Upgrade
+		Description: Fortress Upgrade\nProvides access to advanced Order technologies.
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 86, 48, 0, -4
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 86, 58, 0, -4
+
+ANYREACTOR:
+	AlwaysVisible:
+	Tooltip:
+		Name: Any Reactor
+		Description: Any Reactor

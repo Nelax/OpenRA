@@ -4,3 +4,6 @@ mcv:
 harv:
 	idle:
 	unload: horv
+
+autogun:
+	turret: laser

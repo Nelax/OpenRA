@@ -1,0 +1,243 @@
+SILO:
+	Inherits: ^Building
+	RenderSprites:
+		Image: gasilo.gdi
+	Buildable:
+		Queue: Defense.Aegis
+		BuildPaletteOrder: 40
+		Prerequisites: refine, ~conyard
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Silo
+		Description: Stores excess ore and scrap.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Selectable:
+		Bounds: 80, 48, -5, 0
+	-GivesBuildableArea:
+	Health:
+		HP: 300
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithSpriteBody:
+	WithSiloAnimation:
+	WithIdleOverlay@UNDERLAY:
+		Sequence: idle-underlay
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	StoresResources:
+		PipCount: 5
+		Capacity: 1500
+	Power:
+		Amount: -10
+	SelectionDecorations:
+		VisualBounds: 80, 48, -5, 0
+
+CHAIN:
+	Inherits: ^Wall
+	RenderSprites:
+		Image: GASAND
+	Buildable:
+		Queue: Defense.Aegis
+		BuildPaletteOrder: 0
+		Prerequisites: ~conyard
+	SoundOnDamageTransition:
+		DamagedSounds: sandbag1.aud
+		DestroyedSounds: sandbag1.aud
+	Valued:
+		Cost: 25
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Chainlink
+		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+	Health:
+		HP: 250
+	Armor:
+		Type: Light
+	LineBuild:
+		NodeTypes: chainlink
+	LineBuildNode:
+		Types: chainlink
+	WithWallSpriteBody:
+		Type: chainlink
+		
+CONCWALL:
+	Inherits: ^Wall
+	RenderSprites:
+		Image: GAWALL
+	Buildable:
+		Queue: Defense.Aegis
+		BuildPaletteOrder: 20
+		Prerequisites: barr, ~conyard
+	-SoundOnDamageTransition:
+	Valued:
+		Cost: 50
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+	Health:
+		HP: 225
+	Armor:
+		Type: Concrete
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: concwall
+	LineBuildNode:
+		Types: concwall, gate
+
+AGATE_A:
+	Inherits: ^Gate_A
+	RenderSprites:
+		Image: GAGATE_A
+	Buildable:
+		Queue: Defense.Aegis
+		BuildPaletteOrder: 60
+		Prerequisites: barr, ~conyard
+	Tooltip:
+		Name: Aegis Gate
+
+AGATE_B:
+	Inherits: ^Gate_B
+	RenderSprites:
+		Image: GAGATE_B
+	Buildable:
+		Queue: Defense.Aegis
+		BuildPaletteOrder: 60
+		Prerequisites: barr, ~conyard
+	Tooltip:
+		Name: Aegis Gate
+
+AUTOGUN:
+	Inherits: ^Defense
+	RenderSprites:
+		Image: NALASR
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Auto Cannon
+		Description: Basic base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense.Aegis
+		Prerequisites: barr, ~conyard
+		BuildPaletteOrder: 80
+	Building:
+	Selectable:
+		Bounds: 40, 30, -8, -6
+	DisabledOverlay:
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+	DetectCloaked:
+		Range: 3c0
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 224
+		Offset: 298,-171,288
+	AttackTurreted:
+	Armament:
+		Weapon: TurretLaserFire
+		LocalOffset: 352, 0, 224
+	RenderVoxels:
+	WithVoxelTurret:
+	Power:
+		Amount: -40
+	SelectionDecorations:
+		VisualBounds: 40, 36, -8, -8
+	BodyOrientation:
+		QuantizedFacings: 0
+
+PARTCANN:
+	Inherits: ^Defense
+	RenderSprites:
+		Image: NAOBEL
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Particle Cannon
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense.Aegis
+		BuildPaletteOrder: 120
+		Prerequisites: cmmd, ~conyard
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 42, 0, -6
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 725
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: ObeliskLaserFire
+		LocalOffset: 1400,210,800
+	AttackCharge:
+		ChargeAudio: obelpowr.aud
+		InitialChargeDelay: 120
+	WithChargeOverlay:
+		Sequence: active
+		Palette: player
+		IsPlayerPalette: true
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	SelectionDecorations:
+		VisualBounds: 88, 72, 0, -12
+
+SAM:
+	Inherits: ^Defense
+	RenderSprites:
+		Image: NASAM
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: S.A.M. Bunker
+		Description: Anti-Air base defense.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+	Buildable:
+		Queue: Defense.Aegis
+		Prerequisites: comm, ~conyard
+		BuildPaletteOrder: 100
+	Building:
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 600
+	Armor:
+		Type: Wood
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 224
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: no
+	Armament:
+		Weapon: RedEye2
+		LocalOffset: 384,0,576
+	Power:
+		Amount: -30
+	SelectionDecorations:
+		VisualBounds: 40, 36, -3, -8

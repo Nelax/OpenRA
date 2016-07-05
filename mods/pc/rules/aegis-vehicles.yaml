@@ -3,7 +3,7 @@ MCV:
 	RenderSprites:
 		Image: mcv.gdi
 	Buildable:
-		Queue: Vehicle
+		Queue: Vehicle.Aegis
 		BuildPaletteOrder: 110
 		Prerequisites: ~disabled
 	Valued:

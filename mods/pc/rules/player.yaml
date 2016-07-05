@@ -2,37 +2,105 @@ Player:
 	AlwaysVisible:
 	TechTree:
 	GlobalUpgradeManager:
-	ClassicProductionQueue@Building:
-		Type: Building
+	ClassicProductionQueue@BuildingAegis:
+		Type: Building.Aegis
 		BuildSpeed: 48
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: True
-	ClassicProductionQueue@Defense:
-		Type: Defense
+	ClassicProductionQueue@DefenseAegis:
+		Type: Defense.Aegis
 		BuildSpeed: 48
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: True
-	ClassicProductionQueue@Vehicle:
-		Type: Vehicle
+	ClassicProductionQueue@VehicleAegis:
+		Type: Vehicle.Aegis
 		BuildSpeed: 48
 		LowPowerSlowdown: 3
 		SpeedUp: True
-	ClassicProductionQueue@Infantry:
-		Type: Infantry
+	ClassicProductionQueue@InfantryAegis:
+		Type: Infantry.Aegis
 		BuildSpeed: 48
 		LowPowerSlowdown: 3
 		SpeedUp: True
-	ClassicProductionQueue@Air:
-		Type: Air
+	ClassicProductionQueue@AirAegis:
+		Type: Air.Aegis
 		BuildSpeed: 48
 		LowPowerSlowdown: 3
 		SpeedUp: True
-	ClassicProductionQueue@Ship:
-		Type: Ship
+	ClassicProductionQueue@ShipAegis:
+		Type: Ship.Aegis
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@BuildingManticore:
+		Type: Building.Manticore
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@DefenseManticore:
+		Type: Defense.Manticore
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@VehicleManticore:
+		Type: Vehicle.Manticore
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@InfantryManticore:
+		Type: Infantry.Manticore
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@AirManticore:
+		Type: Air.Manticore
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@ShipManticore:
+		Type: Ship.Manticore
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@BuildingRemnant:
+		Type: Building.Remnant
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@DefenseRemnant:
+		Type: Defense.Remnant
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@VehicleRemnant:
+		Type: Vehicle.Remnant
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@InfantryRemnant:
+		Type: Infantry.Remnant
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@AirRemnant:
+		Type: Air.Remnant
+		BuildSpeed: 48
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@ShipRemnant:
+		Type: Ship.Remnant
 		BuildSpeed: 48
 		LowPowerSlowdown: 3
 		SpeedUp: True
